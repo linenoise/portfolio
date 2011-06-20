@@ -45,3 +45,7 @@ data_sources:
     # The path where layouts should be mounted. The layouts root behaves the
     # same as the items root, but applies to layouts rather than items.
     layouts_root: /
+
+deploy:
+    default:
+        dst: "vaclav:/var/www/sites/dann.stayskal.com"
