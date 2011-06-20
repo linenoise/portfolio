@@ -1,0 +1,27 @@
+GEM
+  remote: http://rubygems.org/
+  remote: http://gemcutter.org/
+  specs:
+    asdf (0.5.0)
+      rack (~> 1.2.1)
+    builder (3.0.0)
+    cri (1.0.1)
+    kramdown (0.13.3)
+    mime-types (1.16)
+    nanoc (3.1.7)
+      nanoc3 (>= 3.1.7)
+    nanoc3 (3.1.7)
+      cri (>= 1.0.0)
+    rack (1.2.3)
+    rdiscount (1.6.8)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  asdf
+  builder
+  kramdown
+  mime-types
+  nanoc
+  rdiscount

@@ -1,0 +1,66 @@
+--- 
+title: Home
+---
+
+<div id="content" class="two-third">
+
+	<% items.select{|i| i.identifier =~ /\/blog\/.+/}.sort{|a,b| b.attributes[:date] <=> a.attributes[:date]}[0..2].each do |post| %>
+
+	<div id="content" class="two-third">
+
+		<article class="entry">
+
+			<header class="entry-header">
+				<div style="float: right; font-size: 1.5em; color: gray"><%= post.attributes[:date] %></div>
+			  <h2><%= post.attributes[:title] %></h2>
+			</header>
+
+			<div class="entry-content">
+				<p><%= post.attributes[:lede] %></p>
+				<p><a href="<%= post.identifier %>" class="button">Read more &rarr;</a></p>
+			</div>
+</div>
+
+		</article>
+
+		<div class="hr"></div>
+		
+	</div>
+
+	<% end %>
+
+	<%= render '_spacer_big' %>
+  
+	<%= render '_content_column', 
+		:width => 'one-third', 
+		:heading => 'Books', 
+		:content => 'Both of my books on human rights, cultural heritage, and intellectual property are available here for free download.', 
+		:read_more_url => '/books/', 
+		:leader_thumbnail => '/images/books/the_visceral_society_thumbnail.jpg', 
+		:leader_alt_text => 'Books'
+	%>
+ 
+	<%= render '_content_column', 
+		:width => 'one-third', 
+		:heading => 'Photography', 
+		:content => 'Photography of mine from various corners of the world is available here under a creative commons license.', 
+		:read_more_url => '/photos/', 
+		:leader_thumbnail => '/photos/Second Coming-thumbnail.jpg', 
+		:leader_alt_text => 'Photography', 
+		:read_more_text => 'View them'
+	%>
+ 
+	<%= render '_content_column', 
+		:width => 'one-third', 
+		:heading => 'Software', 
+		:content => 'My free software can help you communicate securely, monitor your networks, and develop artificial intelligence of your own.', 
+		:read_more_url => '/software/', 
+		:leader_thumbnail => '/images/software/asemica_thumbnail.jpg', 
+		:read_more_text => 'Check it out', 
+		:leader_alt_text => 'Software', 
+		:last => true
+	%>
+
+	<div class="big spacer"></div>
+ 
+</div>

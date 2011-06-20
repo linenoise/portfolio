@@ -1,0 +1,62 @@
+--- 
+title: Portfolio
+---
+<div id="content" class="two-third">
+
+<% @item.children.sort{|a,b| b.attributes[:date] <=> a.attributes[:date]}.each do |portfolio| %>
+
+	<div class="small content-frame">
+
+	  <article class="entry bottom one-third">
+	    <div class="entry-content">
+					<img class="alignleft framed" alt="%= portfolio.attributes[:title] %> screenshot" width="284" height="166" src="<%= portfolio.attributes[:screenshot] %>"/>
+					<p>
+	          <a class="button" href="<%= portfolio.attributes[:url] %>">View site &raquo;</a>
+					</p>
+	    </div>
+	  </article>
+
+	  <article class="entry bottom one-third">
+	    <header class="entry-header">
+	      <h4 class="top underlined">
+	        <%= portfolio.attributes[:title] %>
+	      </h4>
+	    </header>
+	    <div class="entry-content">
+	      <p>
+	        <%= portfolio.attributes[:description] %>
+	      </p>
+	    </div>
+	    <header class="entry-header">
+	      <h4 class="top underlined">
+	        My role
+	      </h4>
+	    </header>
+	    <div class="entry-content">
+	      <p>
+	        <%= portfolio.attributes[:role] %>
+	      </p>
+	    </div>
+	  </article>
+
+	  <article class="entry bottom one-third last">
+	    <header class="entry-header">
+	      <h4 class="top underlined">
+	        My contribution
+	      </h4>
+	    </header>
+	    <div class="entry-content">
+	      <p>
+	        <%= portfolio.attributes[:contribution] %>
+	      </p>
+	    </div>
+	  </article>
+  
+	  <div class="divider"></div>
+	</div>
+
+  <div class="spacer"></div>
+
+<% end %>  
+
+</div>

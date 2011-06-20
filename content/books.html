@@ -1,0 +1,22 @@
+--- 
+title: Books
+---
+
+<div id="content" class="two-third">
+<% book_count = 0 %>
+<% @item.children.sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.each do |book| %>
+	
+	<% book_count = book_count + 1 %>
+
+	<%= render '_content_column', 
+		:width => 'one-third', 
+		:heading => book.attributes[:title], 
+		:content => book.attributes[:byline],
+		:read_more_url => book.identifier,
+		:leader_thumbnail => book.attributes[:thumbnail], 
+		:leader_alt_text => book.attributes[:title] + ' cover image',
+		:last => (book_count % 3 == 0)
+	%>
+	
+<% end %> 
+</div>

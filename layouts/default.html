@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title>Dann Stayskal - <%= @item[:title] %></title>
+
+    <%= render '_html_head' %>
+
+  </head>
+  <body class="button-nav <% unless @item[:sidebar] %>fullwidth <% end %>minimal">
+    <div id="body-container">
+
+      <%= render '_html_header_and_nav' %>
+      
+      <%= render '_topbar_punchline' %>
+      
+      <div id="main">
+        <div class="wrapper with-overflow">
+          <%= yield %>
+        </div>
+      </div>
+      
+      <%= render '_html_footer' %>
+        
+      <%= render '_html_footerbar' %>
+    
+    </div>
+  </body>
+</html>

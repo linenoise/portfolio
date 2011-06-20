@@ -1,0 +1,12 @@
+--- 
+title: Saddleback Leather
+date: 2010-08
+url: http://saddlebackleather.com
+screenshot: /images/portfolio/saddlebackleather-screenshot.png
+role: |
+  <strong>Lead Software Engineer</strong><br/>
+  Maintained for <a href="http://copio.us/">Copious</a>
+description: |
+  Saddleback produces hand-made leather briefcases, backpacks, satchels, and luggage of legendary durability.
+contribution: |
+  Copious developed Saddleback's ecommerce application, and I was tasked with improving its scalability and security.  I developed a monitoring and scalability system to ensure their traffic patterns are met with adequate capacity and improved the security of their checkout process.

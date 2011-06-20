@@ -1,0 +1,12 @@
+--- 
+title: McMenamins
+date: 2010-10
+url: http://mcmenamins.com
+screenshot: /images/portfolio/mcmenamins-screenshot.png
+role: |
+  <strong>Lead Software Engineer</strong><br/>
+  Maintained for <a href="http://copio.us/">Copious</a>
+description: |
+  McMenamins is a local family of pubs, restaurants, hotels and movie theaters operating in Oregon and Washington.
+contribution: |
+  Copious developed web applications for McMenamins' storefront, portfolio, and reservation system, and I was taked with improving integration between them.  I optimized their inter-application communications, stabilized their servers, and refactored their cache controllers for performance.

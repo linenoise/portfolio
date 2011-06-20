@@ -1,0 +1,23 @@
+--- 
+title: Software
+---
+<div id="content" class="two-third">
+
+<% software_count = 0 %>
+<% @item.children.sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.each do |software| %>
+	
+	<% software_count = software_count + 1 %>
+
+	<%= render '_content_column', 
+		:width => 'one-third', 
+		:heading => software.attributes[:title], 
+		:content => software.attributes[:byline],
+		:read_more_url => software.identifier,
+		:leader_thumbnail => software.attributes[:thumbnail], 
+		:leader_alt_text => software.attributes[:title] + ' image',
+		:last => (software_count % 3 == 0)
+	%>
+	
+<% end %>  
+
+</div>

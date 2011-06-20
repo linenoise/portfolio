@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title>Dann Stayskal - <%= @item[:title] %></title>
+
+    <%= render '_html_head' %>
+
+	<link rel="openid.server" href="http://www.myopenid.com/server" />
+    <link rel="openid.delegate" href="http://dannstayskal.myopenid.com/" />
+    <link rel="openid2.local_id" href="http://dannstayskal.myopenid.com" />
+    <link rel="openid2.provider" href="http://www.myopenid.com/server" />
+    <meta http-equiv="X-XRDS-Location" ycontent="http://www.myopenid.com/xrds?username=dannstayskal.myopenid.com" />
+  
+  </head>
+  <body class="button-nav fullwidth with-topbar-content minimal">
+    <div id="body-container">
+
+      <%= render '_html_header_and_nav' %>
+      
+      <section id="topbar" class="content-area">
+        
+        <div class="deco-top-border"></div>
+        <div class="deco-top">
+          <div class="deco-bottom">
+          
+            <div class="wrapper with-overflow">
+              
+              <div class="one-fourth">
+                <a href="page.html">
+                  <img src="/images/dann-stayskal.jpg" class="alignleft" width="200" height="200" alt="Dann Stayskal" />
+                </a>
+              </div>
+              
+              <div class="one-half">
+                <h3 class="top">Digital Craftsmanship</h3>
+                <p>
+									is the recognition that well-made works are equal parts art and science.
+								</p>
+								<p>
+									It's a fusion of engineering and interaction that guides my work online.
+								</p>
+								<p>
+									This site hosts the things I've made that are free&mdash;
+								</p>
+								<p>
+									both free as in speech and free as in beer.
+								</p>
+                <p>
+                  <a href="/about/">About Dann &raquo;</a>
+                </p>
+              </div>
+              
+              <div class="one-fourth last">&nbsp;</div>
+                
+                
+            </div>
+
+          </div>
+        </div>
+        <div class="deco-bottom-border"></div>
+        
+      </section>
+      
+      <div id="main">
+        <div class="wrapper with-overflow">
+
+          <%= yield %>
+            
+        </div>
+      </div>
+      
+      <%= render '_html_footer' %>
+        
+      <%= render '_html_footerbar' %>
+    
+    </div>
+  </body>
+</html>

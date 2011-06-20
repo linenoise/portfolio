@@ -1,0 +1,75 @@
+--- 
+title: Music
+sidebar: yes
+---
+<div id="content" class="two-third">
+
+	<article class="entry">
+
+		<% @item.children.sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.each do |genre| %>
+		  <header class="entry-header">
+
+			<h3><%= genre.attributes[:title] %> music recordings</h3>
+			<p><%= genre.attributes[:description] %></p>
+
+			</header>
+			<% genre.children.sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.each do |song| %>
+
+			  <div class="entry-content">
+    
+			    <h4><%= song.attributes[:title] %></h4>
+			    <p><%= song.attributes[:date] %>: <em><%= song.attributes[:description] %></em></p>
+
+					<audio id="the-romanza" controls style="padding-top: 0.5em">
+						<source src="<%= song.attributes[:ogg_file] %>" />
+						<source src="<%= song.attributes[:mp3_file] %>" />
+					</audio>
+			
+					<p>
+						<a href="<%= song.attributes[:ogg_file] %>" class="button">Download in OGG Vorbis</a>
+						<a href="<%= song.attributes[:mp3_file] %>" class="button">Download in MP3</a>
+					</p>
+				</div>
+
+			<% end %>
+
+		<% end %>
+  
+	</article>
+</div>
+
+<div id="sidebar" class="one-third last">
+  <div class="deco-top"></div>
+  <div class="deco-center">
+    <div class="content">
+
+
+      <aside class="widget text-widget">
+        <h3 class="widget-title">Live Audio</h3>
+        <div class="widget-content">
+					<img src="/images/HTML5_Logo_64.png" class="alignright" style="margin: 15px 0px 0px 5px">
+					<p>The songs on this page are embedded using HTML 5 audio support.  In order to play them here, you'll need to view this page using a browser that supports modern standards.  Otherwise, you can download and play them on your computer or portable music device.</p>
+        </div>
+      </aside>
+
+
+      <aside class="widget list-widget">
+        <h3 class="widget-title">Supporting Browsers</h3>
+        <div class="widget-content">
+					<ul>
+						<li><a href="http://www.mozilla.com/firefox/fx/">FireFox 3.6+</a></li>
+						<li><a href="http://www.apple.com/safari/">Safari 5+</a></li>
+						<li><a href="http://www.google.com/chrome/">Chrome 6</a></li>
+						<li><a href="http://www.opera.com/">Opera 10.5+</a></li>
+						<li><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home">Internet Explorer 9</a></li>
+					</ul>
+
+        </div>
+      </aside>
+
+
+
+    </div>
+  </div>
+  <div class="deco-bottom"></div>
+</div>

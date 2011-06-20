@@ -1,0 +1,37 @@
+<article class="entry bottom <%= @width || 'one-third' %> <% if @last %>last <% end %>heading-under-featured-content">
+  <header class="entry-header">
+    <% if @leader_thumbnail %>
+      <div class="entry-featured-content">
+        <% if @leader_image %>
+        <a href="<%= @leader_image %>" class="lightbox[featured] framed with-shadow" title="<%= @leader_alt_text %>">
+        <% elsif @read_more_url%>
+        <a href="<%= @read_more_url %>" class="framed with-shadow" title="<%= @leader_alt_text %>">
+        <% end %>
+          <img src="<%= @leader_thumbnail %>" width="284" height="166" alt="<%= @leader_alt_text %>" />
+        <% if @leader_image || @read_more_url %>
+        </a>
+        <% end %>
+      </div>
+    <% end %>
+    <h3>
+      <% if @read_more_url %>
+      <a href="<%= @read_more_url %>">
+      <% end %>
+        <%= @heading %>
+      <% if @read_more_url %>
+      </a>
+      <% end %>
+    </h3>
+  </header>
+  <div class="entry-content">
+    <p>
+      <%= @content %>
+    </p>
+  </div>
+  <% if @read_more_url || @site_url %>
+  <footer class="read-more">
+    <% if @site_url %><a href="<%= @site_url %>" class="visit-site-link button">Visit Site</a><% end %>
+    <% if @read_more_url %><a href="<%= @read_more_url %>" class="read-more-link button"><%= @read_more_text || 'Read more' %> »</a><% end %>
+  </footer>
+  <% end %>
+</article>

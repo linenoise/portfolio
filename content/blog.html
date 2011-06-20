@@ -1,0 +1,26 @@
+--- 
+title: Blog
+---
+
+<div id="content" class="two-third">
+
+	<% @item.children.sort{|a,b| b.attributes[:date] <=> a.attributes[:date]}.each do |post| %>
+
+		<article class="entry">
+
+			<header class="entry-header">
+				<div style="float: right; font-size: 1.5em; color: gray"><%= post.attributes[:date] %></div>
+			  <h2><%= post.attributes[:title] %></h2>
+			</header>
+
+			<div class="entry-content">
+				<p><%= post.attributes[:lede] %></p>
+				<p><a href="<%= post.identifier %>" class="button">Read more &rarr;</a></p>
+		  </div>
+
+		</article>
+
+	<% end %>
+
+</div>
+

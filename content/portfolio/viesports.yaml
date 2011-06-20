@@ -1,0 +1,12 @@
+--- 
+title: VIE Golfathon
+date: 2011-03
+url: http://www.viesports.com
+screenshot: /images/portfolio/viesports-screenshot.png
+role: |
+  <strong>Lead Software Engineer</strong><br/>
+  Built for <a href="http://copio.us/">Copious</a>
+description: |
+  Golfathon allows people to support their favorite charitable organizations by sponsoring players in golf fundraisers.
+contribution: |
+  VIE Sports chose Copious to develop golfathon, with whom I lead development. Coordinating with a talented team, I designed and built out the backend of the site, including login with facebook and twitter. We delivered on time and on spec, with full test coverage and build automation.

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+	<channel>
+		<title>Dann Stayskal</title>
+		<link>http://dann.stayskal.com/</link>
+		<managingEditor>dann@stayskal.com (Dann Stayskal)</managingEditor>
+		<webMaster>dann@stayskal.com (Dann Stayskal)</webMaster>
+		<description>Dann Stayskal's Articles</description>
+
+		<language>en-us</language>
+
+		<lastBuildDate><%= Time.now.rfc2822 %></lastBuildDate>
+		<ttl>60</ttl>
+
+		<generator>http://github.com/danndalf/dann.stayskal.com/</generator>
+		<copyright>Copyright 1998-2011 Dann Stayskal. Unless otherwise noted, all content on this site is available under the Creative Commons BY-NC-SA 3.0 license.</copyright>
+
+		<% items.select{|i| i.identifier =~ /\/blog\/.+/}.sort{|a,b| b.attributes[:date] <=> a.attributes[:date]}[0..39].each do |post| %>
+			<item>
+				<title><%= post.attributes[:title] %></title>
+				<link>http://dann.stayskal.com<%= post.identifier %></link>
+				<guid>http://dann.stayskal.com<%= post.identifier %></guid>
+				<description><%= CGI.escapeHTML("<p>#{post.attributes[:lede]}</p><p><a href=\"http://dann.stayskal.com#{post.identifier}\">Read more &rarr;</a></p>") %></description>
+				<pubDate><%= Time.parse(post.attributes[:date].to_s).rfc2822 %></pubDate>
+			</item>
+		<% end %>
+	</channel>
+</rss>
