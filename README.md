@@ -33,7 +33,6 @@ This will autocompile any changes made to the build and make them available thro
 TODO
 ----
 
-* Update rsync deploy route
 * Move photography assets into S3
 * Integrate automatic HTML, CSS, and RSS validations
 
