@@ -8,18 +8,20 @@ Installation
 
 Prerequisites: [OpenSSH](http://www.openssh.com/), [Rsync](http://rsync.samba.org/), [Ruby](http://www.ruby-lang.org/), [RubyGems](http://rubygems.org/pages/download), [Ruby Version Manager](https://rvm.beginrescueend.com/), and [Bundler](http://gembundler.com/).
 
-1. Clone this codebase
+First, clone this codebase
 
-	$ git clone https://danndalf@github.com/danndalf/dann.stayskal.com.git
+	$ git clone git@github.com/danndalf/dann.stayskal.com
 
-2. Accept the RVM version and gemset, building Ruby 1.9.2 if you need
+Second, accept the RVM version and gemset, building Ruby 1.9.2 if you need
 
 	$ rvm install ruby-1.9.2-p180
 
-3. Install Bundler and the rest of the gemset
+Finally, install Bundler and the rest of the gemset
 
 	$ gem install bundler
 	$ bundle install
+
+At this point, you're ready to make changes.
 
 Maintenance
 -----------
