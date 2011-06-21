@@ -37,7 +37,6 @@ TODO
 
 * Move photography assets into S3
 * Integrate automatic HTML, CSS, and RSS validations
-* Link blog article titles to blog display pages
 
 Deployment
 ----------
