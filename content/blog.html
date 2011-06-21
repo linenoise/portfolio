@@ -10,7 +10,7 @@ title: Blog
 
 			<header class="entry-header">
 				<div style="float: right; font-size: 1.5em; color: gray"><%= post.attributes[:date] %></div>
-			  <h2><%= post.attributes[:title] %></h2>
+				<h2><a href="<%= post.identifier %>"><%= post.attributes[:title] %></a></h2>
 			</header>
 
 			<div class="entry-content">
