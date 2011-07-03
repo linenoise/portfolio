@@ -1216,6 +1216,9 @@ ul.social-icons li.facebook a  { background-image: url(../images/social_icons/fa
 .social-widget ul li.flickr a,
 ul.social-icons li.flickr a    { background-image: url(../images/social_icons/flickr.png); }
 
+.social-widget ul li.googleplus a,
+ul.social-icons li.googleplus a    { background-image: url(../images/social_icons/googleplus.png); }
+
 .social-widget ul li.lastfm a,
 ul.social-icons li.lastfm a    { background-image: url(../images/social_icons/lastfm.png); }
 
