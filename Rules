@@ -12,7 +12,7 @@ compile '/' do
 end
 
 # Sitemap, RSS feed, and htaccess get filtered with erb, but get no layout.
-compile %r{^/(sitemap|htaccess|feed)/$} do
+compile %r{^/(sitemap|htaccess|feed|card)/$} do
   filter :erb
 end
 
