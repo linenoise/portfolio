@@ -1,0 +1,58 @@
+--- 
+title: Tor Relay Bundle
+byline: This is a software bundle that makes the installation and maintenance of a Tor relay a straightforward process.
+thumbnail: /images/software/tor_relay_bundle_thumbnail.jpg
+---
+
+<div id="content" class="two-third">
+
+	<article class="entry">
+	     <header class="entry-header">
+	       <div class="entry-featured-content">
+			<h3>Setup a new Tor relay in minutes</h3>
+	       </div>
+	     </header>
+     
+	     <div class="entry-content">
+       		
+	       <p>
+	           <img class="alignright framed" src="/images/software/tor_relay_bundle_thumbnail.jpg" width="372" height="217" alt="Tor Relay Bundle Thumbnail" />
+	     	Relays are the heart of the <a href="http://torproject.org/">Tor network</a>, and every bit of bandwidth counts.  If you want to run a non-exit Tor relay, this code can set that up for you in minutes.
+	       </p>
+ 
+ 	       <div class="alignright small content-frame last">
+	         <ul class="checklist top bottom">
+	           <li>No root required</li>
+	           <li>Perl, curl, OpenSSL, and GCC</li>
+	           <li>Running in around ten minutes</li>
+	         </ul>
+	       </div>
+       
+	       <h3>Setup is simple:</h3>
+
+	       <p>1. Create a directory for the relay to run in:</p>
+
+			<code>
+				mkdir ~/tor_relay<br />
+				cd ~/tor_relay
+			</code>
+	
+			<p>2. Download this installer:</p>
+
+			<code>
+				curl -O https://raw.github.com/danndalf/tor_relay_bundle/master/setup.pl
+			</code>
+
+			<p>3. Run this installer:</p>
+
+			<code>
+				perl setup.pl
+			</code>
+			
+	     <p>The documentation and source code for Tor Relay Bundle are available on Github:</p>
+
+	     <%= render '_flash_notice', :text => '<strong><a href="http://github.com/danndalf/tor_relay_bundle/">http://github.com/danndalf/tor_relay_bundle/</a></strong>'%>
+
+	  </div>
+	</article>
+</div>
