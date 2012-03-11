@@ -1,28 +1,188 @@
-<!doctype html>
-<html lang="en-US">
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
   <head>
     <title>Dann Stayskal - <%= @item[:title] %></title>
 
-    <%= render '_html_head' %>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="description" content="<%= @item[:title] %>" />
+    <meta name="author" content="Dann Stayskal">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="stylesheets/base.css">
+    <link rel="stylesheet" href="stylesheets/skeleton.css">
+    <link rel="stylesheet" href="stylesheets/layout.css">
+
+    <!-- Alternates -->
+    <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://dann.stayskal.com/feed/" />
+
+    <!-- Shims -->
+    <!--[if lt IE 9]>
+      <script src="/javascript/html5shim.js"></script>
+    <![endif]-->
+
+    <!-- Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
 
   </head>
   <body class="button-nav <% unless @item[:sidebar] %>fullwidth <% end %>minimal">
     <div id="body-container">
 
-      <%= render '_html_header_and_nav' %>
+      <header class="main">
+        <div class="wrapper">
+          <h1 id="logo">
+            <a href="/">Dann Stayskal</a>
+          </h1>
+          <nav class="main">
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/blog/">Blog</a></li>
+              <li><a href="/books/">Books</a>
+                <ul>
+                  <li><a href="/books/owning_conversation/">Owning Conversation</a></li>
+                  <li><a href="/books/the_visceral_society/">The Visceral Society</a></li>
+                </ul>
+              </li>
+              <li><a href="/music/">Music</a></li>
+              <li><a href="/photos/">Photos</a></li>
+              <li><a href="/software/">Software</a>
+                <ul>
+                  <li><a href="/software/asemica/">Asemica</a></li>
+                  <li><a href="/software/infoshop/">Infoshop</a></li>
+                  <li><a href="/software/nagios_plugins/">Nagios Plugins</a></li>
+                  <li><a href="/software/sevenn/">Sevenn</a></li>
+                </ul>
+              </li>
+              <li><a href="/about/">About</a>
+                <ul>
+                  <li><a href="/portfolio/">Portfolio</a></li>
+                  <li><a href="/vitae/">Vitae / Resume</a></li>
+            <li><a href="/superpowers/">Superpowers</a></li>
+            <li><a href="/calendar/">Calendar</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        
+        </div>
+        <!-- END .wrapper -->
+      </header>
       
-      <%= render '_topbar_punchline' %>
-      
+      <%= @item[:title] %>
+
       <div id="main">
         <div class="wrapper with-overflow">
           <%= yield %>
         </div>
       </div>
       
-      <%= render '_html_footer' %>
+      <footer class="main">
+        <div class="wrapper with-overflow">
+          
+          <aside class="widget contact-widget one-fourth">
+            <h3 class="widget-title">Contact</h3>
+            <div class="widget-content">
+              <p class="vcard">
+                <span class="fn">Dann Stayskal</span><br/>
+                <span class="adr">
+                  <span class="locality">Portland</span>,
+                  <span class="region">OR</span> 
+                  <br/>
+                </span>
+                <span class="small spacer"></span>
+                Voice: <span class="phone">(503) 217-4104</span><br/>
+                Email: <span class="email"><a href="mailto:dann@stayskal.com">dann@stayskal.com</a></span><br/>
+                GPG/PGP: <a href="/crypto/93F904B0.asc">0x93F904B0</a>
+              </p>
+            </div>
+          </aside>
+          
+          
+          <aside class="widget contact-widget one-fourth">
+            <h3 class="widget-title">vCard</h3>
+            <div class="widget-content">
+                <img src="/images/dann-stayskal-vcard-qrcode.png" class="alignleft" width="115" height="115" alt="Dann Stayskal's vCard QR Code" />
+            </div>
+          </aside>
+          
+          
+          <aside class="widget contact-widget one-fourth">
+            <h3 class="widget-title">Copyright</h3>
+            <div class="widget-content">
+              <em>&copy; 1998-2011 Dann Stayskal.</em><br/>
+              <img alt="Creative Commons License" style="margin: 15px 15px 10px 0px" src="/images/cc_by_nc_sa.png" class="alignleft" />
+              Unless otherwise noted, all content on this site is available under the Creative Commons <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/us/">BY-NC-SA 3.0</a> license.
+            <!-- 
+            <rdf:RDF xmlns="http://creativecommons.org/ns#"
+             xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                  <License rdf:about="http://creativecommons.org/licenses/by-nc-sa/3.0/us/">
+                    <permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+                    <permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+                    <requires rdf:resource="http://creativecommons.org/ns#Notice"/>
+                    <requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
+                    <prohibits rdf:resource="http://creativecommons.org/ns#CommercialUse"/>
+                    <permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+                    <requires rdf:resource="http://creativecommons.org/ns#ShareAlike"/>
+                  </License>
+                </rdf:RDF>
+             -->
+            </div>
+          </aside>
+          
+          
+          <aside class="widget social-widget one-fourth last">
+            <h3 class="widget-title">Social Networks</h3>
+            <div class="widget-content">
+              <ul>
+                <li class="twitter"><a href="https://twitter.com/danndalf">Twitter</a></li>
+                <li class="facebook"><a href="https://www.facebook.com/dann.stayskal">Facebook</a></li>
+                <li class="googleplus"><a href="https://plus.google.com/106058554721926025402">Google+</a></li>
+                <li class="linkedin"><a href="https://www.linkedin.com/in/dannstayskal">LinkedIn</a></li>
+                <li class="github"><a href="https://www.github.com/danndalf/">Github</a></li>
+              </ul>
+            </div>
+          </aside>
+          
+          
+          <div class="divider"></div>
+          
+        </div>
+      </footer>
         
-      <%= render '_html_footerbar' %>
-    
+      <section id="footerbar">
+        <div class="wrapper with-overflow">
+          
+          <div class="primary">
+            This site is open source.  Its source code is available at <a href="http://github.com/danndalf/portfolio">on github</a>.
+          </div>
+           
+          <div class="secondary">
+            <nav>
+              <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/books/">Books</a>
+                <li><a href="/music/">Music</a></li>
+                <li><a href="/photos/">Photos</a></li>
+                <li><a href="/software/">Software</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/colophon/">Colophon</a></li>
+                <li><a href="/feed/">RSS Feed</a></li>
+              </ul>
+            </nav>
+          </div>   
+          
+        </div>
+      </section>
+
+
     </div>
   </body>
 </html>
