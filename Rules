@@ -8,7 +8,7 @@ end
 
 compile '/' do
   filter :erb
-  layout 'welcome'
+  layout 'default'
 end
 
 # Sitemap, RSS feed, and htaccess get filtered with erb, but get no layout.
