@@ -1,4 +1,26 @@
-/* Fonts */
+/*
+* layout.css
+* Copyright 2011, Dann Stayskal
+* http://dann.stayskal.com/ and dann@stayskal.com
+* Free to use under the Creative Commons BY-NC-SA license
+* http://creativecommons.org/licenses/by-nc-sa/3.0/us/
+*/
+
+
+/* Table of Content
+==================================================
+    #Font Faces
+    #Typography
+    #Header
+    #Navigation 
+    #Page Styles
+    #Footer
+    #Media Queries
+*/
+
+
+/* #Fonts (@font-face declarations by FontSquirrel)
+================================================== */
 
 @font-face {
     font-family: 'Fjord';
@@ -44,124 +66,83 @@
     font-style: normal;
 }
 
-/* Typography */
 
-body, h1, h2, h3, h4, h5, p, tr, th, td { font-family: 'Open Sans Regular'; }
-em { font-family: 'Open Sans Italic'; }
-strong { font-family: 'Open Sans Bold'; }
+/* #Typography
+================================================== */
 
-h1 { font-size: 180%; font-family: 'Open Sans Bold'; }
-h2 { font-size: 150%; font-family: 'Open Sans Bold'; }
-h3 { font-size: 130%; font-family: 'Open Sans Italic'; }
-h4 { font-size: 130%; font-family: 'Open Sans Bold'; }
-h5 { font-size: 100%; font-family: 'Open Sans Bold'; }
+body, h1, h2, h3, h4, h5, p, tr, th, td         { font-family: 'Open Sans Regular'; }
+em                                              { font-family: 'Open Sans Italic'; }
+strong                                          { font-family: 'Open Sans Bold'; }
 
-
-/* Header */
-
-header.site{
-        margin: 10px 0px 10px 0px;
-}
-
-header img {
-        padding: 10px 10px 4px 0px;
-}
-header h1 a {
-        text-decoration: none;
-}
-
-/* Navigation*/
-
-nav  {
-        display: block;
-        overflow: hidden;
-        position: absolute;
-        right: 10px;
-}
-
-nav ul {
-        float: left;
-        display: block;
-        margin: 10px 0 10px 0;
-        padding: 0em;
-        list-style: none;
-}
-nav li {
-        float:left;
-        font-family: 'Open Sans Regular';
-}
-
-nav a, nav a:visited {
-        float:left;
-        padding: 20px 20px 18px 20px;
-        text-decoration: none;
-        letter-spacing: 1px;
-        background: #eee;
-        color: black;
-        display: block;
- }
-
-nav a:hover, nav a:focus {
-        outline: 0;
-        color: #A7C520;
-}
+h1                                              { font-size: 180%; font-family: 'Open Sans Bold'; }
+h2                                              { font-size: 150%; font-family: 'Open Sans Bold'; }
+h3                                              { font-size: 130%; font-family: 'Open Sans Italic'; }
+h4                                              { font-size: 130%; font-family: 'Open Sans Bold'; }
+h5                                              { font-size: 100%; font-family: 'Open Sans Bold'; }
 
 
-/* Page Styles */
+/* #Header
+================================================== */
+
+header.site                                     { margin: 10px 0px 10px 0px; }
+header img                                      { padding: 10px 10px 4px 0px; }
+header h1 a                                     { text-decoration: none; }
 
 
-/* Footer Styles */
+/* #Navigation
+================================================== */
 
-footer aside {
-        background: #EEE;
-        height: 200px;
-        margin-bottom: 20px;
-}
-
-footer aside h4 {
-        margin: 20px 20px 0px 20px;
-}
-
-footer aside p {
-        margin: 10px 20px;
-}
-
-footer .social {
-        height: 40px;
-        width: 940px;
-        margin-bottom: 20px;
-}
-
-footer .social h4, footer .social a {
-        display: block;
-        float: left;
-        margin: 10px 20px;
-        padding: 0px;
-}
-footer .social h4 {
-        margin: 5px 20px;
-}
-footer .social a {
-        text-decoration: none;
-}
+nav                                             { display: block; overflow: hidden; position: absolute; right: 10px; }
+nav ul                                          { float: left; display: block; margin: 10px 0 10px 0; padding: 0em; list-style: none; }
+nav li                                          { float:left; font-family: 'Open Sans Regular'; }
+nav a, nav a:visited                            { float:left; padding: 20px 20px 18px 20px; text-decoration: none; letter-spacing: 1px; background: #eee; color: black; display: block; }
+nav a:hover, nav a:focus                        { outline: 0; color: #A7C520; }
 
 
-/* Media Queries */
+/* #Page Styles
+================================================== */
+
+
+
+/* #Footer
+================================================== */
+
+footer aside                                    { background: #EEE; height: 200px; margin-bottom: 20px; }
+footer aside h4                                 { margin: 20px 20px 0px 20px; }
+footer aside p                                  { margin: 10px 20px; }
+footer .social                                  { height: 40px; width: 940px; margin-bottom: 20px; }
+footer .social h4, footer .social a             { display: block; float: left; margin: 10px 20px; padding: 0px; }
+footer .social h4                               { margin: 5px 20px; }
+footer .social a                                { text-decoration: none; }
+
+
+/* #Media Queries
+================================================== */
 
 /* Smaller than standard 960 (devices and browsers) */
-@media only screen and (max-width: 959px) {}
+@media only screen and (max-width: 959px) {
+
+}
 
 /* Tablet Portrait size to standard 960 (devices and browsers) */
-@media only screen and (min-width: 768px) and (max-width: 959px) {}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+
+}
 
 /* All Mobile Sizes (devices and browser) */
-@media only screen and (max-width: 767px) {}
+@media only screen and (max-width: 767px) {
+
+}
 
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
-@media only screen and (min-width: 480px) and (max-width: 767px) {}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+}
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
-@media only screen and (max-width: 479px) {}
+@media only screen and (max-width: 479px) {
+
+}
 
 /* Print media */
 @media print {
