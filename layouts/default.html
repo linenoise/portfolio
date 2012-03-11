@@ -13,10 +13,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="stylesheets/base.css">
-    <link rel="stylesheet" href="stylesheets/skeleton.css">
-    <link rel="stylesheet" href="stylesheets/layout.css">
-    <link rel="stylesheet" href="stylesheets/media.css">
+    <link rel="stylesheet" href="/stylesheets/base.css">
+    <link rel="stylesheet" href="/stylesheets/skeleton.css">
+    <link rel="stylesheet" href="/stylesheets/layout.css">
+    <link rel="stylesheet" href="/stylesheets/media.css">
 
     <!-- Alternates -->
     <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://dann.stayskal.com/feed/" />
@@ -27,143 +27,117 @@
     <![endif]-->
 
     <!-- Icons -->
-    <link rel="shortcut icon" href="images/favicon.ico">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="apple-touch-icon" href="i/mages/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png">
+
+    <!-- OpenID Delegate -->
+    <link rel="openid.server" href="http://www.myopenid.com/server" />
+    <link rel="openid.delegate" href="http://dannstayskal.myopenid.com/" />
+    <link rel="openid2.local_id" href="http://dannstayskal.myopenid.com" />
+    <link rel="openid2.provider" href="http://www.myopenid.com/server" />
+    <meta http-equiv="X-XRDS-Location" ycontent="http://www.myopenid.com/xrds?username=dannstayskal.myopenid.com" />
   </head>
   <body>
     <div class="container">
-      <header>
+      <header class="site clearfix">
         <div class="one-third column">
-          <h1 class="remove-bottom"><a href="/">Dann Stayskal</a></h1>
-          <h5>Portfolio of a digital craftsman</h5>
-          <hr />
+          <a href="/"><img src="/images/logo.png" alt="Dann Stayskal" /></a>
         </div>
         <div class="two-thirds column">
           <nav>
             <ul>
-              <li><a href="/blog/">Blog</a></li>
-              <li><a href="/software/">Software</a></li>
-              <li><a href="/books/">Books</a>
-              <li><a href="/music/">Music</a></li>
-              <li><a href="/photos/">Photos</a></li>
-              <li><a href="/about/">About</a></li>
+              <li><a href="/books/">books</a>
+              <li><a href="/music/">music</a></li>
+              <li><a href="/software/">software</a></li>
+              <li><a href="/photos/">photos</a></li>
+              <li><a href="/about/">about</a></li>
             </ul>
           </nav>
         </div>
       </header>
+
+      <% if @item[:title] %>
+      <div class="column">
+        <h1><%= @item[:title] %></h1>
+      </div>
+      <% end %>
       
       <div class="sixteen columns">
+        <%= yield %>
+      </div>        
 
-        <%= @item[:title] %>
-
-        <div id="main">
-          <div class="wrapper with-overflow">
-            <%= yield %>
-          </div>
-        </div>
-        
-        <footer class="main">
-          <div class="wrapper with-overflow">
-            
-            <aside class="widget contact-widget one-fourth">
-              <h3 class="widget-title">Contact</h3>
-              <div class="widget-content">
-                <p class="vcard">
-                  <span class="fn">Dann Stayskal</span><br/>
-                  <span class="adr">
-                    <span class="locality">Portland</span>,
-                    <span class="region">OR</span> 
-                    <br/>
-                  </span>
-                  <span class="small spacer"></span>
-                  Voice: <span class="phone">(503) 217-4104</span><br/>
-                  Email: <span class="email"><a href="mailto:dann@stayskal.com">dann@stayskal.com</a></span><br/>
-                  GPG/PGP: <a href="/crypto/93F904B0.asc">0x93F904B0</a>
-                </p>
-              </div>
-            </aside>
-            
-            
-            <aside class="widget contact-widget one-fourth">
-              <h3 class="widget-title">vCard</h3>
-              <div class="widget-content">
-                  <img src="/images/dann-stayskal-vcard-qrcode.png" class="alignleft" width="115" height="115" alt="Dann Stayskal's vCard QR Code" />
-              </div>
-            </aside>
-            
-            
-            <aside class="widget contact-widget one-fourth">
-              <h3 class="widget-title">Copyright</h3>
-              <div class="widget-content">
-                <em>&copy; 1998-2011 Dann Stayskal.</em><br/>
-                <img alt="Creative Commons License" style="margin: 15px 15px 10px 0px" src="/images/cc_by_nc_sa.png" class="alignleft" />
-                Unless otherwise noted, all content on this site is available under the Creative Commons <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/us/">BY-NC-SA 3.0</a> license.
-              <!-- 
-              <rdf:RDF xmlns="http://creativecommons.org/ns#"
-               xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-                    <License rdf:about="http://creativecommons.org/licenses/by-nc-sa/3.0/us/">
-                      <permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
-                      <permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
-                      <requires rdf:resource="http://creativecommons.org/ns#Notice"/>
-                      <requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
-                      <prohibits rdf:resource="http://creativecommons.org/ns#CommercialUse"/>
-                      <permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
-                      <requires rdf:resource="http://creativecommons.org/ns#ShareAlike"/>
-                    </License>
-                  </rdf:RDF>
-               -->
-              </div>
-            </aside>
-            
-            
-            <aside class="widget social-widget one-fourth last">
-              <h3 class="widget-title">Social Networks</h3>
-              <div class="widget-content">
-                <ul>
-                  <li class="twitter"><a href="https://twitter.com/danndalf">Twitter</a></li>
-                  <li class="facebook"><a href="https://www.facebook.com/dann.stayskal">Facebook</a></li>
-                  <li class="googleplus"><a href="https://plus.google.com/106058554721926025402">Google+</a></li>
-                  <li class="linkedin"><a href="https://www.linkedin.com/in/dannstayskal">LinkedIn</a></li>
-                  <li class="github"><a href="https://www.github.com/danndalf/">Github</a></li>
-                </ul>
-              </div>
-            </aside>
-            
-            
-            <div class="divider"></div>
-            
-          </div>
-        </footer>
+      <footer class="clearfix">
           
-        <section id="footerbar">
-          <div class="wrapper with-overflow">
-            
-            <div class="primary">
-              This site is open source.  Its source code is available at <a href="http://github.com/danndalf/portfolio">on github</a>.
-            </div>
-             
-            <div class="secondary">
-              <nav>
-                <ul>
-                  <li><a href="/">Home</a></li>
-                  <li><a href="/blog/">Blog</a></li>
-                  <li><a href="/books/">Books</a>
-                  <li><a href="/music/">Music</a></li>
-                  <li><a href="/photos/">Photos</a></li>
-                  <li><a href="/software/">Software</a></li>
-                  <li><a href="/about/">About</a></li>
-                  <li><a href="/colophon/">Colophon</a></li>
-                  <li><a href="/feed/">RSS Feed</a></li>
-                </ul>
-              </nav>
-            </div>   
-            
-          </div>
-        </section>
+        <aside class="social column">
+          <h4>Social Networks</h4>
+          <a href="https://joindiaspora.com/people/261750">Diaspora</a>
+          <a href="https://www.facebook.com/dann.stayskal">Facebook</a>
+          <a href="http://www.flickr.com/photos/danndalf">Flickr</a>
+          <a href="https://www.github.com/danndalf/">Github</a>
+          <a href="https://plus.google.com/106058554721926025402">Google+</a>
+          <a href="https://www.linkedin.com/in/dannstayskal">LinkedIn</a>
+          <a href="http://reddit.com/user/danndalf">Reddit</a>
+          <a href="https://twitter.com/danndalf">Twitter</a>
+        </aside>
 
-      </div>
+        <aside class="one-third column">
+          <h4>Contact</h4>
+          <p class="vcard">
+            <span class="fn">Dann Stayskal</span><br/>
+            <span class="adr">
+              <span class="locality">Portland</span>,
+              <span class="region">OR</span> 
+              <br/>
+            </span>
+            <span class="small spacer"></span>
+            Voice: <span class="phone">(503) 217-4104</span><br/>
+            Email: <span class="email"><a href="mailto:dann@stayskal.com">dann@stayskal.com</a></span><br/>
+            GPG/PGP: <a href="/crypto/93F904B0.asc">0x93F904B0</a>
+          </p>
+        </aside>
+          
+        <aside class="one-third column">
+          <h4>Copyright</h4>
+          <p>
+            <em>&copy; 1998-2011 Dann Stayskal.</em>
+          </p>
+          <p>
+            Unless otherwise noted, all content on this site is available under the Creative Commons <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/us/">BY-NC-SA 3.0</a> license.
+            <!-- 
+            <rdf:RDF xmlns="http://creativecommons.org/ns#"
+             xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                  <License rdf:about="http://creativecommons.org/licenses/by-nc-sa/3.0/us/">
+                    <permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+                    <permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+                    <requires rdf:resource="http://creativecommons.org/ns#Notice"/>
+                    <requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
+                    <prohibits rdf:resource="http://creativecommons.org/ns#CommercialUse"/>
+                    <permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+                    <requires rdf:resource="http://creativecommons.org/ns#ShareAlike"/>
+                  </License>
+                </rdf:RDF>
+             -->
+          </p>
+        </aside>
+          
+        <aside class="one-third column">
+          <h4>Open Source</h4>
+          <p>
+            This site is open source.  Its source code is available at <a href="http://github.com/danndalf/portfolio">on github</a>.
+          </p>
+          <p>
+            <a href="/colophon/">Colophon</a>
+          </p>
+          <p>
+            <a href="/feed/">RSS Feed</a>
+          </p>
+        </aside>
+
+      </footer>
+    
     </div>
+
   </body>
 </html>

@@ -1,76 +1,148 @@
 /* Fonts */
 
+/* Won't need Flord until styling book chapters 
+    @font-face {
+    font-family: 'Fjord';
+    src: url('../fonts/fjord/FjordOne-Regular-webfont-eot.eot');
+    src: url('../fonts/fjord/FjordOne-Regular-webfont-eot.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/fjord/FjordOne-Regular-webfont-woff.woff') format('woff'),
+         url('../fonts/fjord/FjordOne-Regular-webfont-ttf.ttf') format('truetype'),
+         url('../fonts/fjord/FjordOne-Regular-webfont-svg.svg#FjordOne') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+*/
+
+@font-face {
+    font-family: 'Open Sans Regular';
+    src: url('../fonts/open-sans/OpenSans-Regular-webfont-eot.eot');
+    src: url('../fonts/open-sans/OpenSans-Regular-webfont-eot.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/open-sans/OpenSans-Regular-webfont-woff.woff') format('woff'),
+         url('../fonts/open-sans/OpenSans-Regular-webfont-ttf.ttf') format('truetype'),
+         url('../fonts/open-sans/OpenSans-Regular-webfont-svg.svg#FjordOne') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans Bold';
+    src: url('../fonts/open-sans/OpenSans-Bold-webfont-eot.eot');
+    src: url('../fonts/open-sans/OpenSans-Bold-webfont-eot.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/open-sans/OpenSans-Bold-webfont-woff.woff') format('woff'),
+         url('../fonts/open-sans/OpenSans-Bold-webfont-ttf.ttf') format('truetype'),
+         url('../fonts/open-sans/OpenSans-Bold-webfont-svg.svg#FjordOne') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans Italic';
+    src: url('../fonts/open-sans/OpenSans-Italic-webfont-eot.eot');
+    src: url('../fonts/open-sans/OpenSans-Italic-webfont-eot.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/open-sans/OpenSans-Italic-webfont-woff.woff') format('woff'),
+         url('../fonts/open-sans/OpenSans-Italic-webfont-ttf.ttf') format('truetype'),
+         url('../fonts/open-sans/OpenSans-Italic-webfont-svg.svg#FjordOne') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Typography */
+
+body, h1, h2, h3, h4, h5, p, tr, th, td { font-family: 'Open Sans Regular'; }
+em { font-family: 'Open Sans Italic'; }
+strong { font-family: 'Open Sans Bold'; }
+
+h1 { font-size: 180%; font-family: 'Open Sans Bold'; }
+h2 { font-size: 150%; font-family: 'Open Sans Bold'; }
+h3 { font-size: 130%; font-family: 'Open Sans Italic'; }
+h4 { font-size: 130%; font-family: 'Open Sans Bold'; }
+h5 { font-size: 100%; font-family: 'Open Sans Bold'; }
 
 
 /* Header */
 
+header.site{
+        margin: 10px 0px 10px 0px;
+}
 
+header img {
+        padding: 10px 10px 4px 0px;
+}
+header h1 a {
+        text-decoration: none;
+}
 
 /* Navigation*/
 
 nav  {
         display: block;
         overflow: hidden;
+        position: absolute;
+        right: 10px;
 }
 
 nav ul {
         float: left;
-/*        margin: 80px 0 20px 0;
-        padding: .7em;
-        list-style: none; */
+        display: block;
+        margin: 10px 0 10px 0;
+        padding: 0em;
+        list-style: none;
 }
 nav li {
         float:left;
+        font-family: 'Open Sans Regular';
 }
 
-/*
-
-nav a {
+nav a, nav a:visited {
         float:left;
-        padding: .8em 1.5em;
+        padding: 20px 20px 18px 20px;
         text-decoration: none;
-        color: #555;
         letter-spacing: 1px;
-        text-transform: uppercase;
-        border-width: 1px;
-        border-style: solid;
-        border-color: #fff #ccc #999 #eee;
-        background: #c1c1c1;
+        background: #eee;
+        color: black;
+        display: block;
  }
 
 nav a:hover, nav a:focus {
         outline: 0;
-        color: #fff;
-        text-shadow: 0 1px 0 rgba(0,0,0,.2);
-        background: #fac754;
-        background: -moz-linear-gradient(#fac754, #f8ac00);
-        background: -webkit-gradient(linear, left top, left bottom, from(#fac754), to(#f8ac00));
-        background: -webkit-linear-gradient(#fac754, #f8ac00);
-        background: -o-linear-gradient(#fac754, #f8ac00);
-        background: -ms-linear-gradient(#fac754, #f8ac00);
-        background: linear-gradient(#fac754, #f8ac00);
+        color: #A7C520;
 }
 
-nav a:active {
-        -moz-box-shadow: 0 0 2px 2px rgba(0,0,0,.3) inset;
-        -webkit-box-shadow: 0 0 2px 2px rgba(0,0,0,.3) inset;
-        box-shadow: 0 0 2px 2px rgba(0,0,0,.3) inset;
-}
 
-nav li:first-child a {
-        border-left: 0;
-        -moz-border-radius: 4px 0 0 4px;
-        -webkit-border-radius: 4px 0 0 4px;
-        border-radius: 4px 0 0 4px;
-}
-
-nav li:last-child a {
-        border-right: 0;
-        -moz-border-radius: 0 4px 4px 0;
-        -webkit-border-radius: 0 4px 4px 0;
-        border-radius: 0 4px 4px 0;
-}
-
-*/
 /* Page Styles */
 
+
+/* Footer Styles */
+
+footer aside {
+        background: #EEE;
+        height: 200px;
+        margin-bottom: 20px;
+}
+
+footer aside h4 {
+        margin: 20px 20px 0px 20px;
+}
+
+footer aside p {
+        margin: 10px 20px;
+}
+
+footer .social {
+        height: 40px;
+        width: 940px;
+        margin-bottom: 20px;
+}
+
+footer .social h4, footer .social a {
+        display: block;
+        float: left;
+        margin: 10px 20px;
+        padding: 0px;
+}
+footer .social h4 {
+        margin: 5px 20px;
+}
+footer .social a {
+        text-decoration: none;
+}
