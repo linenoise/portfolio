@@ -123,7 +123,8 @@ nav a:hover, nav a:focus                        { outline: 0; color: #A7C520; }
 
 .framed                                         { border: 1px solid #AAA; margin: 5px; padding: 5px; }
 .alignright                                     { float: right; }
-aside.widget                                    { background: #EEE; padding: 5px 0px 10px 0px; margin-bottom: 15px;}
+.alignleft                                      { float: left; }
+aside.widget                                    { background: #EEE; padding: 5px 0px 5px 0px; margin-bottom: 10px;}
 
 
 /* #Page Styles: Blog
@@ -143,6 +144,7 @@ footer .social                                  { min-height: 40px; margin-botto
 footer .social h4, footer .social a             { display: block; float: left; margin: 10px 0px 10px 20px; padding: 0px; }
 footer .social h4                               { margin: 5px 10px 5px 20px; }
 footer .social a                                { text-decoration: none; }
+footer hr                                       { color: #FFF; width: 940px; margin: 20px 10px; }
 
 
 /* #Media Queries: Netbooks
