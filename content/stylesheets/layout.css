@@ -73,6 +73,7 @@
 body, h1, h2, h3, h4, h5, p, tr, th, td         { font-family: 'Open Sans Regular'; }
 em                                              { font-family: 'Open Sans Italic'; }
 strong                                          { font-family: 'Open Sans Bold'; }
+p                                               { margin: 10px 10px 20px 10px; padding: 0px; }
 
 h1                                              { font-size: 180%; font-family: 'Open Sans Bold'; }
 h2                                              { font-size: 150%; font-family: 'Open Sans Bold'; }
@@ -84,9 +85,10 @@ h5                                              { font-size: 100%; font-family: 
 /* #Header
 ================================================== */
 
-header.site                                     { margin: 10px 0px 10px 0px; }
+header.site                                     { margin: 10px 0px 20px 0px; padding-bottom: 10px; border-bottom: 1px solid #A7C520; }
 header img                                      { padding: 10px 10px 4px 0px; }
-header h1 a                                     { text-decoration: none; }
+header h1                                       { margin: 0px; padding: 0px; }
+header h1 a                                     { text-decoration: none; background-image: url("/images/logo.png"); background-position: left center; background-repeat: no-repeat; display: block; height: 56px; width: 275px; text-indent: -9999px; }
 
 
 /* #Navigation
@@ -95,24 +97,26 @@ header h1 a                                     { text-decoration: none; }
 nav                                             { display: block; overflow: hidden; position: absolute; right: 10px; }
 nav ul                                          { float: left; display: block; margin: 10px 0 10px 0; padding: 0em; list-style: none; }
 nav li                                          { float:left; font-family: 'Open Sans Regular'; }
-nav a, nav a:visited                            { float:left; padding: 20px 20px 18px 20px; text-decoration: none; letter-spacing: 1px; background: #eee; color: black; display: block; }
+nav a, nav a:visited                            { float:left; padding: 20px 20px 18px 20px; text-decoration: none; letter-spacing: 1px; color: black; display: block; }
 nav a:hover, nav a:focus                        { outline: 0; color: #A7C520; }
 
 
 /* #Page Styles
 ================================================== */
 
+.intro                                          { margin-bottom: 20px; }
 
 
 /* #Footer
 ================================================== */
 
-footer aside                                    { background: #EEE; height: 200px; margin-bottom: 20px; }
+footer aside                                    { background: #EEE; margin-bottom: 20px !important; }
+footer aside.one-third                          { height: 200px; }
 footer aside h4                                 { margin: 20px 20px 0px 20px; }
 footer aside p                                  { margin: 10px 20px; }
-footer .social                                  { height: 40px; width: 940px; margin-bottom: 20px; }
-footer .social h4, footer .social a             { display: block; float: left; margin: 10px 20px; padding: 0px; }
-footer .social h4                               { margin: 5px 20px; }
+footer .social                                  { min-height: 40px; margin-bottom: 20px; }
+footer .social h4, footer .social a             { display: block; float: left; margin: 10px 10px; padding: 0px; }
+footer .social h4                               { margin: 5px 10px; }
 footer .social a                                { text-decoration: none; }
 
 
@@ -120,28 +124,40 @@ footer .social a                                { text-decoration: none; }
 ================================================== */
 
 /* Smaller than standard 960 (devices and browsers) */
-@media only screen and (max-width: 959px) {
+@media only screen and                          (max-width: 959px) {
 
 }
 
 /* Tablet Portrait size to standard 960 (devices and browsers) */
-@media only screen and (min-width: 768px) and (max-width: 959px) {
-
-}
+@media only screen and (min-width: 768px) and   (max-width: 959px) { }
 
 /* All Mobile Sizes (devices and browser) */
-@media only screen and (max-width: 767px) {
+@media only screen and                          (max-width: 767px) {
 
+    /* Move nav links below the logo */
+    header .two-thirds.column                   { clear:both; min-height: 70px; }
+    nav a, nav a:visited                        { float: none; padding: 10px 12px; background-color: #eee; margin: 0px 1px; border: 1px solid #ccc; }
+    nav                                         { right: auto; padding-top: 10px; }
+    header.site                                 { border-bottom: none; padding-bottom: 0px; margin-bottom: 0px; }
+
+    /* Bump up the spacing between the content area and footer */
+    footer                                      {margin-top: 20px;}
 }
 
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-
-}
+@media only screen and (min-width: 480px) and   (max-width: 767px) { }
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
-@media only screen and (max-width: 479px) {
+@media only screen and                          (max-width: 479px) {
 
+    /* Switch to the vertical logo */
+    header h1 a                                 { background-image: url("/images/logo-vertical.png"); background-position: center center; background-repeat: no-repeat; display: block; height: 169px; width: 230px; margin-left: 32px; text-indent: -9999px; }
+
+    /* Make nav links horizontal rather than vertical */
+    header .two-thirds.column                   { clear:both; min-height: 245px; }
+    nav li                                      { float: none; margin-bottom: 5px; }   
+    nav ul, nav ul li                           { width: 100%; }
+    nav                                         { right: auto; width: 100%; padding-top: 5px; }
 }
 
 /* Print media */
