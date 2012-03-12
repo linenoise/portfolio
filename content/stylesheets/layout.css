@@ -86,7 +86,7 @@ strong                                          { font-family: 'Open Sans Bold';
 p                                               { margin: 10px 10px 20px 10px; padding: 0px; }
 a, a:active, a:visited, a:hover                 { color: #87A500; text-decoration: none; }
 a:hover                                         { color: #A7C520; }
-a.button                                        { color: black; }
+a.button, a.button:hover                        { color: black; background: #eee;}
 h1, h2, h3, h4, h5                              { margin-left: 10px; font-family: 'Open Sans Bold'; }
 h1                                              { font-size: 180%; margin-bottom: 0px;}
 h2                                              { font-size: 150%; }
