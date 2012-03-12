@@ -38,7 +38,7 @@
     src: url('../fonts/open-sans/OpenSans-Regular-webfont-eot.eot?#iefix') format('embedded-opentype'),
          url('../fonts/open-sans/OpenSans-Regular-webfont-woff.woff') format('woff'),
          url('../fonts/open-sans/OpenSans-Regular-webfont-ttf.ttf') format('truetype'),
-         url('../fonts/open-sans/OpenSans-Regular-webfont-svg.svg#FjordOne') format('svg');
+         url('../fonts/open-sans/OpenSans-Regular-webfont-svg.svg#OpenSans-Regular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -49,7 +49,7 @@
     src: url('../fonts/open-sans/OpenSans-Bold-webfont-eot.eot?#iefix') format('embedded-opentype'),
          url('../fonts/open-sans/OpenSans-Bold-webfont-woff.woff') format('woff'),
          url('../fonts/open-sans/OpenSans-Bold-webfont-ttf.ttf') format('truetype'),
-         url('../fonts/open-sans/OpenSans-Bold-webfont-svg.svg#FjordOne') format('svg');
+         url('../fonts/open-sans/OpenSans-Bold-webfont-svg.svg#OpnSans-Bold') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -60,7 +60,18 @@
     src: url('../fonts/open-sans/OpenSans-Italic-webfont-eot.eot?#iefix') format('embedded-opentype'),
          url('../fonts/open-sans/OpenSans-Italic-webfont-woff.woff') format('woff'),
          url('../fonts/open-sans/OpenSans-Italic-webfont-ttf.ttf') format('truetype'),
-         url('../fonts/open-sans/OpenSans-Italic-webfont-svg.svg#FjordOne') format('svg');
+         url('../fonts/open-sans/OpenSans-Italic-webfont-svg.svg#OpenSans-Italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inconsolata';
+    src: url('../fonts/inconsolata/Inconsolata-webfont-eot.eot');
+    src: url('../fonts/inconsolata/Inconsolata-webfont-eot.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/inconsolata/Inconsolata-webfont-woff.woff') format('woff'),
+         url('../fonts/inconsolata/Inconsolata-webfont-ttf.ttf') format('truetype'),
+         url('../fonts/inconsolata/Inconsolata-webfont-svg.svg#Inconsolata') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -76,13 +87,17 @@ p                                               { margin: 10px 10px 20px 10px; p
 a, a:active, a:visited, a:hover                 { color: #87A500; text-decoration: none; }
 a:hover                                         { color: #A7C520; }
 a.button                                        { color: black; }
-h1, h2, h3, h4, h5                              { margin-left: 10px; font-family: 'Open Sans Bold';}
+h1, h2, h3, h4, h5                              { margin-left: 10px; font-family: 'Open Sans Bold'; }
 h1                                              { font-size: 180%; margin-bottom: 0px;}
 h2                                              { font-size: 150%; }
 h3                                              { font-size: 130%; font-family: 'Open Sans Italic'; }
 h4                                              { font-size: 130%; }
 h5                                              { font-size: 100%; }
 ul                                              { list-style: disc outside; margin-left: 30px; }
+table                                           { margin-left: 10px; }
+td, th                                          { padding: 10px; }
+th                                              { text-align: right; font-family: 'Open Sans Bold'; }
+pre, tt                                         { font-family: 'Inconsolata'; font-size: 115%;}
 
 /* #Header
 ================================================== */
