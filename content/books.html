@@ -2,21 +2,15 @@
 title: Books
 ---
 
-<div id="content" class="two-third">
 <% book_count = 0 %>
-<% @item.children.sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.each do |book| %>
-	
+<% @item.children.sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.each do |book| %>	
 	<% book_count = book_count + 1 %>
 
-	<%= render '_content_column', 
-		:width => 'one-third', 
-		:heading => book.attributes[:title], 
-		:content => book.attributes[:byline],
-		:read_more_url => book.identifier,
-		:leader_thumbnail => book.attributes[:thumbnail], 
-		:leader_alt_text => book.attributes[:title] + ' cover image',
-		:last => (book_count % 3 == 0)
-	%>
+	<div class='one-third column'>
+		<a href="<%= book.identifier %>"><img class="framed" src="<%= book.attributes[:cover]%>" alt="<%= book.attributes[:title] + ' cover image'%>" /></a>
+		<h2><%= book.attributes[:title] %></h2>
+		<p><%= book.attributes[:byline] %></p>
+		<p><a class="button" href="<%= book.identifier %>">Read More</a></p>
+	</div>
 	
 <% end %> 
-</div>
