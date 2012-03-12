@@ -140,8 +140,8 @@ footer aside.one-third                          { height: 200px; }
 footer aside h4                                 { margin: 20px 20px 0px 20px; }
 footer aside p                                  { margin: 10px 20px; }
 footer .social                                  { min-height: 40px; margin-bottom: 20px; }
-footer .social h4, footer .social a             { display: block; float: left; margin: 10px 10px; padding: 0px; }
-footer .social h4                               { margin: 5px 10px; }
+footer .social h4, footer .social a             { display: block; float: left; margin: 10px 0px 10px 20px; padding: 0px; }
+footer .social h4                               { margin: 5px 10px 5px 20px; }
 footer .social a                                { text-decoration: none; }
 
 
@@ -162,7 +162,8 @@ footer .social a                                { text-decoration: none; }
     header.site                                 { border-bottom: none; padding-bottom: 0px; margin-bottom: 0px; }
 
     /* Bump up the spacing between the content area and footer */
-    footer                                      {margin-top: 20px;}
+    footer                                      { margin-top: 20px; }
+
 }
 
 
