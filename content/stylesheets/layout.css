@@ -14,7 +14,7 @@
     #Header
     #Navigation 
     #Page Styles
-        #Welcome
+        #Blog
         #Books
         #Music
         #Software
@@ -86,12 +86,14 @@ strong                                          { font-family: 'Open Sans Bold';
 p                                               { margin: 10px 10px 20px 10px; padding: 0px; }
 a, a:active, a:visited, a:hover                 { color: #87A500; text-decoration: none; }
 a:hover                                         { color: #A7C520; }
-h1                                              { font-size: 180%; font-family: 'Open Sans Bold'; }
-h2                                              { font-size: 150%; font-family: 'Open Sans Bold'; }
+a.button                                        { color: black; }
+h1, h2, h3, h4, h5                              { margin-left: 10px; font-family: 'Open Sans Bold';}
+h1                                              { font-size: 180%; margin-bottom: 0px;}
+h2                                              { font-size: 150%; }
 h3                                              { font-size: 130%; font-family: 'Open Sans Italic'; }
-h4                                              { font-size: 130%; font-family: 'Open Sans Bold'; }
-h5                                              { font-size: 100%; font-family: 'Open Sans Bold'; }
-
+h4                                              { font-size: 130%; }
+h5                                              { font-size: 100%; }
+ul                                              { list-style: disc outside; margin-left: 30px; }
 
 /* #Header
 ================================================== */
@@ -112,10 +114,10 @@ nav a, nav a:visited                            { float:left; padding: 20px 20px
 nav a:hover, nav a:focus                        { outline: 0; color: #A7C520; }
 
 
-/* #Page Styles
+/* #Page Styles: Blog
 ================================================== */
 
-.intro                                          { margin-bottom: 20px; }
+article header.blog .date                       { float: right; padding-right: 20px; font-size: 120%; color: gray; }
 
 
 /* #Footer
