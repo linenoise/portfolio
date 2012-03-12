@@ -219,5 +219,10 @@ footer hr                                       { color: #FFF; width: 940px; mar
 
 /* #Media Queries: Printers
 ================================================== */
-@media print {  }
+@media print {
+
+    /* Hide the headers and footers */
+    header.site, footer                         { display:none !important; }
+
+}
 
