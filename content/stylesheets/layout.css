@@ -88,7 +88,7 @@ a, a:active, a:visited, a:hover                 { color: #87A500; text-decoratio
 a:hover                                         { color: #A7C520; }
 a.button, a.button:hover                        { color: black; background: #eee;}
 h1, h2, h3, h4, h5                              { margin-left: 10px; font-family: 'Open Sans Bold'; }
-h1                                              { font-size: 180%; margin-bottom: 0px;}
+h1                                              { font-size: 180%; margin-bottom: 0px; padding-left: 5px; }
 h2                                              { font-size: 150%; }
 h3                                              { font-size: 130%; font-family: 'Open Sans Italic'; }
 h4                                              { font-size: 130%; }
@@ -130,8 +130,8 @@ p.note, p.notice                                { border: 2px solid #999; backgr
 /* #Page Styles: Blog
 ================================================== */
 
-article header.blog .date                       { float: right; padding-right: 20px; font-size: 120%; color: gray; }
-
+article.blog header .date                       { float: right; padding-right: 20px; font-size: 120%; color: gray; }
+article.blog div a.button                       { margin: 0px 0px 0px 10px;}
 
 /* #Page Styles: Vitae
 ================================================== */
@@ -174,6 +174,9 @@ footer hr                                       { color: #FFF; width: 940px; mar
     /* Show *slightly* smaller thumbnails so we don't break the smaller grid */
     img.photo                                   { height: 117px; width: 200px; margin-left: 10px;}
 
+    /* Remove the footer ruled line */
+    footer hr                                   { width: 748px; }
+
 }
 
 
@@ -189,6 +192,9 @@ footer hr                                       { color: #FFF; width: 940px; mar
 
     /* Bump up the spacing between the content area and footer */
     footer                                      { margin-top: 20px; }
+
+    /* Remove the footer ruled line */
+    footer hr                                   { display: none !important; }
 
 }
 @media only screen and (min-width: 480px) and   (max-width: 767px) { }
@@ -208,6 +214,7 @@ footer hr                                       { color: #FFF; width: 940px; mar
     nav li                                      { float: none; margin-bottom: 5px; }   
     nav ul, nav ul li                           { width: 100%; }
     nav                                         { right: auto; width: 100%; padding-top: 5px; }
+
 }
 
 /* #Media Queries: Printers
