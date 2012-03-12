@@ -8,15 +8,13 @@ title: Software
 	
 	<% software_count = software_count + 1 %>
 
-	<%= render '_content_column', 
-		:width => 'one-third', 
-		:heading => software.attributes[:title], 
-		:content => software.attributes[:byline],
-		:read_more_url => software.identifier,
-		:leader_thumbnail => software.attributes[:thumbnail], 
-		:leader_alt_text => software.attributes[:title] + ' image',
-		:last => (software_count % 3 == 0)
-	%>
+	<article>
+		<header>
+			<h3><a href="<%= software.identifier %>"><%= software.attributes[:title] %></a></h3>
+		</header>
+		<p><%= software.attributes[:byline] %></p>
+		<hr />
+	</article>
 	
 <% end %>  
 
