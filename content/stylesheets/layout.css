@@ -148,11 +148,16 @@ footer .social a                                { text-decoration: none; }
 /* #Media Queries: Netbooks
 ================================================== */
 @media only screen and                          (max-width: 959px) {  }
+@media only screen and (min-width: 768px) and   (max-width: 959px) { 
+
+    /* Show *slightly* smaller thumbnails so we don't break the smaller grid */
+    img.photo                                   { height: 117px; width: 200px; margin-left: 10px;}
+
+}
 
 
 /* #Media Queries: Tablets
 ================================================== */
-@media only screen and (min-width: 768px) and   (max-width: 959px) {  }
 @media only screen and                          (max-width: 767px) {
 
     /* Move nav links below the logo */
@@ -165,13 +170,13 @@ footer .social a                                { text-decoration: none; }
     footer                                      { margin-top: 20px; }
 
 }
+@media only screen and (min-width: 480px) and   (max-width: 767px) { }
 
 
 /* #Media Queries: Phones
 ================================================== */
 
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
-@media only screen and (min-width: 480px) and   (max-width: 767px) { }
 @media only screen and                          (max-width: 479px) {
 
     /* Switch to the vertical logo */
