@@ -5,18 +5,13 @@ title: Photos
 <div id="content" class="two-third">
 <% img_count = 0 %>
 
-<% @item.children.find_all{|item| item.path !~ /thumbnail/}.sort{|a,b| b.attributes[:taken] <=> a.attributes[:taken]}.each do |img| %>
+<% @item.children
+	.find_all{|item| item.path !~ /thumbnail/}
+	.sort{|a,b| b.attributes[:taken] <=> a.attributes[:taken]}.each do |img| %>
 
-	<% img_count = img_count + 1 %>
-
-	<%= render '_content_column', 
-		:width => 'one-third', 
-#		:heading => img.attributes[:title], 
-		:leader_thumbnail => img.path.split(/\./)[0]+'-thumbnail.jpg', 
-		:leader_image => img.path,
-		:leader_alt_text => img.attributes[:title],
-		:last => (img_count % 3 == 0)
-	%>
+	<div class="one-third column">
+		<a href="<%= img.path %>"><img class="framed" src="<%= img.path.split(/\./)[0]+'-thumbnail.jpg' %>" alt="<%= img.attributes[:title] %>"></a>
+	</div>
 
 <% end %>
 </div>
