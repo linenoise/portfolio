@@ -88,7 +88,7 @@ a, a:active, a:visited, a:hover                 { color: #87A500; text-decoratio
 a:hover                                         { color: #A7C520; }
 a.button, a.button:hover                        { color: black; background: #eee;}
 h1, h2, h3, h4, h5                              { margin-left: 10px; font-family: 'Open Sans Bold'; }
-h1                                              { font-size: 180%; margin-bottom: 0px; padding-left: 5px; }
+h1                                              { font-size: 180%; margin-bottom: 0px; }
 h2                                              { font-size: 150%; }
 h3                                              { font-size: 130%; font-family: 'Open Sans Italic'; }
 h4                                              { font-size: 130%; }
