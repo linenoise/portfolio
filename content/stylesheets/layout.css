@@ -125,12 +125,31 @@ nav a:hover, nav a:focus                        { outline: 0; color: #A7C520; }
 .alignright                                     { float: right; }
 .alignleft                                      { float: left; }
 aside.widget                                    { background: #EEE; padding: 5px 0px 5px 0px; margin-bottom: 10px;}
-
+p.note, p.notice                                { border: 2px solid #999; background: #eee; padding: 10px; }
 
 /* #Page Styles: Blog
 ================================================== */
 
 article header.blog .date                       { float: right; padding-right: 20px; font-size: 120%; color: gray; }
+
+
+/* #Page Styles: Vitae
+================================================== */
+
+.vitae div.vevent                               { margin-top: 1em; }
+.vitae div.vevent .dates                        { float: right; text-align: right; color: gray; font-weight: bold; }
+.vitae div.vevent .location, 
+.vitae div.vevent .dates                        { font-weight: bold; font-size: 1.15em; }
+.vitae div.progress-container                   { border: 1px solid #ccc; width: 100px; margin: 2px 5px 2px 0; padding: 1px; float: left; background: white; }
+.vitae div.progress-container > div             { background-color: #596f80; height: 12px }
+.vitae td.alt                                   { width: 110px; }
+.vitae .technologies                            { color: gray; }
+.vitae div.responsibilities                     { margin: 1em 0em; }
+.vitae div.education, .vitae h3, .vitae h2      { margin-top: 1em; margin-left: 10px; }
+.vitae div.experience .vevent,
+.vitae div.labs .vevent,
+.vitae div.volunteer .vevent                    { margin-top: 2em; margin-left: 10px; }
+.vitae td, .vitae th                            { padding: 3px; }
 
 
 /* #Footer
