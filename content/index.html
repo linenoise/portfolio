@@ -2,99 +2,23 @@
 ---
       
 <div class="sixteen column intro">
-<p>Hi, I'm Dann.  I research <a href="/vitae">artificial intelligence</a>, work full-time as Engineering Director at <a href="http://copio.us/">Copious</a>, and participate in human rights <a href="/activism">activism</a>.  In my spare time, I write <a href="/books">books</a> and <a href="/software">software</a>, take <a href="/photos">photographs</a>, learn <a href="/about">languages</a>, and record <a href="/music">music</a>, too.</p>
+<p>Hi, I'm Dann.  I study <a href="/vitae">artificial intelligence</a>, work full-time as Engineering Director at <a href="http://copio.us/">Copious</a>, and participate in human rights <a href="/activism">activism</a>.  In my spare time, I write <a href="/books">books</a> and <a href="/software">software</a>, take <a href="/photos">photos</a>, learn <a href="/about">languages</a>, and record <a href="/music">music</a>, too.</p>
 </div>
 
-<div id="content" class="two-third">
+<% items
+	.select{|i| i.identifier =~ /\/blog\/.+/}
+	.sort{|a,b| b.attributes[:date] <=> a.attributes[:date]}[0..2].each do |post| %>
 
-	<%= render '_content_column', 
-		:width => 'one-third', 
-		:heading => 'Books', 
-		:content => 'Both of my books on human rights, cultural heritage, and intellectual property are available here for free download.', 
-		:read_more_url => '/books/', 
-		:leader_thumbnail => '/images/books/the_visceral_society_thumbnail.jpg', 
-		:leader_alt_text => 'Books'
-	%>
-  
-	<%= render '_content_column', 
-		:width => 'one-third', 
-		:heading => 'Photography', 
-		:content => 'Photography of mine from various corners of the world is available here under a creative commons license.', 
-		:read_more_url => '/photos/', 
-		:leader_thumbnail => '/photos/Second Coming-thumbnail.jpg', 
-		:leader_alt_text => 'Photography', 
-		:read_more_text => 'View them'
-	%>
- 
-	<%= render '_content_column', 
-		:width => 'one-third', 
-		:heading => 'Software', 
-		:content => 'My free software can help you communicate securely, monitor your networks, and explore AI.', 
-		:read_more_url => '/software/', 
-		:leader_thumbnail => '/images/software/asemica_thumbnail.jpg', 
-		:read_more_text => 'Check it out', 
-		:leader_alt_text => 'Software', 
-		:last => true
-	%>
+	<article>
+		<header class="blog">
+			<div class="date"><%= post.attributes[:date] %></div>
+			<h2><a href="<%= post.identifier %>"><%= post.attributes[:title] %></a></h2>
+		</header>
 
-	<div class="big spacer"></div>
+		<div class="entry-content">
+			<p><%= post.attributes[:lede] %></p>
+			<p><a href="<%= post.identifier %>" class="button">Read more &rarr;</a></p>
+		</div>
+	</article>
 
-	<%= render '_content_column', 
-		:width => 'one-third', 
-		:heading => 'Music', 
-		:content => 'Recordings of my classical guitar arrangements are available here.', 
-		:read_more_url => '/music/', 
-		:leader_thumbnail => '/images/music_thumbnail.jpg', 
-		:leader_alt_text => 'Music', 
-		:read_more_text => 'Have a listen'
-	%>
-
-	<%= render '_content_column', 
-		:width => 'one-third', 
-		:heading => 'About', 
-		:content => 'A brief bio and list of my profiles on other sites.', 
-		:read_more_url => '/about/', 
-		:leader_thumbnail => 'http://maps.google.com/maps/api/staticmap?center=Portland,Oregon,USA&zoom=12&size=284x166&maptype=roadmap&sensor=false', 
-		:leader_alt_text => 'About'
-	%>
-
-	<%= render '_content_column', 
-		:width => 'one-third', 
-		:heading => 'Web Applications', 
-		:content => 'A curated list of web applications I\'ve helped launch or improve.', 
-		:read_more_url => '/webapps/', 
-		:leader_thumbnail => '/images/webapps/mcmenamins-screenshot.png', 
-		:read_more_text => 'Check it out', 
-		:leader_alt_text => 'Web Apps', 
-		:last => true
-	%>
-
-	<div class="big spacer"></div>
- 
- 	<% items.select{|i| i.identifier =~ /\/blog\/.+/}.sort{|a,b| b.attributes[:date] <=> a.attributes[:date]}[0..2].each do |post| %>
-
-	<div id="content" class="two-third">
-
-    <h2>Blog</h2>
-    
-		<article class="entry">
-
-  		<div class="hr"></div>
-		
-			<header class="entry-header">
-				<div style="float: right; font-size: 1.5em; color: gray"><%= post.attributes[:date] %></div>
-				<h3><a href="<%= post.identifier %>"><%= post.attributes[:title] %></a></h3>
-			</header>
-
-			<div class="entry-content">
-				<p><%= post.attributes[:lede] %></p>
-				<p><a href="<%= post.identifier %>" class="button">Read more &rarr;</a></p>
-			</div>
-
-		</article>
-
-	</div>
-
-	<% end %>
-
-</div>
+<% end %>
