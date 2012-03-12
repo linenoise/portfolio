@@ -7,15 +7,25 @@
 */
 
 
-/* Table of Content
+/* Table of Contents
 ==================================================
     #Font Faces
     #Typography
     #Header
     #Navigation 
     #Page Styles
+        #Welcome
+        #Books
+        #Music
+        #Software
+        #Photos
+        #About
     #Footer
     #Media Queries
+        #Netbooks
+        #Tablets
+        #Phones
+        #Printers
 */
 
 
@@ -74,7 +84,8 @@ body, h1, h2, h3, h4, h5, p, tr, th, td         { font-family: 'Open Sans Regula
 em                                              { font-family: 'Open Sans Italic'; }
 strong                                          { font-family: 'Open Sans Bold'; }
 p                                               { margin: 10px 10px 20px 10px; padding: 0px; }
-
+a, a:active, a:visited, a:hover                 { color: #87A500; text-decoration: none; }
+a:hover                                         { color: #A7C520; }
 h1                                              { font-size: 180%; font-family: 'Open Sans Bold'; }
 h2                                              { font-size: 150%; font-family: 'Open Sans Bold'; }
 h3                                              { font-size: 130%; font-family: 'Open Sans Italic'; }
@@ -120,18 +131,14 @@ footer .social h4                               { margin: 5px 10px; }
 footer .social a                                { text-decoration: none; }
 
 
-/* #Media Queries
+/* #Media Queries: Netbooks
 ================================================== */
+@media only screen and                          (max-width: 959px) {  }
 
-/* Smaller than standard 960 (devices and browsers) */
-@media only screen and                          (max-width: 959px) {
 
-}
-
-/* Tablet Portrait size to standard 960 (devices and browsers) */
-@media only screen and (min-width: 768px) and   (max-width: 959px) { }
-
-/* All Mobile Sizes (devices and browser) */
+/* #Media Queries: Tablets
+================================================== */
+@media only screen and (min-width: 768px) and   (max-width: 959px) {  }
 @media only screen and                          (max-width: 767px) {
 
     /* Move nav links below the logo */
@@ -144,10 +151,12 @@ footer .social a                                { text-decoration: none; }
     footer                                      {margin-top: 20px;}
 }
 
+
+/* #Media Queries: Phones
+================================================== */
+
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
 @media only screen and (min-width: 480px) and   (max-width: 767px) { }
-
-/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and                          (max-width: 479px) {
 
     /* Switch to the vertical logo */
@@ -160,8 +169,7 @@ footer .social a                                { text-decoration: none; }
     nav                                         { right: auto; width: 100%; padding-top: 5px; }
 }
 
-/* Print media */
-@media print {
-
-}
+/* #Media Queries: Printers
+================================================== */
+@media print {  }
 

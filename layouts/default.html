@@ -61,13 +61,8 @@
         <h1><%= @item[:title] %></h1>
       </div>
       <% end %>
-      
-      <div class="sixteen column intro">
-        <p>Hi, I'm Dann.  I research artificial intelligence, work full-time as Engineering Director at <a href="http://copio.us/">Copious</a>, and participate in human rights activism.  In my spare time, I write books and software, take photographs, learn languages, and record music, too.</p>
-      </div>
 
-
-      <!-- <%= yield %> -->
+      <%= yield %>
 
       <footer class="clearfix">
           
@@ -92,7 +87,7 @@
               <br/>
             </span>
             <span class="small spacer"></span>
-            Voice: <span class="phone">(503) 217-4104</span><br/>
+            Voice: <span class="phone"><a href="tel:1-503-217-4104">1-503-217-4104</a></span><br/>
             Email: <span class="email"><a href="mailto:dann@stayskal.com">dann@stayskal.com</a></span><br/>
             GPG/PGP: <a href="/crypto/93F904B0.asc">0x93F904B0</a>
           </p>
