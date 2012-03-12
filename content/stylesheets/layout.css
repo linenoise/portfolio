@@ -123,6 +123,8 @@ nav a:hover, nav a:focus                        { outline: 0; color: #A7C520; }
 
 .framed                                         { border: 1px solid #AAA; margin: 5px; padding: 5px; }
 .alignright                                     { float: right; }
+aside.widget                                    { background: #EEE; padding: 5px 0px 10px 0px; margin-bottom: 15px;}
+
 
 /* #Page Styles: Blog
 ================================================== */
