@@ -131,7 +131,9 @@ p.note, p.notice                                { border: 2px solid #999; backgr
 ================================================== */
 
 article.blog header .date                       { float: right; padding-right: 20px; font-size: 120%; color: gray; }
-article.blog div a.button                       { margin: 0px 0px 0px 10px;}
+article.blog div a.button                       { margin: 0px 0px 0px 10px; }
+#disqus_thread                                  { margin: 0px 10px; }
+#dsq-footer                                     { display: none !important ;}
 
 /* #Page Styles: Vitae
 ================================================== */
