@@ -4,7 +4,7 @@
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
   <head>
-    <title>Dann Stayskal - <%= @item[:title] %></title>
+    <title>Dann Stayskal<% if @item[:title] %> - <%= @item[:title] %><% end %></title>
 
     <!-- Meta -->
     <meta charset="utf-8">
