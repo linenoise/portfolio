@@ -98,10 +98,10 @@ table                                           { margin-left: 10px; }
 td, th                                          { padding: 10px; }
 th                                              { text-align: right; font-family: 'Open Sans Bold'; }
 pre, tt                                         { font-family: 'Inconsolata'; font-size: 115%;}
+p.pullquote                                     { float: right; border-width: 10px 0px; border-color: #333; border-style: solid; margin: 0.5em 0em 2em 2em; padding: 0.75em 0em; font-weight: bold; font-size: 130%; font-color: black; width: 300px;}
 
-/* #Header
-================================================== */
 
+/* #Header ================================================== */
 header.site                                     { margin: 10px 0px 20px 0px; padding-bottom: 10px; border-bottom: 1px solid #A7C520; }
 header img                                      { padding: 10px 10px 4px 0px; }
 header h1                                       { margin: 0px; padding: 0px; }
@@ -198,6 +198,9 @@ footer hr                                       { color: #FFF; width: 940px; mar
     /* Remove the footer ruled line */
     footer hr                                   { display: none !important; }
 
+    /* Make pull quotes full-width */
+    p.pullquote                                 { float: left; clear: both; margin: 1em 1em 1em 10px; }
+
 }
 @media only screen and (min-width: 480px) and   (max-width: 767px) { }
 
@@ -224,7 +227,7 @@ footer hr                                       { color: #FFF; width: 940px; mar
 @media print {
 
     /* Hide the headers and footers */
-    header.site, footer                         { display:none !important; }
+    header.site, footer                         { display: none !important; }
 
 }
 
