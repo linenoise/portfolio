@@ -10,7 +10,7 @@ title: Photos
 	.sort{|a,b| b.attributes[:taken] <=> a.attributes[:taken]}.each do |img| %>
 
 	<div class="one-third column">
-		<a href="<%= img.path %>"><img class="framed photo" src="<%= img.path.split(/\./)[0]+'-thumbnail.jpg' %>" alt="<%= img.attributes[:title] %>"></a>
+		<a href="<%= img.path %>" rel="lightbox[photos]" title="<%= img.attributes[:title] %>"><img class="framed photo" src="<%= img.path.split(/\./)[0]+'-thumbnail.jpg' %>" alt="<%= img.attributes[:title] %>"></a>
 	</div>
 
 <% end %>
