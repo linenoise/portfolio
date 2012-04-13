@@ -3,7 +3,7 @@
 ### COMPILATION RULES
 
 # Don’t filter or layout assets
-compile %r{^/(favicon|robots|crypto/.*|stylesheets/.*|javascripts/.*|plugins/.*|fonts/.*|images/.*|photos/.*)/$} do
+compile %r{^/(favicon|robots|crypto/.*|stylesheets/.*|javascript/.*|plugins/.*|fonts/.*|images/.*|photos/.*)/$} do
 end
 
 compile '/' do
@@ -30,7 +30,7 @@ route '/photos/*/', :rep => :thumbnail do
   item.identifier.chop + '-thumbnail.' + item[:extension]
 end
 
-route %r{^/(favicon|robots|sitemap|crypto/.*|stylesheets/.*|javascripts/.*|plugins/.*|fonts/.*|images/.*|photos/.*)/$} do
+route %r{^/(favicon|robots|sitemap|crypto/.*|stylesheets/.*|javascript/.*|plugins/.*|fonts/.*|images/.*|photos/.*)/$} do
   ext = item[:extension]
   item.identifier.chop + '.' + ext
 end
