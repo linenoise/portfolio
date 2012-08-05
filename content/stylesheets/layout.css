@@ -166,7 +166,7 @@ footer .social h4, footer .social a             { display: block; float: left; m
 footer .social h4                               { margin: 5px 10px 5px 20px; }
 footer .social a                                { text-decoration: none; }
 footer hr                                       { color: #FFF; width: 940px; margin: 20px 10px; }
-
+footer .vcard .fn																{ font-weight: bold; }
 
 /* #Media Queries: Netbooks
 ================================================== */
