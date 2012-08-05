@@ -19,7 +19,7 @@ title: Music
 			    <h4><%= song.attributes[:title] %></h4>
 			    <p><%= song.attributes[:date] %>: <em><%= song.attributes[:description] %></em></p>
 
-					<audio id="the-romanza" controls style="padding: 0.5em 0em 0em 10px">
+					<audio controls style="padding: 0.5em 0em 0em 10px">
 						<source src="<%= song.attributes[:ogg_file] %>" />
 						<source src="<%= song.attributes[:mp3_file] %>" />
 					</audio>
