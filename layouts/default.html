@@ -38,93 +38,86 @@
   </head>
   <body>
     <div class="container">
+      <% if @item[:title] %>
       <header class="site clearfix">
-        <div class="one-third column">
-          <h1><a href="/">Dann Stayskal</a></h1>
-        </div>
-        <div class="two-thirds column">
-          <nav>
-            <ul>
-              <li><a href="/books/">books</a>
-              <li><a href="/music/">music</a></li>
-              <li><a href="/software/">software</a></li>
-              <li><a href="/photos/">photos</a></li>
-              <li><a href="/about/">about</a></li>
-            </ul>
-          </nav>
-        </div>
+        <h1><%= @item[:title] %></h1>
       </header>
 
-      <% if @item[:title] %>
-      <div class="clearfix">
-        <h1><%= @item[:title] %></h1>
-      </div>
       <% end %>
-
       <%= yield %>
 
       <footer class="clearfix">
 
-        <hr />  
-
-        <aside class="one-third column">
-          <h4>Contact</h4>
+        <div class="one-third vcard column">
           <p class="vcard">
-            <span class="fn">Dann Stayskal</span><br/>
-            <span class="small spacer"></span>  
-            Voice: <span class="phone"><a href="tel:1-503-217-4104">1-503-217-4104</a></span><br/>
-            Email: <span class="email"><a href="mailto:dann@stayskal.com">dann@stayskal.com</a></span><br/>
-						PGP: <a href="/crypto/93F904B0.asc">0x93F904B0</a><br />
-						IM: <a href="aim:goim?screenname=danndalf">danndalf</a><br />
-            OTR: <a href="/crypto/92029670.txt">0x92029670</a>
+            <h1><a href="/" class="fn">Dann Stayskal</a></h1>
+            <span class="email"><a href="mailto:dann@stayskal.com">dann@stayskal.com</a></span><br/>
+            PGP: <a href="/crypto/93F904B0.asc">0x93F904B0</a><br />
+            <span class="phone"><a href="tel:1-503-217-4104">1-503-217-4104</a></span><br/>
           </p>
+        </div>
+
+        <aside class="two-thirds column">
+          <nav>
+            <a href="/vitae/">vitae</a>
+            <a href="/activism/">activism</a>
+            <a href="/articles/">articles</a>
+            <a href="/books/">books</a>
+            <a href="/code/">code</a>
+            <a href="/music/">music</a>
+            <a href="/photos/">photos</a>
+          </nav>
         </aside>
-          
-        <aside class="one-third column">
-          <h4>Copyright</h4>
+        <aside class="two-thirds column">
           <p>
-						<em>&copy; 1998-2012 Dann Stayskal.</em><br />
-						Unless otherwise noted, this content is available through Creative Commons <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/us/">BY-NC-SA 3.0</a> for those choosing to respect intellectual property. For everyone else, you are already free.</p>
-            <!-- 
-            <rdf:RDF xmlns="http://creativecommons.org/ns#"
-             xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-                  <License rdf:about="http://creativecommons.org/licenses/by-nc-sa/3.0/us/">
-                    <permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
-                    <permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
-                    <requires rdf:resource="http://creativecommons.org/ns#Notice"/>
-                    <requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
-                    <prohibits rdf:resource="http://creativecommons.org/ns#CommercialUse"/>
-                    <permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
-                    <requires rdf:resource="http://creativecommons.org/ns#ShareAlike"/>
-                  </License>
-                </rdf:RDF>
-             -->
-        </aside>
-          
-        <aside class="one-third column">
-          <h4>Open Source</h4>
+						Copyright &copy; 1998-2012 Dann Stayskal. Unless otherwise noted, this content is available through Creative Commons <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/us/">BY-NC-SA 3.0</a> for those choosing to respect intellectual property. For everyone else, you are already free.
+          </p>
+          <!-- 
+          <rdf:RDF xmlns="http://creativecommons.org/ns#"
+           xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                <License rdf:about="http://creativecommons.org/licenses/by-nc-sa/3.0/us/">
+                  <permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+                  <permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+                  <requires rdf:resource="http://creativecommons.org/ns#Notice"/>
+                  <requires rdf:resource="http://creativecommons.org/ns#Attribution"/>
+                  <prohibits rdf:resource="http://creativecommons.org/ns#CommercialUse"/>
+                  <permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+                  <requires rdf:resource="http://creativecommons.org/ns#ShareAlike"/>
+                </License>
+              </rdf:RDF>
+           -->
           <p>
-            This site is open source.  Its source code is available at <a href="http://github.com/danndalf/portfolio">on github</a>.
+            This site is open source; its code is available <a href="http://github.com/danndalf/portfolio">on github</a>.
           </p>
           <p>
-            <a href="/colophon/">Colophon</a>
-          </p>
-          <p>
-            <a href="/feed/">RSS Feed</a>
+            <a href="/sitemap/">sitemap</a> &middot; 
+            <a href="/feed/">feed</a> &middot; 
+            <a href="/colophon/">colophon</a>
           </p>
         </aside>
 
-        <aside class="social sixteen columns">
-          <h4>Social Networks</h4>
-          <a href="https://www.facebook.com/dann.stayskal" rel="me">Facebook</a>
-					<a href="http://www.flickr.com/photos/danndalf" rel="me">Flickr</a>
-					<a href="http://foursquare.com/danndalf" rel="me">Foursquare</a>
-          <a href="https://www.github.com/danndalf/" rel="me">Github</a>
-          <a href="https://plus.google.com/u/0/114564931610606038420" rel="me">Google+</a>
-					<a href="https://www.linkedin.com/in/dannstayskal" rel="me">LinkedIn</a>
-					<a href="http://pinterest.com/danndalf" rel="me">Pinterest</a>
-          <a href="http://reddit.com/user/danndalf" rel="me">Reddit</a>
-          <a href="https://twitter.com/danndalf" rel="me">Twitter</a>
+        <aside class="social two-thirds column">
+          <h4>active social media profiles</h4>
+
+          <br /><br />
+
+          <a href="http://pdx.academia.edu/DannStayskal" rel="me">academia</a>
+          <a href="https://coderwall.com/danndalf" rel="me">coderwall</a>
+          <a href="http://www.delicious.com/danndalf" rel="me">delicious</a>
+          <a href="http://epdx.org/people/3811" rel="me">epdx</a>
+          <a href="http://everything2.com/user/dann" rel="me">everything2</a>
+          <a href="https://www.facebook.com/dann.stayskal" rel="me">facebook</a>
+					<a href="http://www.flickr.com/photos/danndalf" rel="me">flickr</a>
+
+          <br /><br />
+
+          <a href="https://www.github.com/danndalf/" rel="me">github</a>
+          <a href="http://www.goodreads.com/user/show/70788-dann-stayskal" rel="me">goodreads</a>
+          <a href="https://plus.google.com/u/0/114564931610606038420" rel="me">google+</a>
+					<a href="https://www.linkedin.com/in/dannstayskal" rel="me">linkedin</a>
+					<a href="http://pinterest.com/danndalf" rel="me">pinterest</a>
+          <a href="http://reddit.com/user/danndalf" rel="me">reddit</a>
+          <a href="https://twitter.com/danndalf" rel="me">twitter</a>
         </aside>
 
       </footer>
