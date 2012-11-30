@@ -1,0 +1,20 @@
+---
+title: Dann Stayskal's articles
+---
+<% items
+	.select{|i| i.identifier =~ /\/articles\/.+/}
+	.sort{|a,b| b.attributes[:date] <=> a.attributes[:date]}[0..2].each do |post| %>
+
+	<article class="blog">
+		<header>
+			<div class="date"><%= post.attributes[:date] %></div>
+			<h2><a href="<%= post.identifier %>"><%= post.attributes[:title] %></a></h2>
+		</header>
+
+		<div class="entry-content">
+			<p><%= post.attributes[:lede] %></p>
+			<a href="<%= post.identifier %>" class="button">Read more &rarr;</a>
+		</div>
+	</article>
+
+<% end %>

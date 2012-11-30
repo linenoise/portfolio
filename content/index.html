@@ -1,24 +1,41 @@
 --- 
+title: Hi, I'm Dann.
 ---
-      
-<div class="sixteen column intro">
-<p>Hi, I'm Dann.  I study <a href="/vitae">artificial intelligence</a>, work full-time as Engineering Director at <a href="http://copio.us/">Copious</a>, and participate in human rights activism.  In my spare time, I write <a href="/books">books</a> and <a href="/software">software</a>, take <a href="/photos">photos</a>, learn <a href="/about">languages</a>, and record <a href="/music">music</a> here in Portland, Oregon.</p>
+<div class="clearfix">
+	<div class="one-third intro column">
+		<h2><a href="/vitae/">Vitae</a></h2>
+		<p>By trade, I'm a <em>digital craftsman</em> specializing in machine learning, computational linguistics, crypto, and network security.</p>
+	</div>
+	<div class="one-third intro column">
+		<h2><a href="http://copio.us/">Copious</a></h2>
+		<p>I spend my days as the Engineering Director at <em>Copious</em>, a digital product agency, building web and mobile applications.</p>
+	</div>
+	<div class="one-third intro column">
+		<h2><a href="/activism/">Activism</a></h2>
+		<p>In my spare time, I build <em>mapping</em>, network, and communication tools for activists to help securely coordinate demonstrations.</p>
+	</div>
+	<div class="one-third intro column">
+		<h2><a href="/articles/">Articles</a></h2>
+		<p>I also write <em>articles</em> on technology, productivity, happiness, security, anarchism, and polyamory.</p>
+	</div>
+	<div class="one-third intro column">
+		<h2><a href="/books/">Books</a></h2>
+		<p>Occasionally I'll write <em>books</em> as well. They're on human rights, intellectual property, globalization, and cultural heritage.</p>
+	</div>
+	<div class="one-third intro column">
+		<h2><a href="/code/">Code</a></h2>
+		<p>I develop open source <em>software</em>, too. It can help you build an AI, monitor and secure networks, and publish censorship-resistant materials.</p>
+	</div>
+	<div class="one-third intro column">
+		<h2><a href="/photos/">Music</a></h2>
+		<p>I've also arranged and recorded <em>classical guitar</em> music, written programs to write songs out of math, and played in a band or three.</p>
+	</div>
+	<div class="one-third intro column">
+		<h2><a href="/photos/">Photos</a></h2>
+		<p>I've taken a few <em>photos</em> that I like to share, a few of which have been published in travel guides.</p>
+	</div>
+	<div class="one-third intro column">
+		<h2><a href="/photos/">Superpowers</a></h2>
+		<p>Finally, I share some information on my <em>synaesthesia</em>. Basically, I see sound, hear light, and read as patterns between colors.</p>
+	</div>
 </div>
-
-<% items
-	.select{|i| i.identifier =~ /\/blog\/.+/}
-	.sort{|a,b| b.attributes[:date] <=> a.attributes[:date]}[0..2].each do |post| %>
-
-	<article class="blog">
-		<header>
-			<div class="date"><%= post.attributes[:date] %></div>
-			<h2><a href="<%= post.identifier %>"><%= post.attributes[:title] %></a></h2>
-		</header>
-
-		<div class="entry-content">
-			<p><%= post.attributes[:lede] %></p>
-			<a href="<%= post.identifier %>" class="button">Read more &rarr;</a>
-		</div>
-	</article>
-
-<% end %>
