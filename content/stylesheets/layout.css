@@ -120,15 +120,18 @@ p.note, p.notice                                { border: 2px solid #999; backgr
 .intro p                                        { font-family: 'Open Sans Regular'; padding: 0px; margin: 0px 10px 0px 0px; font-size: 12pt; }
 .intro p em                                     { font-family: 'Open Sans Bold'; font-style: normal; }
 .small.intro                                    { height: 152px; border-bottom: 1px dashed #AAA;  }
+.intro ul                                       { margin-top: 2em; }
 
 
 /* Page Styles: Blog
 ================================================== */
 
-article.blog header .date                       { float: right; padding-right: 20px; font-size: 120%; color: gray; }
+article.blog h3                                 { margin-left: 0px; }
 article.blog div a.button                       { margin: 0px 0px 0px 10px; }
+article.blog p                                  { margin-bottom: 1em; }
 #disqus_thread                                  { margin: 0px 10px; }
 #dsq-footer                                     { display: none !important ;}
+
 
 /* Page Styles: Vitae
 ================================================== */
@@ -152,7 +155,7 @@ article.blog div a.button                       { margin: 0px 0px 0px 10px; }
 /* Navigation
 ================================================== */
 
-nav                                             { font-family: 'Open Sans Bold'; background-color: #FCE05E; padding: 0px 10px; margin: 3em 10px 10px 10px; }
+nav                                             { font-family: 'Open Sans Bold'; background-color: #FCE05E; padding: 0px 10px; margin: 1em 10px 20px 10px; }
 nav a, nav a:visited                            { float:left; padding: 20px; text-decoration: none; letter-spacing: 1px; color: black; display: block; }
 nav a:hover, nav a:focus                        { outline: 0; color: black; background-color: #F68D51; }
 nav a.right                                     { float:right; }
@@ -161,7 +164,7 @@ nav a.right                                     { float:right; }
 /* Footer
 ================================================== */
 
-footer                                          { margin: 20px 0px 0px 0px; padding-bottom: 10px; }
+footer                                          { margin: 10px 0px 0px 0px; padding-bottom: 10px; }
 footer aside                                    { background: #e4f39b; margin-bottom: 20px !important; padding: 10px 0px; text-align: center; }
 footer aside p                                  { margin: 10px 20px; }
 

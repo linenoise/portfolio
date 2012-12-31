@@ -4,44 +4,59 @@ title: Hi, I'm Dann Stayskal.
 <div class="clearfix">
 	<div class="small one-third intro column">
 		<h2>Vitae</h2>
-		<p>By trade, I'm a <em><a href="/vitae/">digital craftsman</a></em> specializing in artificial intelligence, linguistics, cryptography, augmented reality, and network security.</p>
+		<p>By trade, I'm a <em><a href="/vitae/">digital craftsman</a></em> of artificial intelligence, cryptography, augmented reality, and security.</p>
 	</div>
 	<div class="small one-third intro column">
 		<h2>Copious</h2>
-		<p>I spend my days as the Engineering Director at Copious, a <em><a href="http://copio.us/">digital product agency</a></em> building cutting-edge web and mobile applications.</p>
+		<p>As the Engineering Director at Copious, a <em><a href="http://copio.us/">digital product agency</a></em>, I build cutting-edge applications.</p>
 	</div>
 	<div class="small one-third intro column">
 		<h2>Books</h2>
-		<p>I've written some open licensed <em><a href="/books/">books</a></em> as well. They cover human rights, intellectual property, globalization, and culture.</p>
+		<p>I've written some <em><a href="/books/">books</a></em> as well. They cover human rights, intellectual property, globalization, and culture.</p>
 	</div>
 	<div class="small one-third intro column">
 		<h2>Software</h2>
-		<p>I develop open source <em><a href="/software/">software</a></em>, too. It can help you build an AI, monitor and secure networks, and publish censorship-resistant materials.</p>
+		<p>I develop open source <em><a href="/software/">software</a></em>, too. It can help you monitor and secure networks and circumvent censorship.</p>
 	</div>
 	<div class="small one-third intro column">
 		<h2>Music</h2>
-		<p>I've also recorded some of my <a href="/photos/"><em>classical guitar music</em></a>, written programs to write songs out of math, and played in a band or three.</p>
+		<p>I've also recorded some <a href="/photos/"><em>classical guitar music</em></a>, calculated other songs, and played in a band or two.</p>
 	</div>
 	<div class="small one-third intro column">
-		<h2>Photos</h2>
-		<p>I've taken a few open licensed <a href="/photos/"><em>photos</em></a> that I like to share. None of them are professional, though a few have been published.</p>
+		<h2>Articles</h2>
+		<p>I irregularly write <a href="/articles/"><em>articles</em></a> on technology, productivity, security, anarchism, and polyamory.</p>
 	</div>
 </div>
 
 <div class="clearfix">
-	<div class="two-thirds column">
-		<h2>Blog goes here.</h2>
+	<div class="two-thirds intro column">
+		<h2>Most recent article</h2>
+		<% items
+		.select{|i| i.identifier =~ /\/articles\/.+/}
+		.sort{|a,b| b.attributes[:date] <=> a.attributes[:date]}[0].tap do |post| %>
 
-		<p>BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG</p>
+		<article class="blog">
+			<header>
+				<h3><a href="<%= post.identifier %>"><%= post.attributes[:title] %></a></h3>
+			</header>
 
-		<p>BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG BLOG</p>
+			<p><%= post.attributes[:lede] %></p>
+			<p><a href="<%= post.identifier %>">Continue reading&hellip;</a></p>
+		</article>
 
-		<a href="/">READ MORE BLOG >></a>
+		<% end %>
 	</div>
 
 	<div class="one-third intro column">
-		<h2>Recent Articles</h2>
+		<h2>Recent photo</h2>
 
-		<p> <a href="/articles/"><em>Article archives</em></a></p>
+		<% items.select{|i| i.identifier =~ /\/photos\/.+/}
+		.find_all{|item| item.path !~ /thumbnail/}
+		.sort{|a,b| b.attributes[:taken] <=> a.attributes[:taken]}[0].tap do |img| %>
+
+		<a href="<%= img.path %>" rel="lightbox[photos]" title="<%= img.attributes[:title] %>"><img class="framed photo" src="<%= img.path.split(/\./)[0]+'-thumbnail.jpg' %>" alt="<%= img.attributes[:title] %>" style="margin-left: 0px;"></a>
+		<% end %>
+
+		<p> <a href="/photos/">All photos&hellip;</a></p>
 	</div>
 </div>
