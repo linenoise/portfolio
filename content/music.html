@@ -1,57 +1,21 @@
 --- 
 title: Music
 ---
-<div class="two-thirds column">
-
-	<article class="entry">
-
-		<% @item.children.sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.each do |genre| %>
-		  <header class="entry-header">
-
-			<h3><%= genre.attributes[:title] %> music recordings</h3>
-			<p><%= genre.attributes[:description] %></p>
-
-			</header>
-			<% genre.children.sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.each do |song| %>
-
-			  <div class="entry-content">
-    
-			    <h4><%= song.attributes[:title] %></h4>
-			    <p><%= song.attributes[:date] %>: <em><%= song.attributes[:description] %></em></p>
-
-					<audio controls style="padding: 0.5em 0em 0em 10px">
-						<source src="<%= song.attributes[:ogg_file] %>" />
-						<source src="<%= song.attributes[:mp3_file] %>" />
-					</audio>
-			
-					<p>
-						<a href="<%= song.attributes[:ogg_file] %>" class="button">Download in OGG Vorbis</a>
-						<a href="<%= song.attributes[:mp3_file] %>" class="button">Download in MP3</a>
-					</p>
-				</div>
-
-			<% end %>
-
+<aside class="one-third column">
+	<p><em>Click on any song below to play.</em></p>
+	<% @item.children.sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.each do |genre| %>
+	<h3><%= genre.attributes[:title] %> music</h3>
+	<ul>
+		<% genre.children.sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.each do |song| %>
+	    <li><a href="<%= song.path %>" target="player"><%= song.attributes[:title] %></a></li>
 		<% end %>
-  
-	</article>
-</div>
-
-<div class="one-third column">
-      <aside class="widget">
-        <h3>Live Audio</h3>
-		<img src="/images/HTML5_Logo_64.png" class="alignright" style="margin: 15px 0px 0px 5px">
-		<p>The songs on this page are embedded using HTML 5 audio support.  In order to play them here, you'll need to view this page using a browser that supports modern standards.  Otherwise, you can download and play them on your computer or portable music device.</p>
-      </aside>
-
-      <aside class="widget">
-        <h3>Supporting Browsers</h3>
-			<ul>
-				<li><a href="http://www.mozilla.com/firefox/fx/">FireFox 3.6+</a></li>
-				<li><a href="http://www.apple.com/safari/">Safari 5+</a></li>
-				<li><a href="http://www.google.com/chrome/">Chrome 6</a></li>
-				<li><a href="http://www.opera.com/">Opera 10.5+</a></li>
-				<li><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home">Internet Explorer 9</a></li>
-			</ul>
-      </aside>
+	</ul>
+	<% end %>
+</aside>
+<div class="two-thirds column">
+	<iframe name="player" 
+			src="<%= @item.children.sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.first.children.sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.first.path %>" 
+			style="height: 400px; width: 600px;">
+		<em>Sit tight, the music player is loading&hellip;</em>
+	</iframe>
 </div>

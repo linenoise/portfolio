@@ -1,27 +1,50 @@
 --- 
 title: Software
 ---
-<div id="content" class="two-third">
+<div class="two-thirds column">
 
-<% software_count = 0 %>
-<% @item.children.sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.each do |software| %>
-	
+	<table>
+	<% software_count = 0 %>
+	<% @item.children.sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.each do |software| %>	
 	<% software_count = software_count + 1 %>
-
-	<article>
-		<header>
-			<h3><a href="<%= software.identifier %>"><%= software.attributes[:title] %></a></h3>
-		</header>
-		<p><%= software.attributes[:byline] %></p>
-		<hr />
-	</article>
-	
-<% end %>  
-
-<!-- TODO link to coderwall -->
-
-<!-- TODO link to github -->
-
-<!-- TODO link to geeklist -->
+		<tr>
+			<th style="white-space: nowrap">
+				<h2 style="font-size: 12pt;"><a href="<%= software.identifier %>"><%= software.attributes[:title] %></a></h2>
+			</th>
+			<td>
+				<p><%= software.attributes[:byline] %></p>
+			</td>
+		</tr>
+	<% end %>
+	</table>  
 
 </div>
+
+<aside class="one-third column">
+
+	<a href="http://www.catb.org/hacker-emblem/"><img class="alignright" style="margin: 10px 20px" alt="Hacker glider" width="55" height="55" src="/images/glider.png"/></a>
+
+	<div style="margin-left: 10px;">
+	<h2>Code is social.</h2>
+
+	<p>All of the software here is <a href="/articles/open_craft/">Open Source</a>, with source code available on github, packages on rubygems, and teams on coderwall.</p>
+
+	<ul>
+		<li><a href="https://github.com/danndalf/">My profile on github</a></li>
+		<li><a href="https://coderwall.com/danndalf">My profile on coderwall</a></li>
+		<li><a href="http://rubygems.org/profiles/danndalf">My profile on rubygems</a></li>
+	</ul>
+
+	<p>The open source community regularly congregates here in Portland, Oregon. ePDX and Lanyrd are two places where we coordinate those, as well as <a href="http://calagator.org/">Calagator</a>.</p>
+
+	<ul>
+		<li><a href="http://epdx.org/people/3811">My profile on ePDX</a></li>
+		<li><a href="http://lanyrd.com/profile/danndalf/">My profile on Lanyrd</a></li>
+	</ul>
+
+	<p>I occasionaly give talks at tech conferences. Notes from these talks end up as <a href="/articles/">articles</a>.</p>
+
+	</div>
+
+
+</aside>

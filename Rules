@@ -16,6 +16,13 @@ compile %r{^/(sitemap|htaccess|feed|card|identity)/$} do
   filter :erb
 end
 
+# Songs get rendered in the music player
+compile %r{^/music/.*/$} do
+  filter :erb
+  layout 'player'
+end
+
+
 compile '*' do
   case item[:extension]
     when 'md'
