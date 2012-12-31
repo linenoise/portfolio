@@ -41,42 +41,39 @@
     <div class="container">
       <% if @item[:title] %>
       <header class="site clearfix">
+        <a href="/"><img src="/images/ds_ligature-small.png" alt="Dann Stayskal"></a>
         <h1><%= @item[:title] %></h1>
       </header>
-
       <% end %>
+
       <%= yield %>
+
+      <nav class="clearfix">
+        <a class="right" href="/feed/">rss feed</a>
+        <a class="right" href="/colophon/">colophon</a>
+        <a href="/">home</a>
+        <a href="/vitae/">vitae</a>
+        <a href="/books/">books</a>
+        <a href="/software/">software</a>
+        <a href="/music/">music</a>
+        <a href="/photos/">photos</a>
+        <a href="/articles/">articles</a>
+      </nav>
 
       <footer class="clearfix">
 
-        <div class="one-third vcard column">
+        <aside class="one-third vcard column">
           <p class="vcard">
             <h1><a href="/" class="fn">Dann Stayskal</a></h1>
             <span class="email"><a href="mailto:dann@stayskal.com">dann@stayskal.com</a></span><br/>
             PGP: <a href="/crypto/93F904B0.asc">0x93F904B0</a><br />
             <span class="phone"><a href="tel:1-503-217-4104">1-503-217-4104</a></span><br/>
           </p>
-          <p>
-            <a href="/sitemap/">sitemap</a> &middot; 
-            <a href="/feed/">feed</a> &middot; 
-            <a href="/colophon/">colophon</a>
-          </p>
-        </div>
+        </aside>
 
         <aside class="two-thirds column">
-          <nav>
-            <a href="/vitae/">vitae</a>
-            <a href="/activism/">activism</a>
-            <a href="/articles/">articles</a>
-            <a href="/books/">books</a>
-            <a href="/code/">code</a>
-            <a href="/music/">music</a>
-            <a href="/photos/">photos</a>
-          </nav>
-        </aside>
-        <aside class="two-thirds column">
           <p>
-						Copyright &copy; 1998-2012 Dann Stayskal. Unless otherwise noted, this content is available through Creative Commons <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/us/">BY-NC-SA 3.0</a> for those choosing to respect intellectual property. For everyone else, you are already free.
+						Copyright &copy; 1998-2013 Dann Stayskal. Unless otherwise noted, this content is available freely through the Creative Commons <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/us/">BY-NC-SA 3.0</a> license.
           </p>
           <!-- 
           <rdf:RDF xmlns="http://creativecommons.org/ns#"
@@ -92,33 +89,35 @@
                 </License>
               </rdf:RDF>
            -->
-          <p>
-            This site is open source; its code is available <a href="http://github.com/danndalf/portfolio">on github</a>.
-          </p>
         </aside>
 
-        <aside class="social two-thirds column">
-          <h4>active social media profiles</h4>
+        <aside class="social columns">
+              <a href="http://www.delicious.com/danndalf" rel="me">delicious</a>
+        </aside>
+        <aside class="social columns">
+              <a href="https://www.facebook.com/dann.stayskal" rel="me">facebook</a>
+        </aside>
+        <aside class="social columns">
+              <a href="https://www.github.com/danndalf/" rel="me">github</a>
+        </aside>
+        <aside class="social columns">
+              <a href="https://plus.google.com/u/0/114564931610606038420" rel="me">google+</a>
+        </aside>
+        <aside class="social columns">
+    					<a href="https://www.linkedin.com/in/dannstayskal" rel="me">linkedin</a>
+        </aside>
+        <aside class="social columns">
+    					<a href="http://pinterest.com/danndalf" rel="me">pinterest</a>
+        </aside>
+        <aside class="social columns">
+              <a href="http://reddit.com/user/danndalf" rel="me">reddit</a>
+        </aside>
+        <aside class="social columns">
+              <a href="https://twitter.com/danndalf" rel="me">twitter</a>
+        </aside>
 
-          <br /><br />
-
-          <a href="http://pdx.academia.edu/DannStayskal" rel="me">academia</a>
-          <a href="https://coderwall.com/danndalf" rel="me">coderwall</a>
-          <a href="http://www.delicious.com/danndalf" rel="me">delicious</a>
-          <a href="http://epdx.org/people/3811" rel="me">epdx</a>
-          <a href="http://everything2.com/user/dann" rel="me">everything2</a>
-          <a href="https://www.facebook.com/dann.stayskal" rel="me">facebook</a>
-					<a href="http://www.flickr.com/photos/danndalf" rel="me">flickr</a>
-
-          <br /><br />
-
-          <a href="https://www.github.com/danndalf/" rel="me">github</a>
-          <a href="http://www.goodreads.com/user/show/70788-dann-stayskal" rel="me">goodreads</a>
-          <a href="https://plus.google.com/u/0/114564931610606038420" rel="me">google+</a>
-					<a href="https://www.linkedin.com/in/dannstayskal" rel="me">linkedin</a>
-					<a href="http://pinterest.com/danndalf" rel="me">pinterest</a>
-          <a href="http://reddit.com/user/danndalf" rel="me">reddit</a>
-          <a href="https://twitter.com/danndalf" rel="me">twitter</a>
+        <aside class="two-thirds column">
+          <p>This site is open source; its source code <a href="http://github.com/danndalf/portfolio">is available on github</a>.</p>
         </aside>
 
       </footer>
