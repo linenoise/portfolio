@@ -129,9 +129,7 @@ aside                                           { background: #e4f39b; margin-bo
 
 article.blog h3                                 { margin-left: 0px; }
 article.blog div a.button                       { margin: 0px 0px 0px 10px; }
-article.blog p                                  { margin-bottom: 1em; }
-#disqus_thread                                  { margin: 0px 10px; }
-#dsq-footer                                     { display: none !important ;}
+article.blog p                                  { margin-bottom: 1em; margin-left: 0px; }
 
 
 /* Page Styles: Vitae
