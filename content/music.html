@@ -2,7 +2,6 @@
 title: Music
 ---
 <aside class="one-third column">
-	<p><em>Click on any song below to play.</em></p>
 	<% @item.children.sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.each do |genre| %>
 	<h3><%= genre.attributes[:title] %> music</h3>
 	<ul>
@@ -15,7 +14,6 @@ title: Music
 <div class="two-thirds column">
 	<iframe name="player" 
 			src="<%= @item.children.sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.first.children.sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.first.path %>" 
-			style="height: 400px; width: 600px;">
-		<em>Sit tight, the music player is loading&hellip;</em>
+			style="height: 400px; width: 640px;">
 	</iframe>
 </div>
