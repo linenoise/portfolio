@@ -154,7 +154,7 @@ article.blog p                                  { margin-bottom: 1em; margin-lef
 /* Navigation
 ================================================== */
 
-nav                                             { font-family: 'Open Sans Bold'; background-color: #FCE05E; padding: 0px 10px; margin: 0em 10px 20px 10px; }
+nav                                             { font-family: 'Open Sans Bold'; background-color: #FCE05E; padding: 0px; margin: 0em 10px 20px 10px; }
 nav a, nav a:visited                            { float:left; padding: 20px; text-decoration: none; letter-spacing: 1px; color: black; display: block; }
 nav a:hover, nav a:focus                        { outline: 0; color: black; background-color: #F68D51; }
 nav a.right                                     { float:right; }
@@ -174,9 +174,9 @@ footer .social a, footer .social a:visited      { display: block; color: black; 
 footer .social a:hover, 
 footer .social a:active,
 footer .contact a:hover, 
-footer .contact a:active                        { background-color: #BB94B7; }
+footer .contact a:active                        { background-color: #BB94B7; color: black; }
 footer .contact                                 { text-align: left; font-family: 'Open Sans Bold'; font-style: normal; font-size: 12pt; }
-footer .contact a                               { display: block; padding: 14px 10px 14px 14px; color: black; margin: 0px; text-decoration: none; font-size: 12pt;}
+footer .contact a                               { display: block; padding: 14px 10px 14px 14px; color: #444; margin: 0px; text-decoration: none; font-size: 12pt;}
 footer .contact img                             { vertical-align:middle; padding-right: 10px;}
 
 footer aside.vcard                              { height: 183px; text-align:center; line-height: 2em; margin-top: 0px; padding-top: 0px; }
