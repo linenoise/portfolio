@@ -167,11 +167,19 @@ footer                                          { margin: 10px 0px 0px 0px; padd
 footer aside                                    { text-align: center; padding: 10px 0px; }
 footer aside p                                  { margin: 10px 20px; }
 
-footer .social                                  { width: 140px; padding: 0px; background-color: #e1cddf; }
-footer .social a, footer .social a:visited      { font-family: 'Open Sans Bold'; letter-spacing: 1px; text-align: center; display: block; padding: 18px 20px; margin: 0px; text-decoration: none; }
-footer .social a:hover, footer .social a:active { color: black; }
+footer .contact, footer .social                 { height: 60px; padding: 0px; background-color: #e1cddf; }
+footer .social                                  { width: 140px; text-align: left; font-family: 'Open Sans Regular'; font-style: normal; font-size: 12pt; }
+footer .social img                              { vertical-align:middle; padding: 0px 10px 0px 5px; }
+footer .social a, footer .social a:visited      { display: block; color: black; font-size: 11pt; padding: 14px 10px 14px 10px; margin: 0px; text-decoration: none; }
+footer .social a:hover, 
+footer .social a:active,
+footer .contact a:hover, 
+footer .contact a:active                        { background-color: #BB94B7; }
+footer .contact                                 { text-align: left; font-family: 'Open Sans Bold'; font-style: normal; font-size: 12pt; }
+footer .contact a                               { display: block; padding: 14px 10px 14px 14px; color: black; margin: 0px; text-decoration: none; font-size: 12pt;}
+footer .contact img                             { vertical-align:middle; padding-right: 10px;}
 
-footer aside.vcard                              { height: 307px; text-align:center; line-height: 2em; margin-top: 0px; padding-top: 0px; }
+footer aside.vcard                              { height: 183px; text-align:center; line-height: 2em; margin-top: 0px; padding-top: 0px; }
 footer aside.vcard h1                           { margin: 25px 0px 0px 0px; padding: 0px; }
 footer aside.vcard h1 a                         { background-image: url("/images/logo-vertical.png"); background-position: center center; background-repeat: no-repeat; display: block; height: 151px; width: 230px; margin-bottom: 40px; margin-left: 32px; text-indent: -9999px; }
 footer aside.vcard p                            { font-family: 'Open Sans Bold'; padding: 0px; margin: 0px; }
