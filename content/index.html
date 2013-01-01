@@ -23,25 +23,25 @@ title: Hi, I'm Dann Stayskal.
 		<p>I've also recorded some <a href="/photos/"><em>classical guitar music</em></a>, calculated other songs, and played in a band or two.</p>
 	</div>
 	<div class="small one-third intro column">
-		<h2>Articles</h2>
-		<p>I irregularly write <a href="/articles/"><em>articles</em></a> on technology, productivity, security, anarchism, and polyamory.</p>
+		<h2>Essays</h2>
+		<p>I irregularly write <a href="/essays/"><em>essays</em></a> on technology, productivity, security, anarchism, and polyamory.</p>
 	</div>
 </div>
 
 <div class="clearfix">
 	<div class="two-thirds intro column">
-		<h2>Most recent article</h2>
+		<h2>Most recent essay</h2>
 		<% items
-		.select{|i| i.identifier =~ /\/articles\/.+/}
-		.sort{|a,b| b.attributes[:date] <=> a.attributes[:date]}[0].tap do |post| %>
+		.select{|i| i.identifier =~ /\/essays\/.+/}
+		.sort{|a,b| b.attributes[:date] <=> a.attributes[:date]}[0].tap do |essay| %>
 
 		<article class="blog">
 			<header>
-				<h3><a href="<%= post.identifier %>"><%= post.attributes[:title] %></a></h3>
+				<h3><a href="<%= essay.identifier %>"><%= essay.attributes[:title] %></a></h3>
 			</header>
 
-			<p><%= post.attributes[:lede] %></p>
-			<p><a href="<%= post.identifier %>">Continue reading&hellip;</a></p>
+			<p><%= essay.attributes[:lede] %></p>
+			<p><a href="<%= essay.identifier %>">Continue reading&hellip;</a></p>
 		</article>
 
 		<% end %>

@@ -1,0 +1,20 @@
+---
+title: Essays
+---
+<% items
+	.select{|i| i.identifier =~ /\/essays\/.+/}
+	.sort{|a,b| b.attributes[:date] <=> a.attributes[:date]}[0..2].each do |essay| %>
+
+	<article class="blog">
+		<header>
+			<div class="date"><%= essay.attributes[:date] %></div>
+			<h2><a href="<%= essay.identifier %>"><%= essay.attributes[:title] %></a></h2>
+		</header>
+
+		<div class="entry-content">
+			<p><%= essay.attributes[:lede] %></p>
+			<a href="<%= essay.identifier %>" class="button">Read more &rarr;</a>
+		</div>
+	</article>
+
+<% end %>

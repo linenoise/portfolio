@@ -5,7 +5,7 @@
 		<link>http://dann.stayskal.com/</link>
 		<managingEditor>dann@stayskal.com (Dann Stayskal)</managingEditor>
 		<webMaster>dann@stayskal.com (Dann Stayskal)</webMaster>
-		<description>Dann Stayskal's Articles</description>
+		<description>Dann Stayskal's Essays</description>
 
 		<language>en-us</language>
 
@@ -15,13 +15,13 @@
 		<generator>http://github.com/danndalf/portfolio/</generator>
 		<copyright>Copyright 1998-2011 Dann Stayskal. Unless otherwise noted, all content on this site is available under the Creative Commons BY-NC-SA 3.0 license.</copyright>
 
-		<% items.select{|i| i.identifier =~ /\/articles\/.+/}.sort{|a,b| b.attributes[:date] <=> a.attributes[:date]}[0..39].each do |post| %>
+		<% items.select{|i| i.identifier =~ /\/essays\/.+/}.sort{|a,b| b.attributes[:date] <=> a.attributes[:date]}[0..39].each do |essay| %>
 			<item>
-				<title><%= post.attributes[:title] %></title>
-				<link>http://dann.stayskal.com<%= post.identifier %></link>
-				<guid>http://dann.stayskal.com<%= post.identifier %></guid>
-				<description><%= CGI.escapeHTML("<p>#{post.attributes[:lede]}</p><p><a href=\"http://dann.stayskal.com#{post.identifier}\">Read more &rarr;</a></p>") %></description>
-				<pubDate><%= Time.parse(post.attributes[:date].to_s).rfc2822 %></pubDate>
+				<title><%= essay.attributes[:title] %></title>
+				<link>http://dann.stayskal.com<%= essay.identifier %></link>
+				<guid>http://dann.stayskal.com<%= essay.identifier %></guid>
+				<description><%= CGI.escapeHTML("<p>#{essay.attributes[:lede]}</p><p><a href=\"http://dann.stayskal.com#{essay.identifier}\">Read more &rarr;</a></p>") %></description>
+				<pubDate><%= Time.parse(essay.attributes[:date].to_s).rfc2822 %></pubDate>
 			</item>
 		<% end %>
 	</channel>
