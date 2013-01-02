@@ -124,7 +124,7 @@ aside                                           { background: #e4f39b; margin-bo
 .small.intro                                    { height: 152px; border-bottom: 1px dashed #AAA;  }
 .intro ul                                       { margin-top: 2em; }
 
-iframe                                          { height: 400px; width: 236px; }
+iframe                                          { height: 400px; width: 400px; }
 audio                                           { padding: 0.5em 0em 0em 10px; width: 226px; }
 
 /* Page Styles: Blog
@@ -212,6 +212,8 @@ footer aside.vcard p                            { font-family: 'Open Sans Bold';
     /* Stretch the social links in the footer to full-width */
     footer .social                              { width: 172px; }
 
+    /* Narrow the audio player */
+    iframe                                      { height: 400px; width: 236px; }
 }
 
 
@@ -240,6 +242,9 @@ footer aside.vcard p                            { font-family: 'Open Sans Bold';
     div.column, div.columns, 
     div.one-third.column, 
     div.two-thirds.column, div.small.column     { margin: 0px 10px; width: 408px; border-bottom: 0px; }
+
+    /* Narrow the audio player */
+    iframe                                      { height: 400px; width: 236px; }
 
 }
 @media only screen and (min-width: 480px) and   (max-width: 767px) { }
