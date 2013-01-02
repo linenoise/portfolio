@@ -4,6 +4,7 @@ title: Music
 <aside class="one-third column">
 	<% @item.children.sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.each do |genre| %>
 	<h3><%= genre.attributes[:title] %> music</h3>
+	<p><%= genre.attributes[:description] %></p>
 	<ul>
 		<% genre.children.sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.each do |song| %>
 	    <li><a href="<%= song.path %>" target="player"><%= song.attributes[:title] %></a></li>
@@ -13,7 +14,6 @@ title: Music
 </aside>
 <div class="two-thirds column">
 	<iframe name="player" 
-			src="<%= @item.children.sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.first.children.sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.first.path %>" 
-			style="height: 400px; width: 640px;">
+			src="<%= @item.children.sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.first.children.sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.first.path %>">
 	</iframe>
 </div>

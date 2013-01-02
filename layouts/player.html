@@ -33,13 +33,14 @@
   </head>
   <body style="margin: 0px; padding: 0px;">
 	<header>
-		<h4>Now playing: <%= @item[:title] %></h4></header>
+		<h4>Now playing</h4>
+    <p><strong><%= @item[:title] %></strong></p>
 		<p>Published <time pubdate="pubdate"><%= @item[:date] %></time></p>
 	</header>
 
 	<p><%= @item[:description] %></p>
 
-	<audio controls style="padding: 0.5em 0em 0em 10px; width: 610px;">
+	<audio controls style="padding: 0.5em 0em 0em 10px; width: 226px;">
 		<source src="<%= @item[:ogg_file] %>" />
 		<source src="<%= @item[:mp3_file] %>" />
 	</audio>

@@ -8,7 +8,7 @@ title: Software
 	<% @item.children.sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.each do |software| %>	
 	<% software_count = software_count + 1 %>
 		<tr>
-			<th style="white-space: nowrap">
+			<th>
 				<h2 style="font-size: 12pt;"><a href="<%= software.identifier %>"><%= software.attributes[:title] %></a></h2>
 			</th>
 			<td>
