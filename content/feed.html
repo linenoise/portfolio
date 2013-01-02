@@ -20,7 +20,7 @@
 				<title><%= essay.attributes[:title] %></title>
 				<link>http://dann.stayskal.com<%= essay.identifier %></link>
 				<guid>http://dann.stayskal.com<%= essay.identifier %></guid>
-				<description><%= CGI.escapeHTML("<p>#{essay.attributes[:lede]}</p><p><a href=\"http://dann.stayskal.com#{essay.identifier}\">Read more &rarr;</a></p>") %></description>
+				<description><%= CGI.escapeHTML("<p>#{essay.attributes[:lede]}</p><p><a href=\"http://dann.stayskal.com#{essay.identifier}\">Continue reading&hellip;</a></p>") %></description>
 				<pubDate><%= Time.parse(essay.attributes[:date].to_s).rfc2822 %></pubDate>
 			</item>
 		<% end %>
