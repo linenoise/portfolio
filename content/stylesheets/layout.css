@@ -172,14 +172,14 @@ footer                                          { margin: 10px 0px 0px 0px; padd
 footer aside                                    { text-align: center; padding: 10px 0px; }
 footer aside p                                  { margin: 10px 20px; }
 
-footer .contact, footer .social                 { height: 60px; padding: 0px; background-color: #e1cddf; }
+footer .contact, footer .social                 { height: 60px; padding: 0px; background-color: #a3d6da; }
 footer .social                                  { width: 140px; text-align: left; font-family: 'Open Sans Regular'; font-style: normal; font-size: 12pt; }
 footer .social img                              { vertical-align:middle; padding: 0px 10px 0px 5px; }
 footer .social a, footer .social a:visited      { display: block; color: black; font-size: 11pt; padding: 14px 10px 14px 10px; margin: 0px; text-decoration: none; }
 footer .social a:hover, 
 footer .social a:active,
 footer .contact a:hover, 
-footer .contact a:active                        { background-color: #BB94B7; color: black; }
+footer .contact a:active                        { background-color: #afe6ea; color: black; }
 footer .contact                                 { text-align: left; font-family: 'Open Sans Bold'; font-style: normal; font-size: 12pt; }
 footer .contact a                               { display: block; padding: 14px 10px 14px 14px; color: #444; margin: 0px; text-decoration: none; font-size: 12pt;}
 footer .contact img                             { vertical-align:middle; padding-right: 10px;}
