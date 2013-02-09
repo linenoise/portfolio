@@ -30,20 +30,20 @@ This codebase uses nanoc to build a tree of static HTML, CSS, and JavaScript res
 
 	$ nanoc autocompile
 
-This will autocompile any changes made to the build and make them available through a lightweight webserver running at http://localhost:3000/.
-
-TODO
-----
-
-* Move photography assets into S3
-* Integrate automatic HTML, CSS, and RSS validations
+This will automatically compile any changes made to the build and make them available through a lightweight webserver running at http://localhost:3000/.
 
 Deployment
 ----------
 
 To deploy, make sure you've got your deploy keys in place, then run:
 
-	$ nanoc compile -f
-	$ rake deploy:rsync
+	$ ./push
 
 Easy as pie.
+
+Credits
+-------
+
+![Dann Stayksal](http://dann.stayskal.com/images/logo.png)
+
+Unless otherwise noted, all content on this site is © 1998-2013 Dann Stayskal and available to you under the [Creative Commons BY-NC-SA 3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/us/) license. All exceptions to this license are noted in [the colophon for this site](https://github.com/danndalf/portfolio/blob/master/content/colophon.html)
