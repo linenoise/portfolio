@@ -9,10 +9,10 @@ GEM
     cri (2.3.0)
       colored (>= 1.2)
     kramdown (0.14.2)
-    mime-types (1.20.1)
+    mime-types (1.21)
     nanoc (3.5.0)
       cri (~> 2.2)
-    rack (1.2.7)
+    rack (1.2.8)
     rdiscount (2.0.7)
     systemu (2.5.2)
 
