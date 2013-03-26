@@ -2,8 +2,6 @@ GEM
   remote: http://rubygems.org/
   remote: http://gemcutter.org/
   specs:
-    asdf (0.5.0)
-      rack (~> 1.2.1)
     builder (3.2.0)
     colored (1.2)
     cri (2.3.0)
@@ -12,7 +10,6 @@ GEM
     mime-types (1.21)
     nanoc (3.6.2)
       cri (~> 2.3)
-    rack (1.2.8)
     rdiscount (2.0.7.1)
     systemu (2.5.2)
 
@@ -20,7 +17,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  asdf
   builder
   kramdown
   mime-types
