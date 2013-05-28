@@ -31,9 +31,7 @@ title: Howdy, I'm Dann Stayskal.
 <div class="clearfix">
 	<div class="two-thirds intro column">
 		<h2>Most recent essay</h2>
-		<% items
-		.select{|i| i.identifier =~ /\/essays\/.+/}
-		.sort{|a,b| b.attributes[:date] <=> a.attributes[:date]}[0].tap do |essay| %>
+		<% items.select{|i| i.identifier =~ /\/essays\/.+/}.sort{|a,b| b.attributes[:date] <=> a.attributes[:date]}[0].tap do |essay| %>
 
 		<article class="blog">
 			<header>
@@ -50,9 +48,7 @@ title: Howdy, I'm Dann Stayskal.
 	<div class="one-third intro column">
 		<h2>Recent photo</h2>
 
-		<% items.select{|i| i.identifier =~ /\/photos\/.+/}
-		.find_all{|item| item.path !~ /thumbnail/}
-		.sort{|a,b| b.attributes[:taken] <=> a.attributes[:taken]}[0].tap do |img| %>
+		<% items.select{|i| i.identifier =~ /\/photos\/.+/}.find_all{|item| item.path !~ /thumbnail/}.sort{|a,b| b.attributes[:taken] <=> a.attributes[:taken]}[0].tap do |img| %>
 
 		<a href="<%= img.path %>" rel="lightbox[photos]" title="<%= img.attributes[:title] %>"><img class="framed photo" src="<%= img.path.split(/\./)[0]+'-thumbnail.jpg' %>" alt="<%= img.attributes[:title] %>" style="margin-left: 0px;"></a>
 		<% end %>
