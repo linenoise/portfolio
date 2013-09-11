@@ -163,7 +163,10 @@ article.blog p                                  { margin-bottom: 1em; margin-lef
 .vitae div.vevent                               { margin-top: 1em; }
 .vitae div.vevent .dates                        { float: right; text-align: right; color: gray; font-weight: bold; }
 .vitae div.vevent .location, 
-.vitae div.vevent .dates                        { font-weight: bold; font-size: 1.15em; }
+.vitae div.vevent .dates                        { font-weight: bold; }
+.vitae .experience div.vevent .summary          { font-weight: bold; color: black; }
+.vitae div.vevent .org													{ margin-bottom: 0.25em; }
+.vitae div.vevent .organization-name a					{ font-size: 1.25em; }
 .vitae div.progress-container                   { border: 1px solid #ccc; width: 100px; margin: 2px 5px 2px 0; padding: 1px; float: left; background: white; }
 .vitae div.progress-container > div             { background-color: #596f80; height: 12px }
 .vitae td.alt                                   { width: 110px; }
