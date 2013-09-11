@@ -307,7 +307,8 @@ footer aside.vcard p                            { font-family: 'Open Sans Bold';
 @media print {
 
     /* Hide the headers and footers */
-    header.site, footer                         { display: none !important; }
+    header.site, footer, nav                     { display: none !important; }
+		div.vitae																		 { width: 100%; }
 
 }
 
