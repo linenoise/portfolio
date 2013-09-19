@@ -232,8 +232,8 @@ footer aside.vcard p                            { font-family: 'Open Sans Bold';
     /* Scoot the logo over a smidge so it doesn't bleed over into the gutter */
     footer aside.vcard h1 a                     { margin-left: 2px; }
 
-    /* Make the copyrighy area the same height as the logo area in the footer */
-    footer aside.copyright                      { height: 194px; }
+    /* Make the copyrighy area tall enough to contain reasonably typeset text */
+    footer aside.copyright                      { height: 130px; } 
 
     /* Stretch the social links in the footer to full-width */
     footer .social                              { width: 172px; }
@@ -255,11 +255,8 @@ footer aside.vcard p                            { font-family: 'Open Sans Bold';
     footer aside.vcard h1, 
     footer aside.vcard h1 a                     { margin: 20px auto; }
 
-    /* Make the copyrighy area the same height as the logo area in the footer */
-    footer aside.copyright                      { height: 194px; }
-
-    /* Stretch the social links in the footer to full-width */
-    footer .social                              { width: 210px; }
+    /* Make the copyrighy area tall enough to contain reasonably typeset text */
+    footer aside.copyright                      { height: 154px; }
 
     /* Make pull quotes full-width */
     p.pullquote                                 { float: left; clear: both; margin: 1em 1em 1em 10px; }
@@ -298,8 +295,8 @@ footer aside.vcard p                            { font-family: 'Open Sans Bold';
     div.one-third.column, 
     div.two-thirds.column, div.small.column     { margin: 0px 10px; width: 288px; border-bottom: 0px; }
 
-    /* Stretch the social links in the footer to full-width */
-    footer .social                              { width: 300px; }
+    /* Make the copyrighy area tall enough to contain reasonably typeset text */
+    footer aside.copyright                      { height: 174px; }
 
 }
 
