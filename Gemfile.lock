@@ -8,7 +8,7 @@ GEM
       colored (>= 1.2)
     kramdown (1.2.0)
     mime-types (1.25)
-    nanoc (3.6.4)
+    nanoc (3.6.5)
       cri (~> 2.3)
     rack (1.5.2)
     rdiscount (2.1.6)
