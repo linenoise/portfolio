@@ -119,8 +119,9 @@ td, th                                          { padding: 10px; }
 th                                              { text-align: right; font-family: 'Open Sans Bold'; }
 pre, tt                                         { font-family: 'Inconsolata'; font-size: 115%;}
 p.pullquote                                     { float: right; border-width: 10px 0px; border-color: #333; border-style: solid; margin: 0.5em 0em 2em 2em; padding: 0.75em 0em; font-weight: bold; font-size: 130%; font-color: black; width: 300px;}
+p.pullquote.left                                { float: left; border-width: 10px 0px; border-color: #333; border-style: solid; margin: 0.5em 2em 2em 0em; padding: 0.75em 0em; font-weight: bold; font-size: 130%; font-color: black; width: 300px;}
 th                                              { white-space: nowrap; }
-
+sup                                             { vertical-align: super; font-size: 70%; }
 
 /* Header 
 ================================================== */
