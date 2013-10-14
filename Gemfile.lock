@@ -11,7 +11,7 @@ GEM
     nanoc (3.6.5)
       cri (~> 2.3)
     rack (1.5.2)
-    rdiscount (2.1.6)
+    rdiscount (2.1.7)
     systemu (2.5.2)
 
 PLATFORMS
