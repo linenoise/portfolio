@@ -144,7 +144,7 @@ aside                                           { background: #e4f39b; margin-bo
 .intro h2                                       { margin: 10px 0px 10px 0px; font-size: 12pt; line-height: 1em; }
 .intro p                                        { font-family: 'Open Sans Regular'; padding: 0px; margin: 0px 10px 0px 0px; font-size: 12pt; }
 .intro p em                                     { font-family: 'Open Sans Bold'; font-style: normal; }
-.small.intro                                    { height: 152px; border-bottom: 1px dashed #AAA;  }
+.small.intro                                    { height: 152px; }
 .intro ul                                       { margin-top: 2em; }
 
 iframe                                          { height: 400px; width: 400px; }
