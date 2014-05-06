@@ -105,7 +105,9 @@ body, p, tr, th, td      { color: #444; font-family: 'Open Sans Regular'; }
 em                                              { font-family: 'Open Sans Italic'; }
 strong, h1, h2, h3, h4, h5                                          { font-family: 'Open Sans Bold'; }
 p                                               { margin: 10px 10px 20px 10px; padding: 0px; }
-a, a:active, a:visited, a:hover                 { color: #104577; }
+a, a:active, a:visited, a:hover                 { color: #104577; text-decoration: none; }
+article.blog a, article.blog a:active, 
+article.blog a:visited, article.blog a:hover    { text-decoration: underline; }
 a.button, a.button:hover                        { color: black; background: #eee;}
 h1, h2, h3, h4, h5                              { margin-left: 10px; font-family: 'Open Sans Bold'; }
 h1                                              { font-size: 180%; margin-bottom: 0px; }
