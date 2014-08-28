@@ -1,0 +1,22 @@
+--- 
+title: Art
+---
+<div class="two-thirds column">
+
+	<table>
+	<% art_count = 0 %>
+	<% @item.children.sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.each do |art| %>	
+	<% art_count = art_count + 1 %>
+		<tr>
+			<th style="vertical-align: top">
+				<h2 style="font-size: 12pt;"><a href="<%= art.identifier %>"><%= art.attributes[:title] %></a></h2>
+			</th>
+			<td>
+				<p><a href="<%= art.identifier %>"><img src="<%= art.attributes[:thumbnail] %>" alt="<%= art.attributes[:title] %>" /></a></p>
+				<p><%= art.attributes[:byline] %></p>
+			</td>
+		</tr>
+	<% end %>
+	</table>  
+
+</div>

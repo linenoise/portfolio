@@ -1,0 +1,60 @@
+---
+title: The Silk Road
+byline: The Silk Road was a Burning Man honorarium <a href="https://www.facebook.com/thesilkroadartproject">art installation led by Julia Logan Trimarco</a>. I worked on the structural engineering, designed and built the nighttime lighting electronics and power grid, and helped install it next to the temple at Burning Man 2014.
+thumbnail: /images/artwork/silk_road/silk_road_thumbnail.png
+---
+
+<div class="clearfix">
+  <div class="two-thirds column" style="padding-bottom: 1.5em;">
+    The Silk Road was a Burning Man honorarium <a href="https://www.facebook.com/thesilkroadartproject">art installation led by Julia Logan Trimarco</a>. I worked on the structural engineering, designed and built the nighttime lighting electronics and power grid, and helped install it next to the temple at Burning Man 2014.<br /><br />
+
+    The installation was a series of arches in the architectural styles of each major city along the ancient silk road. After the festival, the wood was reclaimed to build a house, and the electronics were recycled into other art projects.
+  </div>
+</div>
+
+<div class="clearfix">
+  <div style="margin-left: 6px;">
+    <a href="/images/artwork/silk_road/Night, The Silk Road.png" 
+       rel="lightbox[photos]" 
+       title="Night, The Silk Road">
+      <img class="framed photo" 
+           src="/images/artwork/silk_road/Night, The Silk Road-thumbnail.png" 
+           alt="Night, The Silk Road" />
+    </a>
+  </div>
+</div>
+
+<div class="clearfix">
+<% ['Night, Eastern arches.jpg', 
+     'Night, Western arches.jpg', 
+     'Night, 1 Nara.jpg', 
+     'Night, 2 Gyeongju.jpg', 
+     'Night, 3 Chang\'an.jpg', 
+     'Night, 4 Anxi.jpg', 
+     'Night, 5 Kashgar.jpg', 
+     'Night, 6 Taraz.jpg', 
+     'Night, 7 Samarkand.jpg', 
+     'Night, 8 Herat.jpg', 
+     'Night, 9 Yazd.jpg', 
+     'Night, 10 Ctesiphon.jpg', 
+     'Night, 11 Palmyra.jpg', 
+     'Night, 12 Antioch.jpg', 
+     'Night, 13 Rome.jpg'].each_with_index do |image, index|
+%>
+  <div class="one-third column">
+    <a href="/images/artwork/silk_road/<%= image %>" 
+       rel="lightbox[photos]" 
+       title="<%= image.split(/\./)[0] %>">
+      <img class="framed photo" 
+           src="/images/artwork/silk_road/<%= image.split(/\./)[0]+'-thumbnail.jpg' %>" <% if index % 3 == 0 %>style="margin-left: 0px;"<% end %> 
+           alt="<%= image.split(/\./)[0] %>" />
+    </a>
+  </div>
+<%
+    end
+%>
+</div>
+
+<div class="clearfix">
+  <p>Video goes here</p>
+</div>
