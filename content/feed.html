@@ -12,7 +12,7 @@
 		<lastBuildDate><%= Time.now.rfc2822 %></lastBuildDate>
 		<ttl>60</ttl>
 
-		<generator>http://github.com/danndalf/portfolio/</generator>
+		<generator>http://github.com/linenoise/portfolio/</generator>
 		<copyright>Copyright 1998-2014 Danne Stayskal. Unless otherwise noted, all content on this site is available under the Creative Commons BY-NC-SA 3.0 license.</copyright>
 
 		<% items.select{|i| i.identifier =~ /\/essays\/.+/}.sort{|a,b| b.attributes[:date] <=> a.attributes[:date]}[0..39].each do |essay| %>
