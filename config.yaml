@@ -49,3 +49,4 @@ data_sources:
 deploy:
     default:
         dst: "vaclav:/var/www/sites/danne.stayskal.com"
+        kind: rsync
