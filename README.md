@@ -10,7 +10,7 @@ Prerequisites: [OpenSSH](http://www.openssh.com/), [Rsync](http://rsync.samba.or
 
 First, clone this codebase
 
-	$ git clone git@github.com/danndalf/portfolio
+	$ git clone git@github.com/linenoise/portfolio
 
 Second, accept the RVM version and gemset, building Ruby 1.9.2 if you need
 
@@ -46,4 +46,4 @@ Credits
 
 ![Danne Stayksal](http://danne.stayskal.com/images/logo.png)
 
-Unless otherwise noted, all content on this site is © 1998-2014 Danne Stayskal and available to you under the [Creative Commons BY-NC-SA 3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/us/) license. All exceptions to this license are noted in [the colophon for this site](https://github.com/danndalf/portfolio/blob/master/content/colophon.html)
+Unless otherwise noted, all content on this site is © 1998-2014 Danne Stayskal and available to you under the [Creative Commons BY-NC-SA 3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/us/) license. All exceptions to this license are noted in [the colophon for this site](https://github.com/linenoise/portfolio/blob/master/content/colophon.html)
