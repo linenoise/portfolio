@@ -19,7 +19,7 @@ index_filenames: [ 'index.html' ]
 # before and after the last site compilation.
 enable_output_diff: false
 
-base_url: http://dann.stayskal.com
+base_url: http://danne.stayskal.com
 
 
 # The data sources where nanoc loads its data from. This is an array of
@@ -30,7 +30,7 @@ data_sources:
   -
     # Only strip the last suffix with a period 
     allow_periods_in_identifiers: true 
-    
+
     # The type is the identifier of the data source. By default, this will be
     # `filesystem_unified`.
     type: filesystem_unified
@@ -48,4 +48,4 @@ data_sources:
 
 deploy:
     default:
-        dst: "vaclav:/var/www/sites/dann.stayskal.com"
+        dst: "vaclav:/var/www/sites/danne.stayskal.com"

@@ -1,7 +1,7 @@
-dann.stayskal.com
+danne.stayskal.com
 =================
 
-This is the codebase that runs [Dann Stayskal's site](http://dann.stayskal.com/).  It is developed using [nanoc](http://nanoc.stoneship.org/) and rsynced in static form to the server.
+This is the codebase that runs [Danne Stayskal's site](http://danne.stayskal.com/).  It is developed using [nanoc](http://nanoc.stoneship.org/) and rsynced in static form to the server.
 
 Installation
 ------------
@@ -44,6 +44,6 @@ Easy as pie.
 Credits
 -------
 
-![Dann Stayksal](http://dann.stayskal.com/images/logo.png)
+![Danne Stayksal](http://danne.stayskal.com/images/logo.png)
 
-Unless otherwise noted, all content on this site is © 1998-2013 Dann Stayskal and available to you under the [Creative Commons BY-NC-SA 3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/us/) license. All exceptions to this license are noted in [the colophon for this site](https://github.com/danndalf/portfolio/blob/master/content/colophon.html)
+Unless otherwise noted, all content on this site is © 1998-2014 Danne Stayskal and available to you under the [Creative Commons BY-NC-SA 3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/us/) license. All exceptions to this license are noted in [the colophon for this site](https://github.com/danndalf/portfolio/blob/master/content/colophon.html)

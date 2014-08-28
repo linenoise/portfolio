@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <rss version="2.0">
 	<channel>
-		<title>Dann Stayskal</title>
-		<link>http://dann.stayskal.com/</link>
-		<managingEditor>dann@stayskal.com (Dann Stayskal)</managingEditor>
-		<webMaster>dann@stayskal.com (Dann Stayskal)</webMaster>
-		<description>Dann Stayskal's Essays</description>
+		<title>Danne Stayskal</title>
+		<link>http://danne.stayskal.com/</link>
+		<managingEditor>danne@stayskal.com (Danne Stayskal)</managingEditor>
+		<webMaster>danne@stayskal.com (Danne Stayskal)</webMaster>
+		<description>Danne Stayskal's Essays</description>
 
 		<language>en-us</language>
 
@@ -13,14 +13,14 @@
 		<ttl>60</ttl>
 
 		<generator>http://github.com/danndalf/portfolio/</generator>
-		<copyright>Copyright 1998-2011 Dann Stayskal. Unless otherwise noted, all content on this site is available under the Creative Commons BY-NC-SA 3.0 license.</copyright>
+		<copyright>Copyright 1998-2014 Danne Stayskal. Unless otherwise noted, all content on this site is available under the Creative Commons BY-NC-SA 3.0 license.</copyright>
 
 		<% items.select{|i| i.identifier =~ /\/essays\/.+/}.sort{|a,b| b.attributes[:date] <=> a.attributes[:date]}[0..39].each do |essay| %>
 			<item>
 				<title><%= essay.attributes[:title] %></title>
-				<link>http://dann.stayskal.com<%= essay.identifier %></link>
-				<guid>http://dann.stayskal.com<%= essay.identifier %></guid>
-				<description><%= CGI.escapeHTML("<p>#{essay.attributes[:lede]}</p><p><a href=\"http://dann.stayskal.com#{essay.identifier}\">Continue reading&hellip;</a></p>") %></description>
+				<link>http://danne.stayskal.com<%= essay.identifier %></link>
+				<guid>http://danne.stayskal.com<%= essay.identifier %></guid>
+				<description><%= CGI.escapeHTML("<p>#{essay.attributes[:lede]}</p><p><a href=\"http://danne.stayskal.com#{essay.identifier}\">Continue reading&hellip;</a></p>") %></description>
 				<pubDate><%= Time.parse(essay.attributes[:date].to_s).rfc2822 %></pubDate>
 			</item>
 		<% end %>
