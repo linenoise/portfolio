@@ -5,7 +5,7 @@ title: Essays
 <div class="two-thirds column">
 
 	<table>
-	<% items.select{|i| i.identifier =~ /\/essays\/.+/}.sort{|a,b| b.attributes[:date] <=> a.attributes[:date]}[0..2].each do |essay| %>
+	<% items.select{|i| i.identifier =~ /\/essays\/.+/}.sort{|a,b| b.attributes[:date] <=> a.attributes[:date]}.each do |essay| %>
 		<tr>
 			<th style="width: 140px">
 				<h2 style="font-size: 12pt;"><a href="<%= essay.identifier %>"><%= essay.attributes[:title] %></a></h2>
