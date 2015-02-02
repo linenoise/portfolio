@@ -7,10 +7,10 @@ GEM
       colored (~> 1.2)
     kramdown (1.5.0)
     mime-types (2.4.3)
-    nanoc (3.7.4)
+    nanoc (3.7.5)
       cri (~> 2.3)
-    rack (1.5.2)
-    rdiscount (2.1.7.1)
+    rack (1.6.0)
+    rdiscount (2.1.8)
     systemu (2.6.4)
 
 PLATFORMS
