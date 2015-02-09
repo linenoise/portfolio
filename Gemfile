@@ -1,5 +1,4 @@
 source 'http://rubygems.org'
-source 'http://gemcutter.org'
 gem "nanoc"
 gem "kramdown"
 gem "mime-types"

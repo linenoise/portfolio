@@ -1,6 +1,5 @@
 GEM
   remote: http://rubygems.org/
-  remote: http://gemcutter.org/
   specs:
     builder (3.2.2)
     colored (1.2)
