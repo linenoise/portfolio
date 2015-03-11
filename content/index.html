@@ -29,25 +29,3 @@ title: Howdy, I'm Danne Stayskal.
 		<p>My <a href="/essays/"><em>essays</em></a> cover activism, open source, graph data, and socio-political philosophy and praxis.</p>
 	</div>
 </div>
-
-<div class="clearfix">
-	<div class="one-third intro column" style="margin-bottom: 0px !important; padding-bottom: 0px !important;">
-		<h2>Photography</h2>
-	</div>
-</div>
-
-<div class="clearfix">
-	<% items.select{|i| i.identifier =~ /\/photos\/.+/}.find_all{|item| item.path !~ /thumbnail/}.sort{|a,b| b.attributes[:taken] <=> a.attributes[:taken]}[0..2].each do |img| %>
-	<div class="one-third intro column" style="margin-bottom: 0px !important; padding-bottom: 0px !important;">
-
-		<a href="<%= img.path %>" rel="lightbox[photos]" title="<%= img.attributes[:title] %>"><img class="framed photo" src="<%= img.path.split(/\./)[0]+'-thumbnail.jpg' %>" alt="<%= img.attributes[:title] %>" style="margin-left: 0px;"></a>
-	</div>
-	<% end %>
-</div>
-
-<div class="clearfix">
-	<div class="one-third intro column">
-		<p> <a href="/photos/">See all photos&hellip;</a><br /><br /><br /></p>
-	</div>
-</div>
-
