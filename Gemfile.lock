@@ -11,7 +11,7 @@ GEM
       cri (~> 2.3)
     rack (1.6.0)
     rdiscount (2.1.8)
-    systemu (2.6.4)
+    systemu (2.6.5)
 
 PLATFORMS
   ruby
