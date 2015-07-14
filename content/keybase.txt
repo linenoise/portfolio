@@ -1,0 +1,72 @@
+==================================================================
+https://keybase.io/linenoise
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://danne.stayskal.com
+  * I am linenoise (https://keybase.io/linenoise) on keybase.
+  * I have a public key with fingerprint 345B D55B F919 EA75 649A  73D1 7640 4A3E 426B 0B8B
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "345bd55bf919ea75649a73d176404a3e426b0b8b",
+            "host": "keybase.io",
+            "key_id": "76404a3e426b0b8b",
+            "kid": "0101552c77bf8954a6cc20abaf63f8a8a2f90fa10ce00c1dda101a8b31ebde05f8e80a",
+            "uid": "9a18128a1cd02b33f74fe1bb99c70619",
+            "username": "linenoise"
+        },
+        "service": {
+            "hostname": "danne.stayskal.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1436907453,
+    "expire_in": 157680000,
+    "prev": "5e76bcf8dd4f9cbd7ab7f527c70c3e3f1e7610d6dc38f7f51e7da3a3681aa69f",
+    "seqno": 4,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+
+owFtkm1QVFUYxxcIW8EGkwRyGCYv+VK74r1737eBcBU/0NiAQDoqMOfce+5yW7gX
+9y67EFGUUaxMuKWNNWjboGQWZqERuxQMCOTADFIORAwxTUxOYAElIgIzdZexb50v
+5zzP///8znmeOb5HIgzGMHd6ZprNEV0XNjAFDXlNnmuVGFTFCsxaiTnQ6ibJih05
+S52y4sKsGEnRUKRpKPEEjwBLMxQPWFIkWIbCKUAiysJAHHIQM2NFqhaq0DEQaChF
+VvWcHhTKop79H79jVcAJnKBpi8CyUOJ4mgKMIFhwAIHEkBIHOGCReFwCBC4gHBcI
+UdSPBOAgSSAoIpyWOMThQMeVreJ4QHCEhQOEIOIWSJISS0mIgJDnBRZnCD5k1JBT
+ASVIdxfLClJUWUNYlRnT025ZQKEZhFp5YBGBoqAUzQUqNAcoThHUEh1R6lRdqqAW
+63qRy1VqDZW7KkpDfg+ChQ9IhVBWRH2aeoEbOTVZVTAroTsFlxxCExTJ8DhL0aQZ
+Q+WlshMVyiEHzTIcrq/QNcitI2nEMlCQOFGkJF6AIgsgK9EWVu9IIBEpEbpO4CIj
+CiQn6Yoei4AEJMMRADC8hIV6O6qomJXSnwnsOlKT7YoRuMqceudR3vDEhwxhRsOa
+yPDQjzBErV3/3zfxPx2zFI5VjKz4bnTvWJ+SmluG0Vsmp6W/l7S5g22BzNqU+3ce
+nXHn7noS9Eo/yfubVyZzUj+9nTcfbTSlncKquvqrP3K0T4zXRNe/UUu1bVg+PV19
+QNtjnx/OefXwFXNN8vhSUcFKVGs0w8CvzuY3C3NJ/TfR6Ovb/8xf++YF2/mL2R82
+bCd8vR3JtoyDxs0JYx5f+lmgHmsfYV4aL3l5ILFu7IU4z6Lv8dTFvphhgVF7T2y2
+O/ChTTkbv72Q3rHjZvCiZ/pZ+xH7ye/fzWpZExyLu0P7n8hs8PdszX3tx+M93tlr
+Bi3119SdpvjlQEHj3foXn1t+K8L8j81YK5vrPqgxD8bu/SsiP7nSP/i23z104OfO
+PWlDh4xHjzQsJPzS6Q8bDdp+885LCb3vN6aVLz+28uXktmPnjBtGpBtpJyfyauc2
+VY/e2rYLdSRNN1LeyEDX9cTInHWH2PiWqdiG4vgzg1mBsEvFRN/G3VRdvLtPm22f
+iOWsTRm2zK9/b6GJ925daQ18fsoDh5L+uP6Dje7CLceX754p2H9i1/gz/ft8RPhM
+VsZitFWxmbIfZlDJcHmV6Z248p68LULj5daYff23g4llXAB2f+a7+nH/gOl8/VTZ
+zldOx9xrDmZ7Z9v2GgZG1z3Vurvzu+SprclXvzk30/TFcHdw4b7P/MnhSwvQ2HjZ
+9Lz33r8=
+=xvcE
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/linenoise
+
+==================================================================
+
