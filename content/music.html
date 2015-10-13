@@ -1,7 +1,9 @@
---- 
+---
 title: Music
 ---
 <aside class="one-third column">
+  <h3>DJ Sets</h3>
+  <p>My DJ sets of electronic music are hosted <a href="http://mixcloud.com/DanneStayskal/">on my MixCloud account</a>.</p>
 	<% @item.children.sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.each do |genre| %>
 	<h3><%= genre.attributes[:title] %> music</h3>
 	<p><%= genre.attributes[:description] %></p>
@@ -13,7 +15,7 @@ title: Music
 	<% end %>
 </aside>
 <div class="two-thirds column">
-	<iframe name="player" 
+	<iframe name="player"
 			src="<%= @item.children.sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.first.children.sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.first.path %>">
 	</iframe>
 </div>
