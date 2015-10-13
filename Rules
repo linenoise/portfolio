@@ -3,7 +3,7 @@
 ### COMPILATION RULES
 
 # Don’t filter or layout assets
-compile %r{^/(favicon|robots|crypto/.*|stylesheets/.*|javascript/.*|plugins/.*|fonts/.*|images/.*|photos/.*)/$} do
+compile %r{^/(favicon|robots|crypto/.*|stylesheets/.*|javascript/.*|plugins/.*|fonts/.*|images/.*|photos/.*|keybase.txt)/$} do
 end
 
 compile '/' do
