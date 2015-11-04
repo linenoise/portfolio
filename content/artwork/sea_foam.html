@@ -1,0 +1,32 @@
+---
+title: Sea Foam
+byline: Sea Foam is an installation built by <a href="http://molliepower.tumblr.com/">Mollie Bryan</a> for which I was the lighting designer. It's a series of lights surrounded by filters with colors that shift and shimmer in waves.
+thumbnail: /images/artwork/sea_foam/sea_foam_thumbnail.jpg
+---
+
+		<p>Sea Foam is an installation built by <a href="http://molliepower.tumblr.com/">Mollie Bryan</a> for which I was the lighting designer. It's a series of lights surrounded by filters with colors that shift and shimmer in waves.</p>
+
+		<p>Full arduino source code for this lighting design <a href="https://github.com/linenoise/arduino/blob/master/sea_foam/sea_foam.ino">is available on GitHub</a>.</p>
+
+    <div class="clearfix">
+    <% ['sea_foam_green.jpg',
+         'sea_foam_red.jpg',
+         'sea_foam_blue.jpg'].each_with_index do |image, index|
+    %>
+      <div class="one-third column">
+        <a href="/images/artwork/sea_foam/<%= image %>"
+           rel="lightbox[photos]"
+           title="<%= image.split(/\./)[0] %>">
+          <img class="framed photo"
+               src="/images/artwork/sea_foam/<%= image.split(/\./)[0]+'-thumbnail.jpg' %>" <% if index % 3 == 0 %>style="margin-left: 0px;"<% end %>
+               alt="<%= image.split(/\./)[0] %>" />
+        </a>
+      </div>
+    <%
+        end
+    %>
+    </div>
+    
+<p><a href="https://instagram.com/p/9m6QW-R2BC/">Vicki Fehl also posted a good photo of this installation to Instagram</a></p>
+
+<p>&nbsp;</p>
