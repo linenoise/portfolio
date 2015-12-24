@@ -1,5 +1,5 @@
 source 'http://rubygems.org'
-gem "nanoc"
+gem "nanoc", '<4'
 gem "kramdown"
 gem "mime-types"
 gem "rdiscount"
