@@ -1,7 +1,7 @@
 danne.stayskal.com
 =================
 
-This is the codebase that runs [Danne Stayskal's site](http://danne.stayskal.com/).  It is developed using [nanoc](http://nanoc.stoneship.org/) and rsynced in static form to the server.
+This is the codebase that runs [Danne Stayskal's portfolio site](http://danne.stayskal.com/).  It is developed using [nanoc](http://nanoc.stoneship.org/) and rsynced in static form to the server.
 
 Installation
 ------------
