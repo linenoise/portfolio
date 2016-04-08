@@ -108,10 +108,10 @@ p                                               { margin: 10px 10px 20px 10px; p
 a, a:active, a:visited, a:hover                 { color: #104577; text-decoration: none; }
 article.blog a, article.blog a:active, 
 article.blog a:visited, article.blog a:hover    { text-decoration: underline; }
-a.button, a.button:hover                        { color: black; background: #eee;}
+a.button, a.button:hover                        { color: black; background: #eee; text-decoration: none !important; font-size: 110%; margin-bottom: 1em;}
 h1, h2, h3, h4, h5                              { margin-left: 10px; font-family: 'Open Sans Bold'; }
 h1                                              { font-size: 180%; margin-bottom: 0px; }
-h2                                              { font-size: 150%; line-height: 24pt; margin-bottom: 1.5em; padding-bottom: 0px; border-bottom: 4px solid #BBB;}
+h2                                              { font-size: 150%; line-height: 24pt; margin-bottom: 1.5em; margin-left: 0px; padding-bottom: 0px; border-bottom: 4px solid #BBB;}
 h3                                              { font-size: 140%; }
 h4                                              { font-size: 130%; font-family: 'Open Sans Italic';}
 h5                                              { font-size: 100%; }
