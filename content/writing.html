@@ -1,0 +1,18 @@
+---
+title: Writing
+---
+
+<table>
+<% items.select{|i| i.identifier =~ /\/writing\/.+/}.sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.each do |essay| %>
+	<tr>
+		<th style="width: 140px">
+			<h2 style="font-size: 12pt;"><a href="<%= essay.identifier %>"><%= essay.attributes[:title] %></a></h2>
+			<div class="date"><%= essay.attributes[:date] %></div>
+		</th>
+		<td>
+			<p><%= essay.attributes[:lede] %></p>
+			<p><a href="<%= essay.identifier %>">Continue reading&hellip;</a></p>
+		</td>
+	</tr>
+<% end %>
+</table>

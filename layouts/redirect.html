@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+  <head>
+    <title><% if @item[:title] %><%= @item[:title] %><% else %>Danne Stayskal<% end %></title>
+
+    <!-- Meta -->
+		<meta charset="UTF-8">
+		<meta http-equiv="Content-Language" content="en" />
+    <meta name="description" content="<%= @item[:title] %>" />
+    <meta name="author" content="Danne Stayskal">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="/stylesheets/skeleton.css" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/layout.css" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/lightbox.css" />
+
+    <!-- Alternates -->
+    <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://danne.stayskal.com/feed/" />
+
+    <!-- Shims -->
+    <!--[if lt IE 9]>
+      <script src="/javascript/html5shim.js"></script>
+    <![endif]-->
+
+    <!-- Icons -->
+    <link rel="shortcut icon" href="/images/danne-stayskal-favicon.ico" />
+    <link rel="apple-touch-icon" href="/images/danne-stayskal-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/danne-stayskal-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/danne-stayskal-icon-114x114.png" />
+
+    <!-- JavaScripts -->
+    <script src="/javascript/jquery-1.7.2.min.js"></script>
+    <script src="/javascript/lightbox.js"></script>
+
+    <!-- Redirection -->
+	<meta http-equiv="refresh" content="1;<%=@item[:redirect_to]%>">
+	<script type="text/javascript">
+		window.location.href = "<%=@item[:redirect_to]%>"
+	</script>
+
+  </head>
+  <body>
+    <div class="container">
+      <% if @item[:title] %>
+      <header class="site clearfix">
+        <a href="/"><img src="/images/ds_ligature-small.png" alt="Danne Stayskal"></a>
+        <h1><%= @item[:title] %></h1>
+      </header>
+      <% end %>
+
+      <div class="clearfix">
+		  <p>This page has moved. If you are not redirected to the link below within five second, please click on it to proceed.</p>p>
+
+		  <p><a href="<%=@item[:redirect_to]%>"</a></a></p>
+     	<%= yield %>
+      </div>
+    </div>
+  </body>
+</html>
