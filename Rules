@@ -11,6 +11,11 @@ compile '/' do
   layout 'default'
 end
 
+compile %r{^/essays/.*/$} do
+  filter :erb
+  layout 'redirect'
+end
+
 # Sitemap, RSS feed, and htaccess get filtered with erb, but get no layout.
 compile %r{^/(sitemap|htaccess|feed|card|identity)/$} do
   filter :erb
