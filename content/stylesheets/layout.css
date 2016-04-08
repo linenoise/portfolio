@@ -111,9 +111,9 @@ article.blog a:visited, article.blog a:hover    { text-decoration: underline; }
 a.button, a.button:hover                        { color: black; background: #eee;}
 h1, h2, h3, h4, h5                              { margin-left: 10px; font-family: 'Open Sans Bold'; }
 h1                                              { font-size: 180%; margin-bottom: 0px; }
-h2                                              { font-size: 150%; }
-h3                                              { font-size: 130%; font-family: 'Open Sans Italic'; }
-h4                                              { font-size: 130%; }
+h2                                              { font-size: 150%; line-height: 24pt; margin-bottom: 1.5em; padding-bottom: 0px; border-bottom: 4px solid #BBB;}
+h3                                              { font-size: 140%; }
+h4                                              { font-size: 130%; font-family: 'Open Sans Italic';}
 h5                                              { font-size: 100%; }
 ul                                              { list-style: disc outside; margin-left: 30px; }
 table                                           { margin-left: 10px; }
@@ -143,7 +143,7 @@ p.note, p.notice                                { border: 2px solid #999; backgr
 aside                                           { background: #e4f39b; margin-bottom: 20px !important; padding: 10px 0px; }
 
 .intro                                          { padding: 0px; margin-bottom: 20px !important; }
-.intro h2                                       { margin: 10px 0px 10px 0px; font-size: 12pt; line-height: 1em; }
+.intro h3                                       { margin: 10px 0px 10px 0px; font-size: 12pt; line-height: 1em; }
 .intro p                                        { font-family: 'Open Sans Regular'; padding: 0px; margin: 0px 10px 0px 0px; font-size: 12pt; }
 .intro p em                                     { font-family: 'Open Sans Bold'; font-style: normal; }
 .small.intro                                    { height: 152px; }
@@ -183,12 +183,12 @@ article.blog p                                  { margin-bottom: 1em; margin-lef
 .vitae div.labs .vevent,
 .vitae div.volunteer .vevent                    { margin-top: 2em; margin-left: 0px; }
 .vitae td, .vitae th                            { padding: 3px; }
-
+.vitae img                                      { float: right; height: 220px; width: 220px; border: 4px solid #BBB; margin: 4px; padding: 10px; margin-right: 0px; }
 
 /* Navigation
 ================================================== */
 
-nav                                             { font-family: 'Open Sans Bold'; background-color: #A6CFE5; padding: 0px; margin: 0em 10px 20px 10px; }
+nav                                             { font-family: 'Open Sans Bold'; background-color: #aad9f4; padding: 0px; margin: 0em 10px 20px 10px; }
 nav a, nav a:visited                            { float:left; padding: 20px; text-decoration: none; letter-spacing: 1px; color: black; display: block; }
 nav a:hover, nav a:focus                        { outline: 0; color: black; background-color: #34A8B7; }
 nav a.right                                     { float:right; }
@@ -201,7 +201,7 @@ footer                                          { margin: 10px 0px 0px 0px; padd
 footer aside                                    { text-align: center; padding: 10px 0px; }
 footer aside p                                  { margin: 10px 20px; }
 
-footer .contact, footer .social                 { height: 60px; padding: 0px; background-color: #F5DC8D; }
+footer .contact, footer .social                 { height: 60px; padding: 0px; background-color: #cfc7fa; }
 footer .social                                  { width: 140px; text-align: left; font-family: 'Open Sans Regular'; font-style: normal; font-size: 12pt; }
 footer .social img                              { vertical-align:middle; padding: 0px 10px 0px 5px; }
 footer .social a, footer .social a:visited      { display: block; color: black; font-size: 11pt; padding: 14px 10px 14px 10px; margin: 0px; text-decoration: none; }
