@@ -5,7 +5,7 @@ GEM
     colored (1.2)
     cri (2.7.0)
       colored (~> 1.2)
-    kramdown (1.10.0)
+    kramdown (1.11.1)
     mime-types (3.0)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0221)
