@@ -22,7 +22,7 @@ GEM
     guard-nanoc (1.0.3)
       guard (~> 2.8)
       nanoc (~> 3.6)
-    kramdown (1.11.1)
+    kramdown (1.12.0)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
