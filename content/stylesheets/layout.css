@@ -101,9 +101,9 @@
 /* Typography
 ================================================== */
 
-body, p, tr, th, td      { color: #444; font-family: 'Open Sans Regular'; }
+body, p, tr, th, td                             { color: #444; font-family: 'Open Sans Regular'; }
 em                                              { font-family: 'Open Sans Italic'; }
-strong, h1, h2, h3, h4, h5                                          { font-family: 'Open Sans Bold'; }
+strong, h1, h2, h3, h4, h5                      { font-family: 'Open Sans Bold'; }
 p                                               { margin: 10px 10px 20px 10px; padding: 0px; }
 a, a:active, a:visited, a:hover                 { color: #104577; text-decoration: none; }
 article.blog a, article.blog a:active, 
@@ -291,7 +291,7 @@ footer aside.vcard p                            { font-family: 'Open Sans Bold';
     th                                          { white-space: normal; text-align: left; padding: 0px 0px 20px 0px; }
     th h2                                       { margin-left: 0px; }
     /* Hide table data elements (since links are in the headers) */
-    td                                          { display: none !important; }
+    /* td                                          { display: none !important; } */
 
     /* Narrow the small columns by 10px */
     div.column, div.columns, 
