@@ -148,6 +148,8 @@ aside                                           { background: #e4f39b; margin-bo
 .intro p em                                     { font-family: 'Open Sans Bold'; font-style: normal; }
 .small.intro                                    { height: 152px; }
 .intro ul                                       { margin-top: 2em; }
+.intro.project                                  { height: 112px; }
+.intro.project img                              { margin: 5px 15px; float: left }
 
 iframe                                          { height: 400px; width: 400px; }
 audio                                           { padding: 0.5em 0em 0em 10px; width: 226px; }
