@@ -3,30 +3,97 @@ title: Portfolio
 ---
 <div class="clearfix">
 
+	<div style="margin-right: 10px; margin-left: 0px;">
+		<p style="font-size: 110%">Danne Stayskal <a href="/vitae/">creates technology to maximize the human potential</a>.</p>
+	</div>
+
 	<div class="small one-third intro column">
 		<h3>Artwork</h3>
-		<p>I create <a href="/artwork/"><em>works of art</em></a> for Burning Man and other regional art and music festivals.</p>
+		<p>
+			I create <a href="/artwork/"><em>facets and works of art</em></a> for Burning Man and other regional art festivals.
+		</p>
+		
+		<ul>	
+			<% items.select{|i| i.identifier =~ /^\/artwork\/.+/}.sort{|a,b| b.attributes[:date] <=> a.attributes[:date]}[0..1].each do |node| %>
+			<li><a href="<%= node.identifier %>"><%= node.attributes[:title] %></a></li>
+			<% end %>
+			<li><a href="/artwork/">All artwork</a></li>
+		</ul>
 	</div>
+
 	<div class="small one-third intro column">
 		<h3>Books</h3>
-		<p>I've written some <em><a href="/books/">books</a></em> as well. They cover human rights, intellectual property, and social geometry.</p>
+		<p>
+			I've written some <em><a href="/books/">books</a></em> as well. They cover human rights, intellectual property, and social geometry.
+		</p>
+
+		<ul>	
+			<% items.select{|i| i.identifier =~ /^\/books\/.+/}.sort{|a,b| b.attributes[:date] <=> a.attributes[:date]}[0..1].each do |node| %>
+			<li><a href="<%= node.identifier %>"><%= node.attributes[:title] %></a></li>
+			<% end %>
+			<li><a href="/books/">All books</a></li>
+		</ul>
 	</div>
+	
 	<div class="small one-third intro column">
 		<h3>Music</h3>
-		<p>I'm a musician&mdash;<a href="/music/"><em>a solo classical guitarist</em></a> who's also played in a few bands.</p>
+		<p>
+			I'm a musician&mdash;<a href="/music/"><em>a solo classical guitarist</em></a> who's also played in a few bands.
+		</p>
+
+		<ul>	
+			<% items.select{|i| i.identifier =~ /^\/music\/classical\/.+/}.sort{|a,b| b.attributes[:date] <=> a.attributes[:date]}[0..1].each do |node| %>
+			<li><a href="<%= node.identifier %>"><%= node.attributes[:title] %></a></li>
+			<% end %>
+			<li><a href="/music/">All music</a></li>
+		</ul>
 	</div>
+	
+	<div class="small one-third intro column">
+		<h3>Photography</h3>
+
+			<% img_count = 0 %>
+			<% items.select{|i| i.identifier =~ /^\/photos\/.+/}.find_all{|item| item.path !~ /thumbnail/}.sort{|a,b| b.attributes[:taken] <=> a.attributes[:taken]}[0..3].each do |img| %>
+			<% img_count = img_count + 1 %>
+
+			<a href="<%= img.path %>" rel="lightbox[photos]" title="<%= img.attributes[:title] %>"><img class="framed photo" src="<%= img.path.split(/\./)[0]+'-thumbnail.jpg' %>" <% if img_count % 3 == 1%>style="margin-left: 0px;"<% end %> alt="<%= img.attributes[:title] %>"></a>
+
+			<% end %>
+		<ul>
+			<li><a href="/photos/">All photos</a></li>
+		</ul>
+
+	</div>
+	
 	<div class="small one-third intro column">
 		<h3>Software</h3>
-		<p>I develop <em><a href="/software/">open source software</a></em>. It can help you circumvent censorship as well as monitor and secure networks.</p>
+		<p>
+			I develop <em><a href="/software/">open source software</a></em>. It can help you circumvent censorship as well as maintain and secure networks.
+		</p>
+
+		<ul>	
+			<% items.select{|i| i.identifier =~ /^\/software\/.+/}.sort{|a,b| b.attributes[:date] <=> a.attributes[:date]}[0..1].each do |node| %>
+			<li><a href="<%= node.identifier %>"><%= node.attributes[:title] %></a></li>
+			<% end %>
+			<li><a href="/software/">All software</a></li>
+		</ul>
 	</div>
-	<div class="small one-third intro column">
-		<h3>Vitae</h3>
-		<p>I'm a <em><a href="/vitae/">cryptographer, linguist, and AI engineer</a></em> who creates tools to maximize the human potential.</p>
-	</div>
+
 	<div class="small one-third intro column">
 		<h3>Writing</h3>
-		<p>My <a href="/writing/"><em>writing</em></a> covers activism, open source, graph data, and socio-political philosophy and praxis.</p>
+		<p>
+			My <a href="/writing/"><em>writing</em></a> covers activism, open source, graph data, and socio-political philosophy and praxis.
+		</p>
+
+		<ul>	
+			<% items.select{|i| i.identifier =~ /^\/writing\/.+/}.sort{|a,b| b.attributes[:date] <=> a.attributes[:date]}[0..1].each do |node| %>
+			<li><a href="<%= node.identifier %>"><%= node.attributes[:title] %></a></li>
+			<% end %>
+			<li><a href="/writing/">All writing</a></li>
+		</ul>
 	</div>
+
+
 
 	<div style="margin-right: 10px; margin-left: 10px;">
 		<h2>Projects</h2>
