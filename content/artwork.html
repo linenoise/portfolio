@@ -5,7 +5,7 @@ title: Art
 
 	<table>
 	<% art_count = 0 %>
-	<% @item.children.sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.each do |art| %>	
+	<% children_of(@item).sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.each do |art| %>	
 	<% art_count = art_count + 1 %>
 		<tr>
 			<th style="vertical-align: top">

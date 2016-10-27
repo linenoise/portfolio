@@ -1,0 +1,40 @@
+/*
+* layout.css
+* Copyright 2016 Danne Stayskal <danne@stayskal.com>
+* For http://danne.stayskal.com/
+*
+* License: Creative Commons BY-NC-SA 3.0 US
+* http://creativecommons.org/licenses/by-nc-sa/3.0/us/
+*/
+
+/* Table of Contents
+==================================================
+    # Typography
+    # Header
+    # Page Styles
+        # Blog
+        # Vitae
+    # Navigation 
+    # Footer
+    # Media Queries
+        # Netbooks and Tablets (landscape)
+        # Tablets (portrait) and Phones (landscape)
+        # Phones (portrait)
+        # Printers
+*/
+
+/* Color Palette 
+================================================== */
+
+$body-color:              #E9E9EA;
+$inset-color:             #FAFAF9;
+$button-color:            #555555;
+$button-hover-color:      #595959;
+
+
+/* Typography
+================================================== */
+
+body {
+    background-color: $body-color;
+}

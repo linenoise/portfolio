@@ -1,54 +1,101 @@
 #!/usr/bin/env ruby
 
-### COMPILATION RULES
-
 # Don’t filter or layout assets
-compile %r{^/(favicon|robots|crypto/.*|stylesheets/.*|javascript/.*|plugins/.*|fonts/.*|images/.*|photos/.*|keybase.txt)/$} do
-end
-
-compile '/' do
-  filter :erb
-  layout 'default'
-end
-
-compile %r{^/essays/.*/$} do
-  filter :erb
-  layout 'redirect'
-end
-
 # Sitemap, RSS feed, and htaccess get filtered with erb, but get no layout.
-compile %r{^/(sitemap|htaccess|feed|card|identity)/$} do
-  filter :erb
+# compile %r{^/(favicon|robots|keybase)/$} do
+# end
+compile %r{^/(javascript|images|photos)/*} do
 end
+route %r{^/(javascript|images|photos)/*} do
+  item.identifier + ''
+end
+
+compile %r{^/(sitemap|feed|card|identity|vitae)} do
+  filter :erb
+  layout '/default.html'
+end
+route %r{^/(sitemap|feed|card|identity|vitae)} do
+  item.identifier.without_ext + '/index.html'
+end
+
+
+
+# Redirect /essays to /writing
+compile %r{^/essays/*} do
+  filter :erb
+  layout '/redirect.html'
+end
+route %r{^/essays/*} do
+  item.identifier + ''
+end
+
+
 
 # Songs get rendered in the music player
-compile %r{^/music/.*/$} do
+compile %r{^/music/*/*} do
   filter :erb
-  layout 'player'
+  layout '/player.html'
+end
+route %r{^/music/*/*} do
+  item.identifier.without_ext + '.html'
 end
 
 
-compile '*' do
-  case item[:extension]
-    when 'md'
-      filter :rdiscount
-    when 'html'
-      filter :erb
+
+# Everything else gets rendered in the default view
+compile %r{/(artwork|books|software|writing)/*} do
+  filter :erb
+  layout '/default.html'
+end
+route %r{/(artwork|books|software|writing)/*} do
+  # Write item with identifier /foo/ to /foo/index.html
+  item.identifier.without_ext + '/index.html'
+end
+
+
+
+# Layout stylesheet gets rendered through SCSS
+compile %r{/stylesheets/layout.scss} do
+  filter :sass, syntax: :scss
+end
+compile %r{/stylesheets/*} do
+end
+route %r{/stylesheets/*} do
+  item.identifier.without_ext + '.css'
+end
+
+
+
+# Photos have a thumbnail representation
+route %r{^/photos/*}, :rep => :thumbnail do
+  item.identifier.without_ext + '-thumbnail.' + item.identifier.ext
+end
+
+
+
+# Catch our landing page
+compile %r{^/index.html} do
+    filter :erb
+    layout '/default.html'
+end
+route %r{^/index.html} do
+  '/index.html'
+end
+
+
+
+# Finally, catch all of our root HTML content
+compile '/*' do
+  if item.binary?
+  else
+    filter :erb
+    layout '/default.html'
   end
-  layout 'default'
-end
-
-route '/photos/*/', :rep => :thumbnail do
-  item.identifier.chop + '-thumbnail.' + item[:extension]
-end
-
-route %r{^/(favicon|robots|sitemap|crypto/.*|stylesheets/.*|javascript/.*|plugins/.*|fonts/.*|images/.*|photos/.*)/$} do
-  ext = item[:extension]
-  item.identifier.chop + '.' + ext
 end
 
 route '*' do
-  item.identifier + 'index.html'
+  item.identifier.without_ext + '/index.html'
 end
 
-layout '*', :erb
+layout '/*', :erb
+

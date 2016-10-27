@@ -15,8 +15,8 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" href="/stylesheets/skeleton.css" />
-    <link rel="stylesheet" type="text/css" href="/stylesheets/layout.css" />
     <link rel="stylesheet" type="text/css" href="/stylesheets/lightbox.css" />
+    <link rel="stylesheet" type="text/css" href="/css/layout.css" /> <!-- Rendered through SASS -->
 
     <!-- Alternates -->
     <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://danne.stayskal.com/feed/" />
@@ -39,41 +39,39 @@
   </head>
   <body>
     <div class="container">
+
       <% if @item[:title] %>
-      <header class="site clearfix">
+      <header class="row">
         <a href="/"><img src="/images/ds_ligature-small.png" alt="Danne Stayskal"></a>
         <h1><%= @item[:title] %></h1>
       </header>
       <% end %>
 
-      <div class="clearfix">
       <%= yield %>
-      </div>
 
-      <nav class="clearfix">
+      <nav class="row">
         <a href="/" style="padding-left: 30px;">home</a>
         <a href="/artwork/">artwork</a>
         <a href="/books/">books</a>
         <a href="/music/">music</a>
         <a href="/photos/">photography</a>
         <a href="/software/">software</a>
-        <a href="/vitae/">vitae</a>
         <a href="/writing/">writing</a>
+        <a href="/vitae/">vitae</a>
       </nav>
 
-      <footer class="clearfix">
+      <footer class="row">
 
-        <aside class="one-third vcard column">
-          <p class="vcard">
-            <h1><a href="/" class="fn">Danne Stayskal</a></h1>
+        <aside class="logomark">
+          <a href="/"><img src="/images/logo-vertical.png" /></a>
         </aside>
 
-        <aside class="two-thirds copyright column" >
+        <aside class="copyright" >
           <p style="padding-top: 10px">
 						Copyright &copy; Danne Lauren Stayskal. Unless otherwise noted, this content is available freely through the Creative Commons <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/us/">BY-NC-SA 3.0</a> license.
           </p>
           <p>
-            This site is open source; its source code <a href="http://github.com/linenoise/portfolio">is available on github</a>.
+            This portfolio is open source; its source code <a href="http://github.com/linenoise/portfolio">is available on github</a>.
           </p>
           <!--
           <rdf:RDF xmlns="http://creativecommons.org/ns#"
@@ -91,21 +89,39 @@
            -->
         </aside>
 
-        <aside class="contact one-third column">
-          <a href="mailto:danne@stayskal.com" rel="me"><img src="/images/icons/mail.png" alt="Email:" />danne@stayskal.com</a>
-        </aside>
-
-        <aside class="contact one-third column">
-          <a href="http://facebook.com/dannestayskal" rel="me" style="float:left; padding-right: 4px;"><img src="/images/icons/facebook.png" alt="Facebok">
-
-          <a href="http://twitter.com/dannestayskal" rel="me" style="float:left; padding-right: 4px;"><img src="/images/icons/twitter.png" alt="Twitter">
-
-          <a href="https://www.linkedin.com/in/dannestayskal/" rel="me" style="float:left; padding-right: 4px;"><img src="/images/icons/linkedin.png" alt="Linkedin" /></a>
-
-          <a href="http://github.com/linenoise" rel="me" style="float:left; padding-right: 4px;"><img src="/images/icons/github.png" alt="GitHub" /></a>
-
-          <a href="http://danne.stayskal.com/feed/" style="float:left; padding-right: 4px;"><img src="/images/icons/feed.png" alt="RSS" /></a>
-
+        <aside class="contact">
+          <ul>
+            <li>
+              <a href="mailto:danne@stayskal.com" rel="me">
+                <img src="/images/icons/mail.png" alt="Email:" />
+                danne@stayskal.com
+              </a>
+            </li>
+            <li>
+              <a href="http://facebook.com/dannestayskal" rel="me">
+                <img src="/images/icons/facebook.png" alt="Facebok" />
+                dannestayskal
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/dannestayskal/" rel="me">
+                <img src="/images/icons/linkedin.png" alt="Linkedin" />
+                dannestayskal
+              </a>
+            </li>
+            <li>
+              <a href="http://github.com/linenoise" rel="me">
+                <img src="/images/icons/github.png" alt="GitHub" />
+                @linenoise
+              </a>
+            </li>
+            <li>
+              <a href="http://danne.stayskal.com/feed/">
+                <img src="/images/icons/feed.png" alt="RSS" />
+                RSS Feed
+              </a>
+            </li>
+          </ul>
         </aside>
 
       </footer>

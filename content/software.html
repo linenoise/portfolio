@@ -5,7 +5,7 @@ title: Software
 
 	<table>
 	<% software_count = 0 %>
-	<% @item.children.sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.each do |software| %>	
+	<% children_of(@item).sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.each do |software| %>	
 	<% software_count = software_count + 1 %>
 		<tr>
 			<th>

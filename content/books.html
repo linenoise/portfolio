@@ -3,7 +3,7 @@ title: Books
 ---
 
 <% book_count = 0 %>
-<% @item.children.sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.each do |book| %>	
+<% children_of(@item).sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.each do |book| %>	
 	<% book_count = book_count + 1 %>
 
 	<div class='one-third column'>

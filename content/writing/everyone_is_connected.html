@@ -5,7 +5,7 @@ lede: |
  <strong>Measuring Social Geometry with Graph Databases</strong><br /><br /><a href="http://en.wikipedia.org/wiki/Social_geometry">Social Geometry</a> is a system of theory developed by Dr. Black that measures and accounts for different social behaviors. He suggests directly-measurable components of location, distance, and direction. Some of these can be measured or estimated directly: on wealth, demographic, age, language ability, or any other form of social indicator for which data is available. In many cases, though, these data aren’t directly available, and must be approximated through other means.
 ---
 
-<%= render '_blog_header_for', :this => @item %>
+<%= render '/_blog_header_for.*', :this => @item %>
 
 <p>What these data have in common is a focus on relationships between things, rather than focusing on the things themselves. The value of money is relative to who else has what amounts of it; as are the value of vocabulary, and the value of a piece of real estate. These relationships can be easy to measure, though difficult to sort through.</p>
 
@@ -81,4 +81,4 @@ lede: |
 
 <p>When your systems architecture requires calculations like this on graph data, social or otherwise, graph databases like Neo4J are great architectural components to consider.</p>
 
-<%= render '_blog_footer_for', :this => @item %>
+<%= render '/_blog_footer_for.*', :this => @item %>

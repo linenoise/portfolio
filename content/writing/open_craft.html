@@ -5,7 +5,7 @@ lede: |
  Thanks to <a href="http://www.opensource.org/">Open Source Software</a>, I didn't have to write the majority of the software that runs this site, my servers, or my home technology. Tools such as Ruby, Ubuntu, Firefox, GnuPG, Linux, and the GNU toolset help me keep my digital world running smoothly day in and day out. This essay covers how to make these tools work for you.
 ---
 
-<%= render '_blog_header_for', :this => @item %>
+<%= render '/_blog_header_for.*', :this => @item %>
 
 			<p>I try not to take this for granted.</p>
 
@@ -48,4 +48,4 @@ lede: |
 
 			<p>Open source software, open standards, and open licensing keeps our cultural heritage safe from forms of exploitation that would seek to exclude it from everyone's full enjoyment. Whether this heritage is video, audio, software, or writing, these tools allow us to confidently share our work, knowing we've done our part to establish and preserve our freedoms.</p>
 
-			<%= render '_blog_footer_for', :this => @item %>
+			<%= render '/_blog_footer_for.*', :this => @item %>
