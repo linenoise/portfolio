@@ -16,7 +16,7 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" href="/stylesheets/skeleton.css" />
     <link rel="stylesheet" type="text/css" href="/stylesheets/lightbox.css" />
-    <link rel="stylesheet" type="text/css" href="/css/layout.css" /> <!-- Rendered through SASS -->
+    <link rel="stylesheet" type="text/css" href="/stylesheets/layout.css" />
 
     <!-- Alternates -->
     <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://danne.stayskal.com/feed/" />
@@ -40,38 +40,63 @@
   <body>
     <div class="container">
 
-      <% if @item[:title] %>
-      <header class="row">
-        <a href="/"><img src="/images/ds_ligature-small.png" alt="Danne Stayskal"></a>
-        <h1><%= @item[:title] %></h1>
+      
+      <header class="title row">
+        <h1>
+          <a href="/">Portfolio</a>
+          <% if @item[:section] %>
+            &middot; <a href="/<%= @item[:section] %>" class="<%= @item[:section] %>"><%= @item[:section] %></a>
+          <% end %>
+          <% if @item[:title] %>
+            &middot; <%= @item[:title] %>
+          <% end %>
+        </h1>
       </header>
-      <% end %>
+      
 
       <%= yield %>
 
       <nav class="row">
-        <a href="/" style="padding-left: 30px;">home</a>
-        <a href="/artwork/">artwork</a>
-        <a href="/books/">books</a>
-        <a href="/music/">music</a>
-        <a href="/photos/">photography</a>
-        <a href="/software/">software</a>
-        <a href="/writing/">writing</a>
-        <a href="/vitae/">vitae</a>
+        <a class="two columns artwork" href="/artwork/">artwork</a>
+        <a class="two columns books" href="/books/">books</a>
+        <a class="two columns music" href="/music/">music</a>
+        <a class="two columns software" href="/software/">software</a>
+        <a class="two columns vitae" href="/vitae/">vitae</a>
+        <a class="two columns writing" href="/writing/">writing</a>
       </nav>
 
       <footer class="row">
 
-        <aside class="logomark">
-          <a href="/"><img src="/images/logo-vertical.png" /></a>
-        </aside>
+        <ul class="contact four columns">
+          <li>
+            <a href="mailto:danne@stayskal.com" rel="me">
+              <img src="/images/icons/mail.png" alt="Email:" />
+              <span>danne@stayskal.com</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://facebook.com/dannestayskal" rel="me">
+              <img src="/images/icons/facebook.png" alt="Facebok" />
+            </a>
+            <a href="http://github.com/linenoise" rel="me">
+              <img src="/images/icons/github.png" alt="GitHub" />
+            </a>
+            <a href="https://www.linkedin.com/in/dannestayskal/" rel="me">
+              <img src="/images/icons/linkedin.png" alt="Linkedin" />
+            </a>
+            <a href="https://twitter.com/dannestayskal">
+              <img src="/images/icons/twitter.png" alt="Twitter" />
+            </a>
+            <a href="https://www.pinterest.com/dannestayskal/" rel="me">
+              <img src="/images/icons/pinterest.png" alt="Pinterest" />
+            </a>
+          </li>
+        </ul>
 
-        <aside class="copyright" >
-          <p style="padding-top: 10px">
-						Copyright &copy; Danne Lauren Stayskal. Unless otherwise noted, this content is available freely through the Creative Commons <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/us/">BY-NC-SA 3.0</a> license.
-          </p>
+        <div class="copyright five columns" >
           <p>
-            This portfolio is open source; its source code <a href="http://github.com/linenoise/portfolio">is available on github</a>.
+						Copyright &copy; Danne Lauren Stayskal.
+            Unless otherwise noted, this content is available freely through the Creative Commons <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/us/">BY-NC-SA 3.0</a> license.
           </p>
           <!--
           <rdf:RDF xmlns="http://creativecommons.org/ns#"
@@ -87,43 +112,15 @@
                 </License>
               </rdf:RDF>
            -->
-        </aside>
+<!--           <p>
+            This portfolio is open source; its source code <a href="http://github.com/linenoise/portfolio">is available on github</a>.
+          </p>
+ --> 
+        </div>
 
-        <aside class="contact">
-          <ul>
-            <li>
-              <a href="mailto:danne@stayskal.com" rel="me">
-                <img src="/images/icons/mail.png" alt="Email:" />
-                danne@stayskal.com
-              </a>
-            </li>
-            <li>
-              <a href="http://facebook.com/dannestayskal" rel="me">
-                <img src="/images/icons/facebook.png" alt="Facebok" />
-                dannestayskal
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/dannestayskal/" rel="me">
-                <img src="/images/icons/linkedin.png" alt="Linkedin" />
-                dannestayskal
-              </a>
-            </li>
-            <li>
-              <a href="http://github.com/linenoise" rel="me">
-                <img src="/images/icons/github.png" alt="GitHub" />
-                @linenoise
-              </a>
-            </li>
-            <li>
-              <a href="http://danne.stayskal.com/feed/">
-                <img src="/images/icons/feed.png" alt="RSS" />
-                RSS Feed
-              </a>
-            </li>
-          </ul>
-        </aside>
-
+        <div class="portfolio three columns" >
+          <a href="/"><img alt="Danne Stayskal" src="/images/portfolio_square.png" /></a>
+        </div>
       </footer>
 
     </div>

@@ -10,12 +10,8 @@
 /* Table of Contents
 ==================================================
     # Typography
-    # Header
-    # Page Styles
-        # Blog
-        # Vitae
-    # Navigation 
-    # Footer
+    # Layout
+    # Landing page
     # Media Queries
         # Netbooks and Tablets (landscape)
         # Tablets (portrait) and Phones (landscape)
@@ -26,15 +22,182 @@
 /* Color Palette 
 ================================================== */
 
-$body-color:              #E9E9EA;
-$inset-color:             #FAFAF9;
-$button-color:            #555555;
-$button-hover-color:      #595959;
+$red-color:                #b10837;  // Pantone 201 U
+$orange-color:             #fe7b01;  // Pantone 1505 C
+$yellow-color:             #f7b718;  // Pantone 14-0957 TCX
+$green-color:              #93a956;  // Pantone 15-0343 TXC
+$blue-color:               #007c84;  // Pantone 322 U
+$purple-color:             #522d63;  // Pantone 520 C
+$white-color:              #f4f4f4;  // = light-gray-color * 2
+$light-gray-color:         #e6e6e6;  // Pantone 427 U
+$dark-gray-color:          #4f5150;  // Pantone P 175 15-U
+$shadow-color:             #313231;  // = dark-gray-color * 20 / 32
 
+$background-color:         $light-gray-color;
+$inset-color:              $white-color;
+$artwork-accent-color:     $red-color;
+$books-accent-color:       $orange-color;
+$music-accent-color:       $yellow-color;
+$software-accent-color:    $green-color;
+$vitae-accent-color:       $blue-color;
+$writing-accent-color:     $purple-color;
+$project-accent-color:     $dark-gray-color;
 
 /* Typography
 ================================================== */
 
 body {
-    background-color: $body-color;
+    background-color: $light-gray-color;
+    color: $dark-gray-color;
+}
+
+.container {
+    background-color: $white-color;
+}
+
+h1 {
+    font-size: 26pt;
+}
+h2 {
+    font-size: 22pt;
+}
+h3 {
+    font-size: 18pt;
+}
+
+/* Layout
+================================================== */
+
+.title h1 {
+    padding: 20px;
+    background-color: $dark-gray-color;
+    border-top: 10px solid $light-gray-color;
+    border-bottom: 10px solid $light-gray-color;
+}
+
+.title, .title a{
+    text-decoration: none;
+    color: $inset-color;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover, {
+    color: $dark-gray-color !important;
+}
+
+.artwork a, a.artwork {
+    color: $artwork-accent-color;
+}
+.books a, a.books {
+    color: $books-accent-color;
+}
+.music a, a.music {
+    color: $music-accent-color;
+}
+.software a, a.software {
+    color: $software-accent-color;
+}
+.vitae a, a.vitae {
+    color: $vitae-accent-color;
+}
+.writing a, a.writing {
+    color: $writing-accent-color;
+}
+
+
+nav {
+    padding: 1em 0px;
+    background-color: $inset-color;
+    border-top: 10px solid $light-gray-color;
+}
+
+nav a {
+    font-size: 20pt;
+    text-decoration: none;
+    padding: 0em 0.5em;
+}
+
+
+footer {
+    padding: 1em 0px 10px 0px;
+    color: $light-gray-color;
+    background-color: $dark-gray-color;
+    border-top: 10px solid $light-gray-color;
+    border-bottom: 10px solid $light-gray-color;
+}
+
+footer ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+footer ul li {
+    background-color: $light-gray-color;
+    color: $dark-gray-color;
+    margin: 10px 20px;
+    padding: 10px;
+    vertical-align: center;
+    height: 32px;
+    border-radius: 3px;
+}
+
+footer ul li a img {
+    float: left;
+    padding-right: 10px;
+}
+
+footer ul li a span {
+    display: block;
+    padding-top: 3px;
+    color: $dark-gray-color;
+    font-weight: bold;
+}
+
+footer .copyright p {
+    padding: 1em 2em 0em 1em;
+    margin-bottom: 0px;
+}
+
+footer .portfolio img {
+    height: 130px;
+    width: 130px;
+    float: right;
+    padding-right: 15px;
+}
+
+/* Landing page
+================================================== */
+
+.landing h2, .landing p, .landing ul {
+    padding: 0px 20px 20px 20px;
+    margin: 0px;
+}
+
+.landing ul {
+    list-style: none;
+}
+
+.landing.title h1 {
+    margin-bottom: 0px;
+}
+
+.landing.project img {
+    float: left;
+    margin: 10px;
+    padding: 0px;
+}
+
+.landing.project h2 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.landing.project a{
+    font-weight:bold;
+    color: $dark-gray-color;
 }

@@ -48,8 +48,8 @@
     padding: 0; }
 }
 
-/* For devices larger than 550px */
-@media (min-width: 550px) {
+/* For devices larger than 1000px */
+@media (min-width: 1000px) {
   .container {
     width: 80%; }
   .column,
@@ -551,7 +551,7 @@ dfn {
  * contexts in Firefox 4+, Safari, and Chrome.
  */
 
-h1 {
+section h1, article h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }

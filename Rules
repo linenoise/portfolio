@@ -43,11 +43,11 @@ end
 
 
 # Everything else gets rendered in the default view
-compile %r{/(artwork|books|software|writing)/*} do
+compile %r{/(artwork|books|software|photos|writing)/*} do
   filter :erb
   layout '/default.html'
 end
-route %r{/(artwork|books|software|writing)/*} do
+route %r{/(artwork|books|software|photos|writing)/*} do
   # Write item with identifier /foo/ to /foo/index.html
   item.identifier.without_ext + '/index.html'
 end
