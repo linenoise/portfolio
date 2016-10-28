@@ -445,3 +445,43 @@ h2.vitae {
     font-weight: bold;
     margin-top: 0.5em;
 }
+
+/* Writing pages
+================================================== */
+
+header.title h1.writing {
+    background-color: $writing-accent-color;
+}
+
+h2.writing {
+    color: $writing-accent-color;
+}
+
+.writing.row h2, .writing.row p, .writing.row img, .writing.row ul, .writing.row ol {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.writing.row table, .writing.row .vevent {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.writing.row table {
+    width: 100%;
+}
+
+.writing.row .date, .writing.row .attribution {
+    font-style: oblique;
+    float: right;
+    margin-right: 20px;
+}
+
+.writing.row h2 {
+    padding-top: 20px;
+    border-top: 10px solid $light-gray-color;
+}
+
+.writing.row .lede {
+    padding-top: 20px;
+}
