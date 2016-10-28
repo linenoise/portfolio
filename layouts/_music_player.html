@@ -1,0 +1,20 @@
+<div class="music player row">
+  <div class="twelve columns">
+
+    <p><%= @this[:description] %></p>
+
+    <p>Published <time pubdate="pubdate"><%= @this[:date] %></time></p>
+
+    <audio controls style="padding: 0.5em 0em 0em 10px; width: 226px;">
+      <source src="<%= @this[:ogg_file] %>" />
+      <source src="<%= @this[:mp3_file] %>" />
+    </audio>
+    
+    <p>
+      <a href="<%= @this[:ogg_file] %>">Download in OGG Vorbis</a>
+      <br /><br />
+      <a href="<%= @this[:mp3_file] %>">Download in MP3</a>
+    </p>
+
+  </div>
+</div>

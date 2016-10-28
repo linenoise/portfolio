@@ -276,4 +276,39 @@ h2.books {
     margin-bottom: 0px;
 }
 
+/* Music pages
+================================================== */
 
+header.title h1.music {
+    background-color: $music-accent-color;
+}
+
+h2.music {
+    color: $music-accent-color;
+}
+
+.music.row h2, .music.row p, .music.row img, .music.row ul {
+    padding-left: 20px;
+}
+
+.music.row h2 {
+    margin-top: 20px;
+}
+
+.music.row img {
+    padding: 20px;
+}
+
+.music.row p, .music.row ul {
+    padding: 0px 20px 20px 20px;
+    margin-bottom: 0px;
+}
+
+.music.row audio {
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+.music.player.row p {
+    padding: 20px !important;
+}

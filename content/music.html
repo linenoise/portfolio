@@ -1,28 +1,29 @@
 ---
 title: Music
+section: music
 ---
-<aside class="one-third column">
-  <h3>DJ Sets</h3>
-  <p>My DJ sets of electronic music are hosted <a href="https://www.mixcloud.com/DanneStayskal/uploads/">on my MixCloud account</a>.</p>
-	<% children_of(@item).sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.each do |genre| %>
-	<h3><%= genre.attributes[:title] %> music</h3>
-	<p><%= genre.attributes[:description] %></p>
-	<ul>
+<div class="music row">
+
+	<div class="twelve columns">
+		<h2>Electronic music</h2>
+		<p>
+			My DJ sets of electronic music are on a different site, <a href="http://linenoise.io/">http://linenoise.io/</a>.
+		</p>
+		
+		<% children_of(@item).sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.each do |genre| %>
+
+		<h2><%= genre.attributes[:title] %> music</h2>
+
+		<p>
+			<%= genre.attributes[:description] %>
+		</p>
+
+		<ul>
 		<% children_of(genre).sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.each do |song| %>
-	    <li><a href="<%= song.path %>" target="player"><%= song.attributes[:title] %></a></li>
+			<li><a href="<%= song.path %>"><%= song.attributes[:title] %></a></li>
 		<% end %>
-	</ul>
-	<% end %>
-</aside>
-<div class="two-thirds column">
-	<iframe name="player"
-			src="<%= 
-			children_of(
-				children_of(@item).sort{ |a,b| 
-					a.attributes[:title] <=> b.attributes[:title]
-				}.first
-			).sort{
-				|a,b| a.attributes[:title] <=> b.attributes[:title]
-			}.first.path %>">
-	</iframe>
+		</ul>
+		<% end %>
+	</div>
+
 </div>

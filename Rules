@@ -10,11 +10,11 @@ route %r{^/(javascript|images|photos)/*} do
   item.identifier + ''
 end
 
-compile %r{^/(sitemap|feed|card|identity|vitae)} do
+compile %r{^/(music|sitemap|feed|card|identity|vitae)} do
   filter :erb
   layout '/default.html'
 end
-route %r{^/(sitemap|feed|card|identity|vitae)} do
+route %r{^/(music|sitemap|feed|card|identity|vitae)} do
   item.identifier.without_ext + '/index.html'
 end
 
@@ -31,10 +31,10 @@ end
 
 
 
-# Songs get rendered in the music player
+# Music is a couple levels deep
 compile %r{^/music/*/*} do
   filter :erb
-  layout '/player.html'
+  layout '/default.html'
 end
 route %r{^/music/*/*} do
   item.identifier.without_ext + '.html'
