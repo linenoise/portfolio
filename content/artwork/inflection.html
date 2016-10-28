@@ -2,34 +2,54 @@
 title: Inflection
 byline: Inflection was a large wood and rope bridge designed and produced by <a href="http://spacemeat.net/">Trevor Schrock</a>, supported by the <a href="http://tautology.io/">Tautology Arts Collective</a> as an honorarium art project for Burning Man in 2015. I produced this project's lighting and power systems.
 thumbnail: /images/artwork/inflection/inflection_thumbnail.jpg
+section: artwork
 ---
 
-<p>Inflection was a large wood and rope bridge designed and produced by <a href="http://spacemeat.net/">Trevor Schrock</a>, supported by the <a href="http://tautology.io/">Tautology Arts Collective</a> as an honorarium art project for Burning Man in 2015. I produced this project's lighting and power systems.</p>
+<div class="artwork row">
 
-<p><a href="https://espressobuzz.smugmug.com/BurningMan/2015/Art/Inflection/">Espressobuzz got some amazing photoss of Inflection at Burning Man 2015 &raquo;</a></p>
+  <div class="twelve columns">
+    <p>
+      Inflection was a large wood and rope bridge designed and produced by <a href="http://spacemeat.net/">Trevor Schrock</a>, supported by the <a href="http://tautology.io/">Tautology Arts Collective</a> as an honorarium art project for Burning Man in 2015. I produced this project's lighting and power systems.
+    </p>
 
-<p>The photos below are my own of the project.</a>
+    <p>
+      <a href="https://espressobuzz.smugmug.com/BurningMan/2015/Art/Inflection/">Espressobuzz got some amazing photoss of Inflection at Burning Man 2015 &raquo;</a>
+    </p>
 
-<div class="clearfix">
-<% ['Inflection burn.jpg',
-     'Inflection construction.jpg',
-     'Inflection dust.jpg',
-     'Inflection lights.jpg',
-     'Inflection twist.jpg',
-     'Inflection windstorm.jpg'].each_with_index do |image, index|
-%>
-  <div class="one-third column">
-    <a href="/images/artwork/inflection/<%= image %>"
-       rel="lightbox[photos]"
-       title="<%= image.split(/\./)[0] %>">
-      <img class="framed photo"
-           src="/images/artwork/inflection/<%= image.split(/\./)[0]+'-thumbnail.jpg' %>" <% if index % 3 == 0 %>style="margin-left: 0px;"<% end %>
-           alt="<%= image.split(/\./)[0] %>" />
-    </a>
   </div>
-<%
-    end
-%>
+
 </div>
 
-<div class="clearfix"><p>Yes, it was that windy that year.</p></div>
+<div class="artwork row">
+  <% ['Inflection burn.jpg',
+       'Inflection construction.jpg',
+       'Inflection dust.jpg'].each_with_index do |image, index|
+  %>
+    <div class="one-third column">
+      <a href="/images/artwork/inflection/<%= image %>"
+         rel="lightbox[photos]"
+         title="<%= image.split(/\./)[0] %>">
+        <img class="framed photo"
+             src="/images/artwork/inflection/<%= image.split(/\./)[0]+'-thumbnail.jpg' %>" 
+             alt="<%= image.split(/\./)[0] %>" />
+      </a>
+    </div>
+  <% end %>
+</div>
+
+<div class="artwork row">
+  <% [ 'Inflection lights.jpg',
+       'Inflection twist.jpg',
+       'Inflection windstorm.jpg'].each_with_index do |image, index|
+  %>
+    <div class="one-third column">
+      <a href="/images/artwork/inflection/<%= image %>"
+         rel="lightbox[photos]"
+         title="<%= image.split(/\./)[0] %>">
+        <img class="framed photo"
+             src="/images/artwork/inflection/<%= image.split(/\./)[0]+'-thumbnail.jpg' %>" 
+             alt="<%= image.split(/\./)[0] %>" />
+      </a>
+    </div>
+  <% end %>
+</div>

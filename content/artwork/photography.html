@@ -1,0 +1,29 @@
+---
+title: Photography
+byline: Some of my favorite thigns to have come out of my cameras over the years.
+thumbnail: /images/artwork/photography/photography_thumbnail.png
+section: artwork
+---
+
+<div class="artwork row">
+	<div class="twelve columns">
+		<p>Some of my favorite thigns to have come out of my cameras over the years.</p>
+	</div>
+</div>
+
+<div class="artwork gallery row">
+	<% img_count = 0 %>
+
+	<% items.select{|i| i.identifier =~ /\/photos\/.+/}.find_all{|item| item.path !~ /thumbnail/}.sort{|a,b| b.attributes[:taken] <=> a.attributes[:taken]}.each do |img| %>
+
+		<div class="one-third column">
+			<a href="<%= img.path %>" rel="lightbox[photos]" title="<%= img.attributes[:title] %>"><img class="framed photo" src="<%= img.path.split(/\./)[0]+'-thumbnail.jpg' %>" <% if img_count % 3 == 1%>style="margin-left: 0px;"<% end %> alt="<%= img.attributes[:title] %>"></a>
+		</div>
+
+		<% if img_count % 3 == 2 %></div><div class="artwork gallery row"><% end %>
+
+		<% img_count = img_count + 1 %>
+
+    <% end %>
+</div>
+

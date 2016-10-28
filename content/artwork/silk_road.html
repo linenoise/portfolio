@@ -2,18 +2,21 @@
 title: The Silk Road
 byline: The Silk Road was a Burning Man honorarium <a href="https://www.facebook.com/thesilkroadartproject">art installation led by Julia Logan Trimarco</a>. I did the the structural engineering and some carpentry, designed and built the nighttime lighting electronics and power grid, then worked with a stellar team to install it beside the Temple of Grace at Burning Man 2014.
 thumbnail: /images/artwork/silk_road/silk_road_thumbnail.png
+section: artwork
 ---
 
-<div class="clearfix">
-  <div class="two-thirds column" style="padding-bottom: 1.5em;">
-    The Silk Road was a Burning Man honorarium <a href="https://www.facebook.com/thesilkroadartproject">art installation led by Julia Logan Trimarco</a>. I did the structural engineering and some carpentry, designed and built the nighttime lighting electronics and power grid, then worked with a stellar team to install it beside the Temple of Grace at Burning Man 2014.<br /><br />
+<div class="artwork row">
+  <div class="twelve columns">
 
-    The installation was a series of arches in the architectural styles of each major city along the ancient silk road. After the festival, the wood was reclaimed to build a house, and the electronics were recycled into other art projects.
+    <p>The Silk Road was a Burning Man honorarium <a href="https://www.facebook.com/thesilkroadartproject">art installation led by Julia Logan Trimarco</a>. I did the structural engineering and some carpentry, designed and built the nighttime lighting electronics and power grid, then worked with a stellar team to install it beside the Temple of Grace at Burning Man 2014.</p>
+
+    <p>The installation was a series of arches in the architectural styles of each major city along the ancient silk road. After the festival, the wood was reclaimed to build a house, and the electronics were recycled into other art projects.</p>
+
   </div>
 </div>
 
-<div class="clearfix">
-  <div style="margin-left: 6px;">
+<div class="artwork row">
+  <div class="twelve columns">
     <a href="/images/artwork/silk_road/Night, The Silk Road.png" 
        rel="lightbox[photos]" 
        title="Night, The Silk Road">
@@ -24,7 +27,8 @@ thumbnail: /images/artwork/silk_road/silk_road_thumbnail.png
   </div>
 </div>
 
-<div class="clearfix">
+<div class="artwork row">
+
 <% ['Night, Eastern arches.jpg', 
      'Night, Western arches.jpg', 
      'Night, 1 Nara.jpg', 
@@ -46,19 +50,21 @@ thumbnail: /images/artwork/silk_road/silk_road_thumbnail.png
        rel="lightbox[photos]" 
        title="<%= image.split(/\./)[0] %>">
       <img class="framed photo" 
-           src="/images/artwork/silk_road/<%= image.split(/\./)[0]+'-thumbnail.jpg' %>" <% if index % 3 == 0 %>style="margin-left: 0px;"<% end %> 
+           src="/images/artwork/silk_road/<%= image.split(/\./)[0]+'-thumbnail.jpg' %>"  
            alt="<%= image.split(/\./)[0] %>" />
     </a>
   </div>
-<%
-    end
-%>
+  <% if index % 3 == 2 %></div><div class="artwork row"><% end %>
+
+<% end %>
 </div>
-<div class="clearfix" style="padding-top: 6px; padding-bottom: 12px;">
-	<div class="one-half column">
-		<iframe src="//player.vimeo.com/video/105063783" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
-	</div>
-	<div class="one-half column" style="float: right; padding-right: 62px">
-		<iframe src="//player.vimeo.com/video/105063782" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
-	</div>
+
+<div class="artwork row">
+	<div class="twelve columns">
+    <p>
+  		<iframe src="//player.vimeo.com/video/105063783" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+    
+      <iframe src="//player.vimeo.com/video/105063782" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+    </p>
+  </div>
 </div>

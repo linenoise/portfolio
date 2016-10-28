@@ -2,34 +2,30 @@
 title: Synaesthesia Guitar
 byline: This is a guitar that I've modified to simulate <a href="/superpowers">my form of synaesthesia</a>. The lights along the ourside display the colors I see from the music I play on it.
 thumbnail: /images/artwork/synaesthesia_guitar/synaesthesia_guitar_horizontal.png
+section: artwork
 ---
 
-<div class="two-thirds column">
+<div class="artwork row">
+	<div class="twelve columns">
 
-<p>I have a form of synaesthesia that <a href="/superpowers">causes me to see sound and hear light</a>.</p>
+		<p>
+			I have a form of synaesthesia that <a href="/superpowers">causes me to see sound and hear light</a>. To show others what this is like for me, <a href="http://brianernst.org">Brian Ernst</a> and I modified a classical guitar to display colors around its edge according to what I see when I’m playing it. A brief rundown of how it works:
+		</p>
 
-<p>To show others what this is like for me, <a href="http://brianernst.org">Brian Ernst</a> and I modified a classical guitar to display colors around its edge according to what I see when I’m playing it. A brief rundown of how it works:</p>
+		<ul>
+		  <li>A pair of <strong>Piezo pickups</strong> records sound from the guitar, which is wired into</li>
+		  <li>a <strong>guitar tuner</strong>, which routes analog audio data to</li>
+		  <li>the <strong>USB sound card</strong> that pulse-code modulates that sound, and hands it off to</li>
+		  <li>the <strong>Raspberry Pi</strong>, which runs a Fast Fourier Transform on the data to extract spectral components, which is driven over a high-speed serial bus to</li>
+		  <li>the <strong>Arduino Uno</strong>, which modulates the frequency spectrum according to my synaesthesia and sends visual data to</li>
+		  <li>the <strong>WS2812B lighting strip</strong> that’s wrapped around the body of the guitar.</li>
+		</ul>
 
-<ul>
-  <li>A pair of <strong>Piezo pickups</strong> records sound from the guitar, which is wired into</li>
-  <li>a <strong>guitar tuner</strong>, which routes analog audio data to</li>
-  <li>the <strong>USB sound card</strong> that pulse-code modulates that sound, and hands it off to</li>
-  <li>the <strong>Raspberry Pi</strong>, which runs a Fast Fourier Transform on the data to extract spectral components, which is driven over a high-speed serial bus to</li>
-  <li>the <strong>Arduino Uno</strong>, which modulates the frequency spectrum according to my synaesthesia and sends visual data to</li>
-  <li>the <strong>WS2812B lighting strip</strong> that’s wrapped around the body of the guitar.</li>
-</ul>
+		<p>
+			The software running on the <a href="https://github.com/linenoise/guitar_pi">Raspberry Pi</a> and <a href="https://github.com/linenoise/arduino/blob/master/guitarduino/guitarduino.ino">Arduino</a> are open source. <a href="/images/artwork/synaesthesia_guitar/guitar_wiring.png">The wiring diagram for this instrument</a> is available as well. There is also a video recording of <a href="https://www.youtube.com/watch?v=1Ayx5btnCPw">the talk and performance I gave with this instrument</a> at <a href="http://tedxsalem.us/">TEDxSalem</a> in 2014.
+		</p>
 
-<p>The software running on the Raspberry Pi and Arduino are open source:</p>
+		<img src="/images/artwork/synaesthesia_guitar/synaesthesia_guitar_vertical.png" alt="Synaesthesia Guitar Photograph"/>
 
-<ul>
-  <li>Arduino: <a href="https://github.com/linenoise/arduino/blob/master/guitarduino/guitarduino.ino">https://github.com/linenoise/arduino/blob/master/guitarduino/guitarduino.ino</a></li>
-  <li>Raspberry Pi: <a href="https://github.com/linenoise/guitar_pi">https://github.com/linenoise/guitar_pi</a></li>
-</ul>
-
-<p><a href="/images/artwork/synaesthesia_guitar/guitar_wiring.png">The wiring diagram for this instrument</a> is available as well. Below is a video recording of <a href="https://www.youtube.com/watch?v=1Ayx5btnCPw">the talk</a> and performance I gave with this instrument at <a href="http://tedxsalem.us/">TEDxSalem</a> in 2014.</p>
-
+	</div>
 </div>
-
-<aside class="one-third column" style="padding-left: 0px !important">
-	<img src="/images/artwork/synaesthesia_guitar/synaesthesia_guitar_vertical.png" alt="Synaesthesia Guitar Photograph" style="padding-left: 26px;"/>
-</aside>

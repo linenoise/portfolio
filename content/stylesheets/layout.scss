@@ -73,11 +73,16 @@ h3 {
     background-color: $dark-gray-color;
     border-top: 10px solid $light-gray-color;
     border-bottom: 10px solid $light-gray-color;
+    margin-bottom: 0px;
 }
 
 .title, .title a{
     text-decoration: none;
     color: $inset-color;
+}
+
+.title a:hover{
+    color: $inset-color !important;
 }
 
 a {
@@ -200,4 +205,45 @@ footer .portfolio img {
 .landing.project a{
     font-weight:bold;
     color: $dark-gray-color;
+}
+
+.landing.row {
+    padding-top: 1em;
+}
+
+/* Artwork pages
+================================================== */
+
+header.title h1.artwork {
+    background-color: $artwork-accent-color;
+}
+
+h2.artwork {
+    color: $artwork-accent-color;
+}
+
+.artwork.row h2, .artwork.row p, .artwork.row img, .artwork.row ul {
+    padding-left: 20px;
+}
+
+.artwork.row h2 {
+    margin-top: 20px;
+}
+
+.artwork.row img {
+    padding: 20px;
+}
+
+.artwork.gallery.row img {
+    padding: 20px 0px !important;
+}
+
+.artwork.gallery.row div {
+    text-align: center;
+}
+
+.artwork.row p, .artwork.row ul {
+    border-bottom: 10px solid $light-gray-color;
+    padding: 20px;
+    margin-bottom: 0px;
 }

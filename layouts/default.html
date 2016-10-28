@@ -4,7 +4,7 @@
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
   <head>
-    <title><% if @item[:title] %><%= @item[:title] %><% else %>Danne Stayskal<% end %></title>
+    <title><% if @item[:title] %><%= @item[:title] %><% end %></title>
 
     <!-- Meta -->
 		<meta charset="UTF-8">
@@ -42,14 +42,8 @@
 
       
       <header class="title row">
-        <h1>
-          <a href="/">Portfolio</a>
-          <% if @item[:section] %>
-            &middot; <a href="/<%= @item[:section] %>" class="<%= @item[:section] %>"><%= @item[:section] %></a>
-          <% end %>
-          <% if @item[:title] %>
-            &middot; <%= @item[:title] %>
-          <% end %>
+        <h1 <% if @item[:section] %>class="<%= @item[:section] %>"<% end %>>
+          <% if @item[:title] %><%= @item[:title] %><% end %>
         </h1>
       </header>
       
@@ -95,7 +89,7 @@
 
         <div class="copyright five columns" >
           <p>
-						Copyright &copy; Danne Lauren Stayskal.
+						Copyright &copy; 1996-2016 Danne Lauren Stayskal.
             Unless otherwise noted, this content is available freely through the Creative Commons <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/us/">BY-NC-SA 3.0</a> license.
           </p>
           <!--

@@ -1,22 +1,18 @@
 --- 
-title: Art
+title: Artwork
+section: artwork
 ---
-<div class="two-thirds column">
 
-	<table>
-	<% art_count = 0 %>
-	<% children_of(@item).sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.each do |art| %>	
-	<% art_count = art_count + 1 %>
-		<tr>
-			<th style="vertical-align: top">
-				<h2 style="font-size: 12pt;"><a href="<%= art.identifier %>"><%= art.attributes[:title] %></a></h2>
-			</th>
-			<td>
-				<p><a href="<%= art.identifier %>"><img src="<%= art.attributes[:thumbnail] %>" alt="<%= art.attributes[:title] %>" /></a></p>
-				<p><%= art.attributes[:byline] %></p>
-			</td>
-		</tr>
-	<% end %>
-	</table>  
+<% children_of(@item).sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.each do |art| %>	
+<div class="artwork row">
+	<div class="twelve columns">
+		<h2 class="artwork"><a href="<%= art.identifier.without_ext %>/index.html"><%= art.attributes[:title] %></a></h2>
 
+		<a href="<%= art.identifier.without_ext %>/index.html">
+			<img src="<%= art.attributes[:thumbnail] %>" alt="<%= art.attributes[:title] %>" />
+		</a>
+
+		<p><%= art.attributes[:byline] %></p>
+	</div>
 </div>
+<% end %>
