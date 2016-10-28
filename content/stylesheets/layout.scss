@@ -247,3 +247,33 @@ h2.artwork {
     padding: 20px;
     margin-bottom: 0px;
 }
+
+/* Books pages
+================================================== */
+
+header.title h1.books {
+    background-color: $books-accent-color;
+}
+
+h2.books {
+    color: $books-accent-color;
+}
+
+.books.row h2, .books.row p, .books.row img, .books.row ul {
+    padding-left: 20px;
+}
+
+.books.row h2 {
+    margin-top: 20px;
+}
+
+.books.row img {
+    padding: 20px;
+}
+
+.books.row p, .books.row ul {
+    padding: 20px;
+    margin-bottom: 0px;
+}
+
+

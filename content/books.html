@@ -1,16 +1,24 @@
 --- 
 title: Books
+section: books
 ---
 
+<div class="books row">
 <% book_count = 0 %>
 <% children_of(@item).sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.each do |book| %>	
 	<% book_count = book_count + 1 %>
+	<div class="six columns">
+		<h2 class="books">
+			<a href="<%= book.identifier.without_ext %>/index.html"><%= book.attributes[:title] %></a>
+		</h2>
 
-	<div class='one-third column'>
-		<a href="<%= book.identifier %>"><img class="framed" src="<%= book.attributes[:cover]%>" alt="<%= book.attributes[:title] + ' cover image'%>" /></a>
-		<h2><%= book.attributes[:title] %></h2>
-		<p><%= book.attributes[:byline] %></p>
-		<p><a class="button" href="<%= book.identifier %>">Read More</a></p>
+		<a href="<%= book.identifier.without_ext %>/index.html"><img class="framed" src="<%= book.attributes[:cover]%>" alt="<%= book.attributes[:title] + ' cover image'%>" /></a>
+		
+		<p>
+			<%= book.attributes[:byline] %>
+			<br /><br />
+			<a href="<%= book.identifier.without_ext %>/index.html">Read more</a>
+		</p>
 	</div>
-	
 <% end %> 
+</div>
