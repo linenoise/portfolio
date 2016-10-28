@@ -1,0 +1,51 @@
+--- 
+title: One thousand points of light
+byline: "The source code that runs the experimental writing community at http://onethousandpointsoflight.com/"
+maintained: true
+section: software
+---
+
+<div class="software description row">
+  <div class="twelve columns">
+
+    <h2>Share your light</h2>
+
+	<p>This is the main One Thousand Points of Light ("Otpol") API and web application. It is a public-facing Ruby on Rails app.</p>
+
+	<h2>Development</h2>
+
+	<p>To setup a development environment on OSX:</p>
+
+<pre><code>### Clone the repository
+
+git clone git@github.com:linenoise/otpol
+cd otpol
+
+### Install Nokogiri, Imagemagick, and gems
+
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew install imagemagick
+brew tap homebrew/dupes
+brew install libxml2 libxslt
+brew install libiconv
+gem install nokogiri  -v '1.6.1' -- --with-iconv-dir=/usr/local/Cellar/libiconv/1.14/
+bundle install
+
+### Migrate a database and run the test suite
+
+rake db:migrate
+rake test
+
+### Run the dev server
+
+rails server</code></pre>
+
+	<p>Now open it in your browser: <a href="http://localhost:3000/">http://localhost:3000/</a></p>
+
+	<p><a href="http://github.com/linenoise/otpol/zipball/master">Download the latest One thousand points of light codebase</a></p>
+
+    <p>The full source code and documentation for this project are available on GitHub:<br />
+    <a href="http://github.com/linenoise/otpol/">http://github.com/linenoise/ptpol/</a></p>
+
+    </div>
+</div>

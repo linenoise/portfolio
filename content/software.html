@@ -1,43 +1,42 @@
 --- 
 title: Software
+section: software
 ---
-<div class="two-thirds column">
 
-	<table>
-	<% software_count = 0 %>
-	<% children_of(@item).sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.each do |software| %>	
-	<% software_count = software_count + 1 %>
-		<tr>
-			<th>
-				<h2 style="font-size: 12pt;"><a href="<%= software.identifier %>"><%= software.attributes[:title] %></a></h2>
-			</th>
-			<td>
-				<p><%= software.attributes[:byline] %></p>
-			</td>
-		</tr>
-	<% end %>
-	</table>  
+<div class="software row">
+	<div class="twelve columns">
 
-</div>
+		<h2>Code is social.</h2>
 
-<aside class="one-third column">
+		<p>
+			All of the software that I write on my own time is <a href="/writing/open_craft/">Open Source</a>, with code available <a href="https://github.com/linenoise/">via my profile on github</a> and packages <a href="http://rubygems.org/profiles/linenoise">on rubygems</a>.
+		</p>
 
-	<a href="http://www.catb.org/hacker-emblem/"><img class="alignright" style="margin: 10px 20px" alt="Hacker glider" width="55" height="55" src="/images/glider.png"/></a>
+		<% children_of(@item).find_all{|item| item.attributes[:maintained] == true}.sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.each do |software| %>	
+		<h2>
+			<a href="<%= software.identifier.without_ext %>/index.html"><%= software.attributes[:title] %></a>
+		</h2>
 
-	<div style="margin-left: 10px;">
-	<h2>Code is social.</h2>
+		<p>
+			<%= software.attributes[:byline] %>
+		</p>
+		<% end %>
 
-	<p>All of the software that I write is <a href="/writing/open_craft/">Open Source</a><sup>[1]</sup>, with source code available on github and packages on rubygems.</p>
+		<h1 id="legacy">Legacy</h1>
 
-	<ul>
-		<li><a href="https://github.com/linenoise/">My profile on github</a></li>
-		<li><a href="http://rubygems.org/profiles/linenoise">My profile on rubygems</a></li>
-	</ul>
+		<p>
+			The following applications are here for reference purposes only and are no longer active maintained.
+		</p>
 
-	<p>I occasionaly give talks at tech conferences. Notes from these talks end up as <a href="/writing/">writings on this site</a>.</p>
+		<% children_of(@item).find_all{|item| item.attributes[:maintained] == false}.sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.each do |software| %>	
+		<h2>
+			<a href="<%= software.identifier.without_ext %>/index.html"><%= software.attributes[:title] %></a>
+		</h2>
 
-	<p>[1] &ndash; This usually excepts the <a href="/vitae/">software I'm paid to write.</p>
+		<p>
+			<%= software.attributes[:byline] %>
+		</p>
+		<% end %>
 
 	</div>
-
-</aside>
+</div>

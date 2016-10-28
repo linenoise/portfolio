@@ -2,143 +2,79 @@
 title: FastFader
 byline: This is an Arduino library that implements a fast cross-fader and pixel buffer for use with LED lighting strips.
 thumbnail: /images/software/fastfader_thumbnail.jpg
+maintained: true
+section: software
 ---
 
-<div id="content" class="two-third">
+<div class="software description row">
+	<div class="twelve columns">
+		<h2>A fast cross-fader and pixel buffer for use with LED lighting strips.</h2>
 
-	<article class="entry">
-	     <header class="entry-header">
-	       <div class="entry-featured-content">
-						<h3>An Arduino library that implements a fast cross-fader and pixel buffer for use with LED lighting strips.</h3>
-	       </div>
-	     </header>
-     
-	     <div class="entry-content">
-       
-	       <p>
-	           <img class="alignright framed" src="/images/software/fastfader_header.jpg" width="617" height="200" alt="Asemica Header" />
-	         <span class="dropcap">F</span>astFader is an Arduino library that implements a fast cross-fader and pixel buffer for use with LED lighting strips. It pairs with the <a href="http://fastled.io/">FastLED library</a> to produce smooth, fast animations on WS2810, WS2811, LPD8806, Neopixel and <a href="https://github.com/FastLED/FastLED/wiki/Chipset-reference">other types of lighting strips</a>. The code for <a href="https://github.com/linenoise/fastfader">FastFader is on GitHub</a>.
-	       </p>
+		<img src="/images/software/fastfader_header.jpg" width="617" height="200" alt="Asemica Header" />
 
-	     	<p><a href="http://github.com/linenoise/fastfader/zipball/master" class="button">Download the latest FastFader</a></p>
+		<p>FastFader is an Arduino library that implements a fast cross-fader and pixel buffer for use with LED lighting strips. It pairs with the <a href="http://fastled.io/">FastLED library</a> to produce smooth, fast animations on WS2810, WS2811, LPD8806, Neopixel and <a href="https://github.com/FastLED/FastLED/wiki/Chipset-reference">other types of lighting strips</a>. The code for <a href="https://github.com/linenoise/fastfader">FastFader is on GitHub</a>.</p>
 
-       	<h3>Prerequisites</h3>
+		<p><a href="http://github.com/linenoise/fastfader/zipball/master">Download the latest FastFader</a></p>
 
-				<p>Since this needs to use the <tt>math.h</tt> library, you will need an <a href="http://arduino.cc/en/Hacking/PinMapping168">Arduino ATmega168</a> or better CPU. You will also need to have the <a href="https://github.com/FastLED/FastLED/">FastLED</a> library installed.
+       	<h2>Prerequisites</h2>
 
-				<h3>Installation</h3>
+		<p>Since this needs to use the <tt>math.h</tt> library, you will need an <a href="http://arduino.cc/en/Hacking/PinMapping168">Arduino ATmega168</a> or better CPU. You will also need to have the <a href="https://github.com/FastLED/FastLED/">FastLED</a> library installed.</p>
 
-				<p>To install this library, checkout this codebase and place the FastFader folder next to the FastLED folder in your Arduino Libraries folder. This will usually be in an Arduino folder wherever your operating system keeps documents. Restart the Arduino IDE, and you're ready to go.</p>
+		<h2>Installation</h2>
 
-				<p>Once this library is installed, you'll need to include it in the header of the <tt>.ino</tt> file for the relevant Arduino sketch. The best place for it will be directly below your <tt>#include</tt> directive for FastLED</p>
+		<p>To install this library, checkout this codebase and place the FastFader folder next to the FastLED folder in your Arduino Libraries folder. This will usually be in an Arduino folder wherever your operating system keeps documents. Restart the Arduino IDE, and you're ready to go.</p>
 
-				<div style="padding-left: 2em">
-<code>#include "FastLED.h"<br />
-#include "FastFader.h"<br />
-<br />
-// How many LEDs are in the strip<br />
-#define NUM_LEDS 18<br />
-<br />
-// Using the Arduino Uno in dev mode<br />
-#define DATA_PIN 2<br />
-#define CLOCK_PIN 3<br />
-				</code></div>
+		<p>Once this library is installed, you'll need to include it in the header of the <tt>.ino</tt> file for the relevant Arduino sketch. The best place for it will be directly below your <tt>#include</tt> directive for FastLED</p>
 
-				<p>Next, where you initialize your LED strip, you'll also need to initialize a fader, then bind them. This should be in your <tt>void setup();</tt> function:</p>
+<pre><code>#include "FastLED.h"
+#include "FastFader.h"
 
-				<div style="padding-left: 2em">
-<codevoid setup() {<br />
-  // Initialize the LED interface<br />
-  FastLED.addLeds<LPD8806, DATA_PIN, CLOCK_PIN, RGB>(leds, NUM_LEDS);<br />
-<br />
-  // Bind the pixel fader to the LED interface<br />
-  pixel_fader.bind(pixel_buffer, leds, NUM_LEDS, FastLED);<br />
-<br />
-}<br />
-				</code></div>
+// How many LEDs are in the strip
+#define NUM_LEDS 18
 
-				<p>Easy as pie.</p>
+// Using the Arduino Uno in dev mode
+#define DATA_PIN 2
+#define CLOCK_PIN 3
+</code></pre>
 
-				<h3>Usage</h3>
+		<p>Next, where you initialize your LED strip, you'll also need to initialize a fader, then bind them. This should be in your <tt>void setup();</tt> function:</p>
 
-				<p>To see example lighting demonstrations, check out the `examples` folder of <a href="https://github.com/linenoise/fastfader">the codebase.</a></p>
+<pre><code>void setup() {
+  // Initialize the LED interface
+  FastLED.addLeds<LPD8806, DATA_PIN, CLOCK_PIN, RGB>(leds, NUM_LEDS);
 
-				<p>Once you have a fader object instantiated and bound to your FastLED interface, you have the following additional functions available with which to communicate with your LED strip. All functions other than get_pixel return a reference to the fader object, so calls can be chained if desired, e.g. <tt>fader.clear().set_frame(your_array).push()</tt>.</p>
+  // Bind the pixel fader to the LED interface
+  pixel_fader.bind(pixel_buffer, leds, NUM_LEDS, FastLED);
+}
+</code></pre>
 
-				<h4>clear();</h4>
+		<h2>Usage</h2>
 
-				<p>The `fader.clear` function quickly resets the LED strip.</p>
+		<p>To see example lighting demonstrations, check out the `examples` folder of <a href="https://github.com/linenoise/fastfader">the codebase.</a></p>
 
-				<h4>set_pixel(int pos, int value, int channel);</h4>
+		<h2>Maintenance</h2>
 
-				<p>Also callable as:</p>
+		<p>If you have something to contribute to this codebase, please <a href="https://github.com/linenoise/fastfader">fork it on github</a>, make your change in a branch, and send me a pull request.</p>
 
-				<ul>
-					<li><tt>set_pixel(int pos, int value[3]);</tt>(takes an array of r, g, and b values)</li>
-					<li><tt>set_pixel(int pos, int value);</tt> (pushes a single value to r, g, and b channels)</li>
-					<li><tt>set_pixel(int pos);</tt> (turns on a single pixel to fullbrightness)</li>
-				</ul>
+		<h2>License</h2>
 
-				<p>The <tt>fader.set_pixel</tt> function sets an individual pixel by position, value, and channel. Value and Channel are optional arguments. If you call <tt>set_pixel</tt> with no channel, it defaults to all three (Red, Green, and Blue). If you call <tt>set_pixel</tt> with no channel and no value, it assumes a value of 255. Value can be passed as a three-dimensional integer array, or as a single integer (to apply to all three channels).</p>
+		<p>This library is free software; you can redistribute it and/or
+		modify it under the terms of the GNU Lesser General Public
+		License as published by the Free Software Foundation; version
+		2.1 of the License.</p>
 
-				<p>Any data passed to <tt>set_pixel</tt> that's outside of valid ranges will be clipped.</p>
+		<p>This library is distributed in the hope that it will be useful,
+		but WITHOUT ANY WARRANTY; without even the implied warranty of
+		MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+		Lesser General Public License for more details.</p>
 
-				<h4>get_pixel(int pos);</h4>
+		<p>You should have received a copy of the GNU Lesser General Public
+		License along with this library; if not, write to the Free Software
+		Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA</p>
 
-				<p>The <tt>fader.get_pixel</tt> function returns a three-dimensional integer array of the present red, green, and blue channel values at a given position.</p>
+		<h2>Thanks</h2>
 
-				<h4>set_frame(int (*frame)[3]);</h4>
+		<p>Special thanks to John Windberg for the hardware I used to develop this.</p>
 
-				<p>The <tt>fader.set_frame</tt> function loads an entire array of pixels into your light strip at once. Its dimensions should match the length of your strip.</p>
-
-				<p>Any data passed to <tt>set_frame</tt> that's outside of valid ranges will be clipped.</p>
-
-				<h4>push(int fader_delay, int fader_steps, int decay_type);</h4>
-
-				<p>Also callable as:</p>
-
-				<ul>
-					<li><tt>push(int fader_delay, int fader_steps);</tt> (assumes LOGARITHMIC_DECAY)</li>
-					<li><tt>push(int fader_delay);</tt> (assumes ten cross-fade steps)</li>
-					<li><tt>push();</tt> (assumes ten cross-fade steps over 100 miliseconds)</li>
-				</ul>
-
-				<p>The <tt>fader.push</tt> function sends data to the LED strip through a cross-fader and ditherer. The first two parameters control the timing of the cross-fade. <tt>fader_delay</tt> tells it how many miliseconds to take for the fade, and the <tt>fader_steps</tt> parameter tells it how many divisions of color-space to traverse on its way to the new frame.</p>
-
-				<p>Further, three types of cross-fading are supported:</p>
-
-				<ul>
-					<li><tt>NO_DECAY</tt> will disable cross-fading. This is very fast and can be used in parts of a demonstration where CPU-intensive work is happening behind the scenes.</li>
-					<li><tt>LINEAR_DECAY</tt> will cause the new frame to fade in directly: for every step the new frame takes forward, the old frame takes one step back. This is slower, but visually nice.</li>
-					<li><tt>LOGARITHMIC_DECAY</tt> will logarithmically weight the fade-in, since human perception of luminosity is logarithmic, not linear. This is the slowest, but also the prettiest (which is why it's the default).</li>
-				</ul>
-
-				<p>Any of these three parameters can be passed to <tt>fader.push</tt> as the third parameter.</p>
-
-				<h3>Maintenance</h3>
-
-				<p>If you have something to contribute to this codebase, please <a href="https://github.com/linenoise/fastfader">fork it on github</a>, make your change in a branch, and send me a pull request.</p>
-
-				<h3>License</h3>
-
-					<p>This library is free software; you can redistribute it and/or
-				modify it under the terms of the GNU Lesser General Public
-				License as published by the Free Software Foundation; version
-				2.1 of the License.</p>
-
-					<p>This library is distributed in the hope that it will be useful,
-				but WITHOUT ANY WARRANTY; without even the implied warranty of
-				MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-				Lesser General Public License for more details.</p>
-
-					<p>You should have received a copy of the GNU Lesser General Public
-				License along with this library; if not, write to the Free Software
-				Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA</p>
-
-				<h3>Thanks</h3>
-
-				Special thanks to John Windberg for the hardware I used to develop this.
-
-	  </div>
-	</article>
+	</div>
 </div>

@@ -248,6 +248,10 @@ h2.artwork {
     margin-bottom: 0px;
 }
 
+.artwork.row p:last-child {
+    border-bottom: 0px;
+}
+
 /* Books pages
 ================================================== */
 
@@ -304,6 +308,15 @@ h2.music {
     margin-bottom: 0px;
 }
 
+.music.row p {
+}
+
+.music.row ul {
+    list-style-type: none;
+    border-bottom: 10px solid $light-gray-color;
+    padding-bottom: 10px;
+}
+
 .music.row audio {
     margin-left: 10px;
     margin-bottom: 20px;
@@ -311,4 +324,50 @@ h2.music {
 
 .music.player.row p {
     padding: 20px !important;
+}
+
+/* Software pages
+================================================== */
+
+header.title h1.software {
+    background-color: $software-accent-color;
+}
+
+h2.software {
+    color: $software-accent-color;
+}
+
+.software.row h2, .software.row p, .software.row img, .software.row ul, .software pre {
+    padding-left: 20px;
+}
+
+.software.row h2 {
+    margin-top: 20px;
+}
+
+.software.row img {
+    padding: 20px;
+}
+
+.software.row p, .software.row ul {
+    padding: 0px 20px 20px 20px;
+    margin-bottom: 0px;
+}
+
+.software.row p {
+    border-bottom: 10px solid $light-gray-color;
+}
+
+.software.row p:last-child {
+    border-bottom: 0px;
+}
+
+.software.description.row p {
+    border-bottom: 0px !important;
+}
+
+#legacy {
+    color: $light-gray-color;
+    background-color: $dark-gray-color;
+    padding: 20px;
 }

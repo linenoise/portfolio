@@ -1,76 +1,70 @@
 --- 
 title: Nagios Plugins
-byline: These are free tools to monitor your network server's daemons and resources, including apache, memory allocation, process tables, network stack, open files, and swap space.
+byline: These are free tools to help manage your network server's daemons and resources. These include tests for apache, memory allocation, process tables, the network stack, open files, and swap space.
 thumbnail: /images/software/nagios_plugins_thumbnail.jpg
+maintained: true
+section: software
 ---
 
 
-<div id="content" class="two-third">
+<div class="software description row">
+  <div class="twelve columns">
 
-<article class="entry">
-     <header class="entry-header">
-       <div class="entry-featured-content">
-		<h3>Tools to monitor your network resources</h3>
-       </div>
-     </header>
-     
-     <div class="entry-content">
-       
-       <p>
-           <img class="alignright framed" src="/images/software/nagios_plugins_header.jpg" width="617" height="200" alt="Nagios Plugins Header" />
-         <span class="dropcap">S</span>ervers sometimes fail, often caused by preventable errors such as capacity exhaustion.  These tools work with a network monitoring system called <a href="http://www.nagios.org/">nagios</a> to let you know when your servers resources are approaching exhausted so you can fix things <em>before</em> they crash and cause downtime for you and your customers.
-       </p>
+    <h2>Tools to manage your network resources</h2>
 
-       <h3>check_apache</h3>
+    <img src="/images/software/nagios_plugins_header.jpg" width="617" height="200" alt="Nagios Plugins Header" />
+    
+    <p>Servers sometimes fail, often caused by preventable errors such as capacity exhaustion.  These tools work with a network monitoring system called <a href="http://www.nagios.org/">nagios</a> to let you know when your servers resources are approaching exhausted so you can fix things <em>before</em> they crash and cause downtime for you and your customers.</p>
 
-       <p>This module polls an Apache HTTPD server for status information through mod_status, parses for the requested value, compares that value against warning and critical levels, and responds with a status string and appropriate exit status.  It script handles basic authentication (.htaccess / .htpasswd), SSL encryption, and redirection to extract a wide variety of values.</p>
+    <h2>check_apache</h2>
 
-       <p>This has been tested with Apache/2.2.10 (Unix) and should work with any
-    HTTPD 2.x running mod_status.</p>
+    <p>This module polls an Apache HTTPD server for status information through mod_status, parses for the requested value, compares that value against warning and critical levels, and responds with a status string and appropriate exit status.  It script handles basic authentication (.htaccess / .htpasswd), SSL encryption, and redirection to extract a wide variety of values.</p>
 
-      <p>This module and its documentation is available on github: <strong><a href="http://github.com/linenoise/check_apache/">http://github.com/linenoise/check_apache/</a></strong></p>
+    <p>This has been tested with Apache/2.2.10 (Unix) and should work with any HTTPD 2.x running mod_status.</p>
+
+    <p>This module and its documentation is available on github: <br />
+    <a href="http://github.com/linenoise/check_apache/">http://github.com/linenoise/check_apache/</a></p>
 
 
+    <h2>check_freebsd_memory</h2>
 
-       <h3>check_freebsd_memory</h3>
+    <p>This module polls a FreeBSD server for memory information through sysctl(8). This plugin reports on the a variety of memory measurements and has been tested with FreeBSD 7.1.</p>
 
-       <p>This module polls a FreeBSD server for memory information through sysctl(8). This plugin reports on the a variety of memory measurements and has been tested with FreeBSD 7.1.</p>
-
-       <p>This module and its documentation is available on github: <strong><a href="http://github.com/linenoise/check_freebsd_memory/">http://github.com/linenoise/check_freebsd_memory/</a></strong></p>
+    <p>This module and its documentation is available on github: <br />
+    <a href="http://github.com/linenoise/check_freebsd_memory/">http://github.com/linenoise/check_freebsd_memory/</a></p>
 
 
 
-       <h3>check_freebsd_processes</h3>
+    <h2>check_freebsd_processes</h2>
 
-       <p>This module monitors the FreeBSD process table for matching threads, optionally filtering by thread state.  This plugin is designed to be run through NRPE on remote machines rather than being spawned by the central Nagios monitoring process. This pulls a process list through ps(1), and optionally matches the subset of those processes based on command name or execution state (wait, idle, swapped, etc).</p>
+    <p>This module monitors the FreeBSD process table for matching threads, optionally filtering by thread state.  This plugin is designed to be run through NRPE on remote machines rather than being spawned by the central Nagios monitoring process. This pulls a process list through ps(1), and optionally matches the subset of those processes based on command name or execution state (wait, idle, swapped, etc).</p>
 
-       <p>This has been tested with FreeBSD 7.2, but should work with any version of FreeBSD with compatible ps(1) output formatting.</p>
+    <p>This has been tested with FreeBSD 7.2, but should work with any version of FreeBSD with compatible ps(1) output formatting.</p>
 
-       <p>This module and its documentation is available on github: <strong><a href="http://github.com/linenoise/check_freebsd_processes/">http://github.com/linenoise/check_freebsd_processes/</a></strong></p>
-
-
-
-      <h3>check_freebsd_network</h3>
-
-      <p>This module polls and reports on FreeBSD network statistics.  It pulls network status information from netstat(1). This plugin reports on 322 different network statistics.</p>
-
-      <p>This module and its documentation is available on github: <strong><a href="http://github.com/linenoise/check_freebsd_network/">http://github.com/linenoise/check_freebsd_network/</a></strong></p>
+    <p>This module and its documentation is available on github: <br /><a href="http://github.com/linenoise/check_freebsd_processes/">http://github.com/linenoise/check_freebsd_processes/</a></p>
 
 
-      <h3>check_freebsd_open_files</h3>
 
-      <p>This module pulls FreeBSD status on open files, querying based on file descriptor, mode, mount, process, and user.  It allows queries based on file descriptor, mode, mount, process, and user.</p>
-	
-      <p>This module and its documentation is available on github: <strong><a href="http://github.com/linenoise/check_freebsd_open_files/">http://github.com/linenoise/check_freebsd_open_files/</a></strong></p>
+    <h2>check_freebsd_network</h2>
+
+    <p>This module polls and reports on FreeBSD network statistics.  It pulls network status information from netstat(1). This plugin reports on 322 different network statistics.</p>
+
+    <p>This module and its documentation is available on github: <br /><a href="http://github.com/linenoise/check_freebsd_network/">http://github.com/linenoise/check_freebsd_network/</a></p>
 
 
-      <h3>check_freebsd_swap</h3>
+    <h2>check_freebsd_open_files</h2>
 
-      <p>This module reports on FreeBSD aggregate swap file usage.  It polls for swap file information through pstat(8). This plugin reports on available_swap_blocks, swap_usage, total_swap_blocks, and used_swap_blocks.  This has been tested with FreeBSD 7.1.</p>
+    <p>This module pulls FreeBSD status on open files, querying based on file descriptor, mode, mount, process, and user.  It allows queries based on file descriptor, mode, mount, process, and user.</p>
 
-      <p>This module and its documentation is available on github: <strong><a href="http://github.com/linenoise/check_freebsd_swap/">http://github.com/linenoise/check_freebsd_swap/</a></strong></p>
+    <p>This module and its documentation is available on github: <br /><a href="http://github.com/linenoise/check_freebsd_open_files/">http://github.com/linenoise/check_freebsd_open_files/</a></p>
+
+
+    <h2>check_freebsd_swap</h2>
+
+    <p>This module reports on FreeBSD aggregate swap file usage.  It polls for swap file information through pstat(8). This plugin reports on available_swap_blocks, swap_usage, total_swap_blocks, and used_swap_blocks.  This has been tested with FreeBSD 7.1.</p>
+
+    <p>This module and its documentation is available on github: <br /><a href="http://github.com/linenoise/check_freebsd_swap/">http://github.com/linenoise/check_freebsd_swap/</a></p>
 
 
      </div>
-   </article>
 </div>
