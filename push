@@ -2,4 +2,4 @@
 set -e
 set -x
 nanoc compile
-bundle exec nanoc deploy:rsync
+bundle exec nanoc deploy
