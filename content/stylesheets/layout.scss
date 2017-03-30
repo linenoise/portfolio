@@ -154,13 +154,14 @@ footer ul li a img {
 
 footer ul li a span {
     display: block;
-    padding-top: 3px;
+    padding-top: 1px;
     color: $dark-gray-color;
     font-weight: bold;
+    font-size: 105%;
 }
 
 footer .copyright p {
-    padding: 1em 2em 0em 1em;
+    margin: 2em 3em;
     margin-bottom: 0px;
 }
 
