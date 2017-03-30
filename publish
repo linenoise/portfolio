@@ -1,0 +1,11 @@
+#!/bin/bash
+set -e
+set -x
+git push origin master
+bundle exec nanoc compile
+cd site
+git pull origin master
+cp -rv ../output/* .
+git add *
+git commit -m "Updating site through linenoise/portfolio_generator"
+git push origin master
