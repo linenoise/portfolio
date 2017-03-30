@@ -1,6 +1,0 @@
-#!/bin/bash
-set -e
-set -x
-git push origin master
-nanoc compile
-bundle exec nanoc deploy
