@@ -7,5 +7,8 @@ cd site
 git pull origin master
 cp -rv ../output/* .
 git add *
-git commit -m "Updating site through linenoise/portfolio_generator"
+git commit -m "Updating site through linenoise/portfolio"
+git push origin master
+cd ..
+git commit site -m "Locking to latest release"
 git push origin master
