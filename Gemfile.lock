@@ -33,13 +33,13 @@ GEM
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
       ruby_dep (~> 1.2)
-    lumberjack (1.0.11)
+    lumberjack (1.0.12)
     method_source (0.8.2)
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
-    nanoc (4.7.5)
-      cri (~> 2.3)
+    nanoc (4.7.10)
+      cri (~> 2.8)
       ddplugin (~> 1.0)
       hamster (~> 3.0)
       ref (~> 2.0)
@@ -51,14 +51,14 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
-    rack (2.0.1)
+    rack (2.0.3)
     rb-fsevent (0.9.8)
     rb-inotify (0.9.8)
       ffi (>= 0.5.0)
     rdiscount (2.2.0.1)
     ref (2.0.0)
     ruby_dep (1.5.0)
-    sass (3.4.23)
+    sass (3.4.24)
     shellany (0.0.1)
     slop (3.6.0)
     systemu (2.6.5)
@@ -80,4 +80,4 @@ DEPENDENCIES
   systemu
 
 BUNDLED WITH
-   1.13.6
+   1.15.0
