@@ -9,5 +9,3 @@ gem "rack"
 gem "guard-nanoc"
 gem "adsf"
 gem "sass"
-gem 'aws-sdk', '~> 2'
-
