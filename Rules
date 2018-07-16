@@ -75,7 +75,7 @@ end
 # Catch our landing page
 compile %r{^/index.html} do
     filter :erb
-    layout '/default.html'
+    layout '/landing.html'
 end
 route %r{^/index.html} do
   '/index.html'
