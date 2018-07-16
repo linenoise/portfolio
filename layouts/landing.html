@@ -33,24 +33,15 @@
 
   </head>
   <body>
-    <div class="container">
+    <div class="container" style="margin-top: 2em;">
 
       <header class="title row">
         <h1 <% if @item[:section] %>class="<%= @item[:section] %>"<% end %>>
           <% if @item[:title] %><%= @item[:title] %><% end %>
         </h1>
       </header>
-      
-      <%= yield %>
 
-      <nav class="row">
-        <a class="two columns artwork" href="/artwork/">Artwork</a>
-        <a class="two columns books" href="/books/">Books</a>
-        <a class="two columns music" href="/music/">Music</a>
-        <a class="two columns software" href="/software/">Software</a>
-        <a class="two columns vitae" href="/vitae/">Vitae</a>
-        <a class="two columns writing" href="/writing/">Writing</a>
-      </nav>
+      <%= yield %>
 
       <footer class="row">
 
