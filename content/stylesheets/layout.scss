@@ -46,6 +46,10 @@ $project-accent-color:     $dark-gray-color;
 /* Typography
 ================================================== */
 
+body, html {
+    font-family: 'Open Sans', sans-serif;
+}
+
 body {
     background-color: $light-gray-color;
     color: $dark-gray-color;
@@ -55,6 +59,10 @@ body {
     background-color: $white-color;
 }
 
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: normal;
+}
 h1 {
     font-size: 26pt;
 }
@@ -161,15 +169,15 @@ footer ul li a span {
 }
 
 footer .copyright p {
-    margin: 2em 3em;
+    margin: 1.2em 1em;
     margin-bottom: 0px;
 }
 
 footer .portfolio img {
     height: 130px;
     width: 130px;
-    float: right;
-    padding-right: 15px;
+    float: left;
+    padding-left: 15px;
 }
 
 /* Landing page

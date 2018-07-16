@@ -17,8 +17,6 @@
   z-index: 100;
   text-align: center;
   line-height: 0;
-  font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
-  font-weight: normal;
 }
 /* line 24, ../sass/lightbox.sass */
 #lightbox img {
