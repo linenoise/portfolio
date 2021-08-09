@@ -4,3 +4,5 @@ output
 tmp
 crash.log
 .sass-cache
+.translation-table.md
+.vscode

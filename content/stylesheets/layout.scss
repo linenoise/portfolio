@@ -1,6 +1,6 @@
 /*
 * layout.css
-* Copyright 2016 Danne Stayskal <danne@stayskal.com>
+* Copyright 2016-2018 Danne Stayskal <danne@stayskal.com>
 * For http://danne.stayskal.com/
 *
 * License: Creative Commons BY-NC-SA 3.0 US
@@ -12,6 +12,12 @@
     # Typography
     # Layout
     # Landing page
+    # Artwork pages
+    # Book pages
+    # Music pages
+    # Software pages
+    # Vitae page
+    # Writing pages
     # Media Queries
         # Netbooks and Tablets (landscape)
         # Tablets (portrait) and Phones (landscape)
@@ -30,6 +36,7 @@ $blue-color:               #007c84;  // Pantone 322 U
 $purple-color:             #522d63;  // Pantone 520 C
 $white-color:              #f4f4f4;  // = light-gray-color * 2
 $light-gray-color:         #e6e6e6;  // Pantone 427 U
+$medium-gray-color:        #959595;  // = (white-color + shadow-color) / 2
 $dark-gray-color:          #4f5150;  // Pantone P 175 15-U
 $shadow-color:             #313231;  // = dark-gray-color * 20 / 32
 
@@ -51,15 +58,19 @@ body, html {
 }
 
 body {
-    background-color: $light-gray-color;
     color: $dark-gray-color;
+    // Grid paper background in CSS gradients
+    background-color: #F1EFED;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.05) 1px, rgba(0, 0, 0, 0) 0px), 
+                      linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, rgba(0, 0, 0, 0) 0px),
+                      linear-gradient(rgba(0, 0, 0, 0.035) 1px, rgba(0, 0, 0, 0) 0px),
+                      linear-gradient(90deg, rgba(0, 0, 0, 0.035) 1px, rgba(0, 0, 0, 0) 0px);
+    background-position-x: -1px, -1px, -1px, -1px;
+    background-position-y: -1px, -1px, -1px, -1px;
+    background-size: 96px 96px, 96px 96px, 24px 24px, 24px 24px;
 }
 
-.container {
-    background-color: $white-color;
-}
-
-h1, h2, h3 {
+h1, h2, h3, time {
     font-family: 'Montserrat', sans-serif;
     letter-spacing: normal;
 }
@@ -68,20 +79,32 @@ h1 {
 }
 h2 {
     font-size: 22pt;
+    margin-top: 0px !important;
 }
 h3 {
     font-size: 18pt;
 }
 
+pre, code {
+    font-family: 'Cutive Mono', monospace;
+    font-size: 115%;
+}
+
 /* Layout
 ================================================== */
 
+div.row {
+    background-color: $white-color;
+    border: 1px solid $medium-gray-color;
+    margin-top: 20px;
+}
+
 .title h1 {
-    padding: 20px;
+    padding: 16px;
+    padding-bottom: 15px;
     background-color: $dark-gray-color;
-    border-top: 10px solid $light-gray-color;
-    border-bottom: 10px solid $light-gray-color;
-    margin-bottom: 0px;
+    margin-top: 23px;
+    margin-bottom: 4px;
 }
 
 .title, .title a, .title a:hover, .title h1{
@@ -92,10 +115,6 @@ h3 {
 a {
     text-decoration: none;
     font-weight: bold;
-}
-
-a:hover, {
-    color: $dark-gray-color !important;
 }
 
 .artwork a, a.artwork {
@@ -117,11 +136,17 @@ a:hover, {
     color: $writing-accent-color;
 }
 
+footer img.ligature {
+    aspect-ratio: 2.14;
+    height: 0.8em;
+    padding: 0em 0.33em 0em 0.25em;
+}
 
 nav {
     padding: 1em 0px;
     background-color: $inset-color;
-    border-top: 10px solid $light-gray-color;
+    margin-top: 20px;
+    border: 1px solid $medium-gray-color;
 }
 
 nav a {
@@ -132,52 +157,15 @@ nav a {
 
 
 footer {
-    padding: 1em 0px 10px 0px;
+    padding: 1em 0px 1em 0px;
     color: $light-gray-color;
     background-color: $dark-gray-color;
-    border-top: 10px solid $light-gray-color;
-    border-bottom: 10px solid $light-gray-color;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-footer ul {
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
-}
-
-footer ul li {
-    background-color: $light-gray-color;
-    color: $dark-gray-color;
-    margin: 10px 20px;
-    padding: 10px;
-    vertical-align: center;
-    height: 32px;
-    border-radius: 3px;
-}
-
-footer ul li a img {
-    float: left;
-    padding-right: 10px;
-}
-
-footer ul li a span {
-    display: block;
-    padding-top: 1px;
-    color: $dark-gray-color;
-    font-weight: bold;
-    font-size: 105%;
-}
-
-footer .copyright p {
-    margin: 1.2em 1em;
-    margin-bottom: 0px;
-}
-
-footer .portfolio img {
-    height: 130px;
-    width: 130px;
-    float: left;
-    padding-left: 15px;
+footer  p {
+    margin: 0em 1em;
 }
 
 /* Landing page
@@ -248,7 +236,7 @@ h2.artwork {
 }
 
 .artwork.row p, .artwork.row ul {
-    border-bottom: 10px solid $light-gray-color;
+    margin-bottom: 20px;
     padding: 20px;
     margin-bottom: 0px;
 }
@@ -318,7 +306,7 @@ h2.music {
 
 .music.row ul {
     list-style-type: none;
-    border-bottom: 10px solid $light-gray-color;
+    border-bottom: 20px;
     padding-bottom: 10px;
 }
 
@@ -347,7 +335,8 @@ h2.software {
 }
 
 .software.row h2 {
-    margin-top: 20px;
+    margin-top: 2em;
+    padding-top: 0.5em;
 }
 
 .software.row img {
@@ -355,12 +344,13 @@ h2.software {
 }
 
 .software.row p, .software.row ul {
-    padding: 0px 20px 20px 20px;
+    padding: 1em;
     margin-bottom: 0px;
 }
 
 .software.row p {
-    border-bottom: 10px solid $light-gray-color;
+    border-bottom: 20px;
+    padding-top: 0em;
 }
 
 .software.row p:last-child {
@@ -388,6 +378,30 @@ h2.vitae {
     color: $vitae-accent-color;
 }
 
+.vitae .photo {
+    text-align: left;
+}
+@media (min-width: 1000px) {
+    .vitae .photo {
+        text-align: right;
+    }
+}
+
+.vitae .photo::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.vitae img.profile {
+    width: 290px;
+    aspect-ratio: 0.54;
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
 .vitae.row h2, .vitae.row p, .vitae.row img, .vitae.row ul {
     padding-left: 20px;
 }
@@ -407,7 +421,7 @@ h2.vitae {
 
 .vitae.row h2 {
     padding-top: 20px;
-    border-top: 10px solid $light-gray-color;
+    margin-top: 20px;
 }
 
 .vitae.row .contact h2 {
@@ -415,8 +429,9 @@ h2.vitae {
     margin-bottom: 0.25em;
 }
 
-.vitae.row .contact p .pronunciation {
-    margin-bottom: 1em;
+.vitae.row div.skills td.technologies {
+    padding-bottom: 0.25em;
+    padding-left: 1em;
 }
 
 .vitae.row h3 {
@@ -454,6 +469,15 @@ h2.vitae {
 .vitae.row .summary {
     font-weight: bold;
     margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.vitae.row .description .responsibilities {
+    margin-bottom: 1em;
+}
+
+.vitae.row .description .technologies {
+    font-style: oblique;
 }
 
 /* Writing pages
@@ -489,9 +513,65 @@ h2.writing {
 
 .writing.row h2 {
     padding-top: 20px;
-    border-top: 10px solid $light-gray-color;
+    margin-top: 20px;
 }
 
 .writing.row .lede {
     padding-top: 20px;
+}
+
+.writing.row ol.timeline {
+    border-left: 4px solid $light-gray-color;
+    margin-left: 20px;
+    // overflow:hidden;
+    list-style:none;
+    position:relative;
+    padding-top: 0px;
+}
+
+.writing.row ol.timeline > li:before {
+    content:" ";
+    width:26px;
+    height:26px;
+    display:block;
+    background:$light-gray-color;
+    position:absolute;
+    left:0px;
+    margin-top: 0px;
+    margin-left: -15px;
+    border-radius:26px;
+    z-index: 5;
+}
+
+.writing.row ol.timeline > li {
+    padding-left: 10px;
+}
+
+.writing.row ol.timeline p {
+    padding-left: 0px;
+    margin-bottom: 1em;
+}
+
+.writing.row ol.timeline time {
+    font-weight: bold;
+    font-variant: small-caps;
+}
+
+.writing.row ol.timeline ul {
+    margin: 0px 1em 1em 1em;
+    list-style: disc;
+}
+
+.writing.row ol.timeline ul li {
+    margin-bottom: 0px;
+}
+
+.writing.row.burnlog-nav {
+    margin-top: 20px;
+}
+
+.writing.row.burnlog-nav > div {
+    text-align: center;
+    font-size: 150%;
+    margin: 1em auto 1em auto;
 }

@@ -10,15 +10,17 @@ route %r{^/(javascript|images|photos)/*} do
   item.identifier + ''
 end
 
-compile %r{^/(music|sitemap|feed|card|identity|vitae)} do
+compile %r{^/(music|sitemap|feed|card|vitae)} do
   filter :erb
   layout '/default.html'
 end
-route %r{^/(music|sitemap|feed|card|identity|vitae)} do
+compile %r{^/(identity)} do
+  filter :erb
+  layout '/minimal.html'
+end
+route %r{^/(music|sitemap|feed|card|identity|solstice|vitae)} do
   item.identifier.without_ext + '/index.html'
 end
-
-
 
 # Redirect /essays to /writing
 compile %r{^/essays/*} do
@@ -29,8 +31,6 @@ route %r{^/essays/*} do
   item.identifier + ''
 end
 
-
-
 # Music is a couple levels deep
 compile %r{^/music/*/*} do
   filter :erb
@@ -39,8 +39,6 @@ end
 route %r{^/music/*/*} do
   item.identifier.without_ext + '.html'
 end
-
-
 
 # Everything else gets rendered in the default view
 compile %r{/(artwork|books|software|photos|writing)/*} do
@@ -52,7 +50,6 @@ route %r{/(artwork|books|software|photos|writing)/*} do
   item.identifier.without_ext + '/index.html'
 end
 
-
 # Layout stylesheet gets rendered through SCSS
 compile %r{/stylesheets/layout.scss} do
   filter :sass, syntax: :scss
@@ -63,14 +60,10 @@ route %r{/stylesheets/*} do
   item.identifier.without_ext + '.css'
 end
 
-
-
 # Photos have a thumbnail representation
 route %r{^/photos/*}, :rep => :thumbnail do
   item.identifier.without_ext + '-thumbnail.' + item.identifier.ext
 end
-
-
 
 # Catch our landing page
 compile %r{^/index.html} do
@@ -80,8 +73,6 @@ end
 route %r{^/index.html} do
   '/index.html'
 end
-
-
 
 # Finally, catch all of our root HTML content
 compile '/*' do
@@ -97,4 +88,3 @@ route '*' do
 end
 
 layout '/*', :erb
-

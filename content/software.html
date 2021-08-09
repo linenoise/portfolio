@@ -3,40 +3,34 @@ title: Software
 section: software
 ---
 
-<div class="software row">
-	<div class="twelve columns">
 
-		<h2>Code is social.</h2>
-
-		<p>
-			All of the software that I write on my own time is <a href="/writing/open_craft/">Open Source</a>, with code available <a href="https://github.com/linenoise/">via my profile on github</a> and packages <a href="http://rubygems.org/profiles/linenoise">on rubygems</a>.
-		</p>
-
-		<% children_of(@item).find_all{|item| item.attributes[:maintained] == true}.sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.each do |software| %>	
+	<% children_of(@item).find_all{|item| item.attributes[:maintained] == true}.sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.each do |software| %>	
+	<div class="software row">
 		<h2>
-			<a href="<%= software.identifier.without_ext %>/index.html"><%= software.attributes[:title] %></a>
-		</h2>
+		<a href="<%= software.identifier.without_ext %>/index.html"><%= software.attributes[:title] %></a>
+	</h2>
 
-		<p>
-			<%= software.attributes[:byline] %>
-		</p>
-		<% end %>
-
-		<h1 id="legacy">Legacy</h1>
-
-		<p>
-			The following applications are here for reference purposes only and are no longer active maintained.
-		</p>
-
-		<% children_of(@item).find_all{|item| item.attributes[:maintained] == false}.sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.each do |software| %>	
-		<h2>
-			<a href="<%= software.identifier.without_ext %>/index.html"><%= software.attributes[:title] %></a>
-		</h2>
-
-		<p>
-			<%= software.attributes[:byline] %>
-		</p>
-		<% end %>
-
-	</div>
+	<p>
+		<%= software.attributes[:byline] %>
+	</p>
 </div>
+<% end %>
+
+<div class="software row">
+	<h2 id="legacy">Legacy</h2>
+	<p>
+		The following applications are here for reference purposes only and are no longer active maintained.
+	</p>
+</div>
+
+<% children_of(@item).find_all{|item| item.attributes[:maintained] == false}.sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.each do |software| %>	
+<div class="software row">
+	<h2>
+		<a href="<%= software.identifier.without_ext %>/index.html"><%= software.attributes[:title] %></a>
+	</h2>
+
+	<p>
+		<%= software.attributes[:byline] %>
+	</p>
+</div>
+<% end %>
