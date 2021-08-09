@@ -2,16 +2,17 @@
 title: Writing
 section: writing
 ---
-	<% items.select{|i| i.identifier =~ /\/writing\/.+/}.sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.each do |essay| %>
+<% items.select{|i| i.identifier =~ /\/writing\/.+/}.sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.each do |essay| %>
 
-	<% next if essay.identifier =~ /burnlog/ %> 
-	<% next if essay.identifier =~ /desert/ %> <!-- TODO FIXME Remove this when you release --> 
+<% next if essay.identifier =~ /burnlog/ %> 
+<% next if essay.identifier =~ /desert/ %> <!-- TODO FIXME Remove this when you release --> 
 
-	<div class="writing row">
+<div class="writing row">
+	<div class="twelve columns">
 		<h2><a href="<%= essay.identifier.without_ext %>/index.html"><%= essay.attributes[:title] %></a></h2>
 
 		<p><%= essay.attributes[:lede] %></p>
 		<p><a href="<%= essay.identifier.without_ext %>/index.html">Continue reading&hellip;</a></p>
-
 	</div>
-	<% end %>
+</div>
+<% end %>

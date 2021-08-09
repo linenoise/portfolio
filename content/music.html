@@ -2,29 +2,28 @@
 title: Music
 section: music
 ---
+<% children_of(@item).sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.each do |genre| %>
+	<div class="music row">
+		<div class="twelve columns">
+			<h2><%= genre.attributes[:title] %> music</h2>
+
+			<p>
+				<%= genre.attributes[:description] %>
+			</p>
+
+			<ul>
+			<% children_of(genre).sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.each do |song| %>
+				<li><a href="<%= song.path %>"><%= song.attributes[:title] %></a></li>
+			<% end %>
+			</ul>
+		</div>
+	</div>
+<% end %>
 <div class="music row">
-
 	<div class="twelve columns">
-		<% children_of(@item).sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.each do |genre| %>
-
-		<h2><%= genre.attributes[:title] %> music</h2>
-
-		<p>
-			<%= genre.attributes[:description] %>
-		</p>
-
-		<ul>
-		<% children_of(genre).sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.each do |song| %>
-			<li><a href="<%= song.path %>"><%= song.attributes[:title] %></a></li>
-		<% end %>
-		</ul>
-		<% end %>
-
 		<h2>Electronic music</h2>
 		<p>
 			My DJ sets of electronic music are on a different site, <a href="http://linenoise.io/">http://linenoise.io/</a>.
 		</p>
-		
 	</div>
-
 </div>

@@ -6,31 +6,34 @@ section: software
 
 	<% children_of(@item).find_all{|item| item.attributes[:maintained] == true}.sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.each do |software| %>	
 	<div class="software row">
-		<h2>
-		<a href="<%= software.identifier.without_ext %>/index.html"><%= software.attributes[:title] %></a>
-	</h2>
-
-	<p>
-		<%= software.attributes[:byline] %>
-	</p>
-</div>
-<% end %>
+		<div class="twelve columns">
+			<h2>
+			<a href="<%= software.identifier.without_ext %>/index.html"><%= software.attributes[:title] %></a>
+			</h2>
+			<p><%= software.attributes[:byline] %></p>
+		</div>
+	</div>
+	<% end %>
 
 <div class="software row">
-	<h2 id="legacy">Legacy</h2>
-	<p>
-		The following applications are here for reference purposes only and are no longer active maintained.
-	</p>
+	<div class="twelve columns">
+		<h2 id="legacy">Legacy</h2>
+		<p>
+			The following applications are here for reference purposes only and are no longer active maintained.
+		</p>
+	</div>
 </div>
 
 <% children_of(@item).find_all{|item| item.attributes[:maintained] == false}.sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.each do |software| %>	
 <div class="software row">
-	<h2>
-		<a href="<%= software.identifier.without_ext %>/index.html"><%= software.attributes[:title] %></a>
-	</h2>
+	<div class="twelve columns">
+		<h2>
+			<a href="<%= software.identifier.without_ext %>/index.html"><%= software.attributes[:title] %></a>
+		</h2>
 
-	<p>
-		<%= software.attributes[:byline] %>
-	</p>
+		<p>
+			<%= software.attributes[:byline] %>
+		</p>
+	</div>
 </div>
 <% end %>

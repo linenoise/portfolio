@@ -87,20 +87,20 @@ h3 {
 
 pre, code {
     font-family: 'Cutive Mono', monospace;
-    font-size: 115%;
+    margin-right: 12px;
 }
 
 /* Layout
 ================================================== */
 
-div.row {
+div.row > div {
     background-color: $white-color;
-    border: 1px solid $medium-gray-color;
-    margin-top: 20px;
+    border: 1px solid $light-gray-color;
+    margin-top: 24px;
 }
 
 .title h1 {
-    padding: 16px;
+    padding: 16px 24px;
     padding-bottom: 15px;
     background-color: $dark-gray-color;
     margin-top: 23px;
@@ -138,30 +138,34 @@ a {
 
 footer img.ligature {
     aspect-ratio: 2.14;
-    height: 0.8em;
+    height: 3em;
     padding: 0em 0.33em 0em 0.25em;
 }
 
 nav {
     padding: 1em 0px;
     background-color: $inset-color;
-    margin-top: 20px;
-    border: 1px solid $medium-gray-color;
+    margin-top: 24px;
+    border: 1px solid $light-gray-color;
 }
 
 nav a {
-    font-size: 20pt;
+    font-size: 18pt;
     text-decoration: none;
-    padding: 0em 0.5em;
+    padding: 0px 0px 0px 24px;
 }
 
+nav a:last-child {
+    padding-left: 0px;
+    padding-right: 24px;
+}
 
 footer {
     padding: 1em 0px 1em 0px;
     color: $light-gray-color;
     background-color: $dark-gray-color;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 24px;
+    margin-bottom: 24px;
 }
 
 footer  p {
@@ -171,8 +175,12 @@ footer  p {
 /* Landing page
 ================================================== */
 
+.landing > div {
+    padding-top: 24px;
+}
+
 .landing h2, .landing p, .landing ul {
-    padding: 0px 20px 20px 20px;
+    padding: 0px 24px 24px 24px;
     margin: 0px;
 }
 
@@ -184,25 +192,9 @@ footer  p {
     margin-bottom: 0px;
 }
 
-.landing.project img {
-    float: left;
-    margin: 10px;
-    padding: 0px;
-}
-
-.landing.project h2 {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-.landing.project a{
-    font-weight:bold;
-    color: $dark-gray-color;
-}
-
-.landing.row {
-    padding-top: 1em;
-}
+// .landing.row {
+//     padding-top: 1em;
+// }
 
 /* Artwork pages
 ================================================== */
@@ -216,19 +208,19 @@ h2.artwork {
 }
 
 .artwork.row h2, .artwork.row p, .artwork.row img, .artwork.row ul {
-    padding-left: 20px;
+    padding-left: 24px;
 }
 
 .artwork.row h2 {
-    margin-top: 20px;
+    padding-top: 24px;
 }
 
 .artwork.row img {
-    padding: 20px;
+    padding: 0px 24px;
 }
 
 .artwork.gallery.row img {
-    padding: 20px 0px !important;
+    padding: 24px 0px !important;
 }
 
 .artwork.gallery.row div {
@@ -236,8 +228,8 @@ h2.artwork {
 }
 
 .artwork.row p, .artwork.row ul {
-    margin-bottom: 20px;
-    padding: 20px;
+    margin-bottom: 24px;
+    padding: 24px;
     margin-bottom: 0px;
 }
 
@@ -257,19 +249,19 @@ h2.books {
 }
 
 .books.row h2, .books.row p, .books.row img, .books.row ul {
-    padding-left: 20px;
+    padding-left: 24px;
 }
 
 .books.row h2 {
-    margin-top: 20px;
+    padding-top: 24px;
 }
 
 .books.row img {
-    padding: 20px;
+    padding: 0px 24px;
 }
 
 .books.row p, .books.row ul {
-    padding: 20px;
+    padding: 24px;
     margin-bottom: 0px;
 }
 
@@ -285,19 +277,19 @@ h2.music {
 }
 
 .music.row h2, .music.row p, .music.row img, .music.row ul {
-    padding-left: 20px;
+    padding-left: 24px;
 }
 
 .music.row h2 {
-    margin-top: 20px;
+    padding-top: 24px;
 }
 
 .music.row img {
-    padding: 20px;
+    padding: 24px;
 }
 
 .music.row p, .music.row ul {
-    padding: 0px 20px 20px 20px;
+    padding: 0px 24px 24px 24px;
     margin-bottom: 0px;
 }
 
@@ -306,17 +298,17 @@ h2.music {
 
 .music.row ul {
     list-style-type: none;
-    border-bottom: 20px;
+    border-bottom: 24px;
     padding-bottom: 10px;
 }
 
 .music.row audio {
     margin-left: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 }
 
 .music.player.row p {
-    padding: 20px !important;
+    padding: 24px !important;
 }
 
 /* Software pages
@@ -331,7 +323,7 @@ h2.software {
 }
 
 .software.row h2, .software.row p, .software.row img, .software.row ul, .software pre {
-    padding-left: 20px;
+    padding-left: 24px;
 }
 
 .software.row h2 {
@@ -340,16 +332,16 @@ h2.software {
 }
 
 .software.row img {
-    padding: 20px;
+    padding: 24px;
 }
 
 .software.row p, .software.row ul {
-    padding: 1em;
+    padding: 24px;
     margin-bottom: 0px;
 }
 
 .software.row p {
-    border-bottom: 20px;
+    border-bottom: 24px;
     padding-top: 0em;
 }
 
@@ -364,7 +356,7 @@ h2.software {
 #legacy {
     color: $light-gray-color;
     background-color: $dark-gray-color;
-    padding: 20px;
+    padding: 24px;
 }
 
 /* Vitae page
@@ -383,7 +375,7 @@ h2.vitae {
 }
 @media (min-width: 1000px) {
     .vitae .photo {
-        text-align: right;
+        text-align: center;
     }
 }
 
@@ -403,12 +395,13 @@ h2.vitae {
 }
 
 .vitae.row h2, .vitae.row p, .vitae.row img, .vitae.row ul {
-    padding-left: 20px;
+    padding-left: 24px;
+    padding-top: 24px;
 }
 
 .vitae.row table, .vitae.row .vevent {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 24px;
+    margin-right: 24px;
 }
 
 .vitae.row table {
@@ -420,8 +413,8 @@ h2.vitae {
 }
 
 .vitae.row h2 {
-    padding-top: 20px;
-    margin-top: 20px;
+    padding-top: 24px;
+    margin-top: 24px;
 }
 
 .vitae.row .contact h2 {
@@ -436,11 +429,18 @@ h2.vitae {
 
 .vitae.row h3 {
     margin-bottom: 10px;
-    margin-top: 20px;
+    margin-top: 24px;
 }
-.vitae.row p, .vitae.row ul {
-    padding: 0px 20px 20px 20px;
+.vitae.row p {
+    padding: 0px 24px 24px 24px;
     margin-bottom: 0px;
+}
+.vitae.row ul {
+    padding: 24px;
+    margin-bottom: 0px;
+}
+.vitae.row table {
+    margin: 24px;
 }
 
 .vitae.row ul {
@@ -492,13 +492,13 @@ h2.writing {
 }
 
 .writing.row h2, .writing.row p, .writing.row img, .writing.row ul, .writing.row ol {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 24px;
+    padding-right: 24px;
 }
 
 .writing.row table, .writing.row .vevent {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 24px;
+    margin-right: 24px;
 }
 
 .writing.row table {
@@ -508,21 +508,21 @@ h2.writing {
 .writing.row .date, .writing.row .attribution, .writing.row .pullright {
     font-style: oblique;
     float: right;
-    margin-right: 20px;
+    margin-right: 24px;
 }
 
 .writing.row h2 {
-    padding-top: 20px;
-    margin-top: 20px;
+    padding-top: 24px;
+    margin-top: 24px;
 }
 
 .writing.row .lede {
-    padding-top: 20px;
+    padding-top: 24px;
 }
 
 .writing.row ol.timeline {
     border-left: 4px solid $light-gray-color;
-    margin-left: 20px;
+    margin-left: 24px;
     // overflow:hidden;
     list-style:none;
     position:relative;
@@ -567,7 +567,7 @@ h2.writing {
 }
 
 .writing.row.burnlog-nav {
-    margin-top: 20px;
+    margin-top: 24px;
 }
 
 .writing.row.burnlog-nav > div {

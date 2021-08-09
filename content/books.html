@@ -4,7 +4,14 @@ section: books
 ---
 
 <div class="books row">
-<% book_count = 0 %>
+	<div class="twelve columns">
+		<p>
+			I wrote two books in graduate school, published through a local press who is no longer publishing.<br />PDFs of these books are available here to download.
+		</p>
+	</div>
+</div>
+<div class="books row">
+	<% book_count = 0 %>
 <% children_of(@item).sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.each do |book| %>	
 	<% book_count = book_count + 1 %>
 	<div class="six columns">

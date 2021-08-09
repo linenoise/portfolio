@@ -4,17 +4,17 @@ section: artwork
 ---
 
 <div class="artwork row">
-	<div class="twelve columns">
 		
 		<% children_of(@item).sort{|a,b| a.attributes[:title] <=> b.attributes[:title]}.each do |art| %>	
-		<h2 class="artwork"><a href="<%= art.identifier.without_ext %>/index.html"><%= art.attributes[:title] %></a></h2>
+		<div class="twelve columns">
+			<h2 class="artwork"><a href="<%= art.identifier.without_ext %>/index.html"><%= art.attributes[:title] %></a></h2>
 
-		<a href="<%= art.identifier.without_ext %>/index.html">
-			<img src="<%= art.attributes[:thumbnail] %>" alt="<%= art.attributes[:title] %>" />
-		</a>
+			<a href="<%= art.identifier.without_ext %>/index.html">
+				<img src="<%= art.attributes[:thumbnail] %>" alt="<%= art.attributes[:title] %>" />
+			</a>
 
-		<p><%= art.attributes[:byline] %></p>
+			<p><%= art.attributes[:byline] %></p>
+		</div>
 		<% end %>
 
-	</div>
 </div>
