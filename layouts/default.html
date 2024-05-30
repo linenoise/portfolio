@@ -9,10 +9,26 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="Content-Language" content="en" />
     <meta name="description" content="<%= @item[:title] %>" />
-    <meta name="author" content="Danne Stayskal">
+    <meta name="author" content="Danne Stayskal Huffaker">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:500|Open Sans|Cutive+Mono">
+    <link rel="preload" href="/fonts/NeuronDemiBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/Neuron-Italic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/NeuronExtraBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/NeuronExtraBold-Italic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/NeuronHeavy.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/NeuronLight.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/NeuronLight-Italic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/Neuron.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/NeuronHeavy-Italic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/NeuronBlack.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/NeuronBlack-Italic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/NeuronBold-Italic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/NeuronBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/NeuronExtraLight-Italic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/NeuronDemiBold-Italic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/NeuronExtraLight.woff2" as="font" type="font/woff2" crossorigin>
+
     <link rel="stylesheet" type="text/css" href="/stylesheets/skeleton.css" />
     <link rel="stylesheet" type="text/css" href="/stylesheets/lightbox.css" />
     <link rel="stylesheet" type="text/css" href="/stylesheets/layout.css" />
@@ -36,11 +52,20 @@
     <div class="container">
 
       <header class="title row">
-        <h1 class="<% if @item[:section] %><%= @item[:section] %><% end %>">
-          <% if @item[:title] %><%= @item[:title] %><% end %>
+        <h1>
+          <a href="/">Danne Huffaker</a>
+          <% if @item[:section] %><span class="<%= @item[:section] %> section"><a href="/<%= @item[:section] %>"><%= @item[:section] %></a></span><% end %>
         </h1>
       </header>
       
+      <% if @item[:title] && @item[:section] %>
+      <div class="<%= @item[:section] %> row">
+        <div class="twelve columns">
+          <h2><%= @item[:title] %></h2>
+        </div>
+      </div>
+      <% end %>
+
       <%= yield %>
 
       <nav class="row">

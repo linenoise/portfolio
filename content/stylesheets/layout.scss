@@ -23,63 +23,47 @@
         # Tablets (portrait) and Phones (landscape)
         # Phones (portrait)
         # Printers
+    # Fonts
 */
 
 /* Color Palette 
 ================================================== */
 
-$red-color:                #b10837;  // Pantone 201 U
-$orange-color:             #fe7b01;  // Pantone 1505 C
-$yellow-color:             #f7b718;  // Pantone 14-0957 TCX
-$green-color:              #93a956;  // Pantone 15-0343 TXC
-$blue-color:               #007c84;  // Pantone 322 U
-$purple-color:             #522d63;  // Pantone 520 C
-$white-color:              #f4f4f4;  // = light-gray-color * 2
-$light-gray-color:         #e6e6e6;  // Pantone 427 U
-$medium-gray-color:        #959595;  // = (white-color + shadow-color) / 2
-$dark-gray-color:          #4f5150;  // Pantone P 175 15-U
-$shadow-color:             #313231;  // = dark-gray-color * 20 / 32
-
-$background-color:         $light-gray-color;
-$inset-color:              $white-color;
-$artwork-accent-color:     $red-color;
-$books-accent-color:       $orange-color;
-$music-accent-color:       $yellow-color;
-$software-accent-color:    $green-color;
-$vitae-accent-color:       $blue-color;
-$writing-accent-color:     $purple-color;
-$project-accent-color:     $dark-gray-color;
+$red-color:                #cc2424;
+$orange-color:             #e05f1a;
+$yellow-color:             #a38800;
+$green-color:              #559245;
+$blue-color:               #3a72a6;
+$purple-color:             #7f61b3;
+$white-color:              #f3f3f7;  // = light-gray-color * 2
+$light-gray-color:         #e7e6ef;
+$medium-gray-color:        #afabc9;
+$dark-gray-color:          #1e1c2b;
+$shadow-color:             #0d0c13;
+$highlight-color:          #00969e;
 
 /* Typography
 ================================================== */
 
 body, html {
-    font-family: 'Open Sans', sans-serif;
-}
-
-body {
-    color: $dark-gray-color;
-    // Grid paper background in CSS gradients
-    background-color: #F1EFED;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.05) 1px, rgba(0, 0, 0, 0) 0px), 
-                      linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, rgba(0, 0, 0, 0) 0px),
-                      linear-gradient(rgba(0, 0, 0, 0.035) 1px, rgba(0, 0, 0, 0) 0px),
-                      linear-gradient(90deg, rgba(0, 0, 0, 0.035) 1px, rgba(0, 0, 0, 0) 0px);
-    background-position-x: -1px, -1px, -1px, -1px;
-    background-position-y: -1px, -1px, -1px, -1px;
-    background-size: 96px 96px, 96px 96px, 24px 24px, 24px 24px;
+    font-family: 'Neuron', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 14pt;
 }
 
 h1, h2, h3, time {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Neuron', sans-serif;
     letter-spacing: normal;
+    font-weight: 600;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
 }
 h1 {
-    font-size: 26pt;
+    font-size: 32pt;
 }
 h2 {
     font-size: 22pt;
-    margin-top: 0px !important;
 }
 h3 {
     font-size: 18pt;
@@ -90,86 +74,123 @@ pre, code {
     margin-right: 12px;
 }
 
+/* Color
+================================================== */
+body, header, nav, footer {
+    background-color: $light-gray-color;
+}
+body, a, span, div, .title a, .title a:hover  {
+    color: $dark-gray-color;
+}
+.container {
+    background-color: $white-color;
+}
+img.scheme.dark {
+    display: none;
+}
+img.scheme.light {
+    display: block;
+}
+
+@media (prefers-color-scheme: dark) {
+    body, header, nav, footer {
+        background-color: $dark-gray-color;
+    }
+    body, a, h1, h2, h3, span, div, .title a, .title a:hover {
+        color: $medium-gray-color;
+    }
+    .container {
+        background-color: $shadow-color;
+    }
+        img.scheme.dark {
+        display: block;
+    }
+    img.scheme.light {
+        display: none;
+    }
+}
+
+a, a:active, a:hover {
+    color: $highlight-color;
+}
+.artwork a, .artwork a:hover, a.artwork, header.title h1 span.artwork.section, h2.artwork {
+    color: $red-color;
+}
+.books a, .books a:hover, a.books, header.title h1 span.books.section, h2.books {
+    color: $orange-color;
+}
+.music a, .music a:hover, a.music, header.title h1 span.music.section, h2.music {
+    color: $yellow-color;
+}
+.software a, .software a:hover, a.software, header.title h1 span.software.section, h2.software {
+    color: $green-color;
+}
+.vitae a, .vitae a:hover, a.vitae, header.title h1 span.vitae.section, h2.vitae {
+    color: $blue-color;
+}
+.writing a, .writing a:hover, a.writing, header.title h1 span.writing.section, h2.writing {
+    color: $purple-color;
+}
+
+
 /* Layout
 ================================================== */
 
-div.row > div {
-    background-color: $white-color;
-    border: 1px solid $light-gray-color;
-    margin-top: 24px;
+.title {
+    margin-top: 23px;
 }
 
 .title h1 {
-    padding: 16px 24px;
+    padding: 16px 0px;
     padding-bottom: 15px;
-    background-color: $dark-gray-color;
-    margin-top: 23px;
-    margin-bottom: 4px;
+    margin-bottom: 0px !important;
 }
 
 .title, .title a, .title a:hover, .title h1{
     text-decoration: none;
-    color: $inset-color !important;
 }
 
 a {
     text-decoration: none;
-    font-weight: bold;
-}
-
-.artwork a, a.artwork {
-    color: $artwork-accent-color;
-}
-.books a, a.books {
-    color: $books-accent-color;
-}
-.music a, a.music {
-    color: $music-accent-color;
-}
-.software a, a.software {
-    color: $software-accent-color;
-}
-.vitae a, a.vitae {
-    color: $vitae-accent-color;
-}
-.writing a, a.writing {
-    color: $writing-accent-color;
+    font-weight: 600;
 }
 
 footer img.ligature {
-    aspect-ratio: 2.14;
-    height: 3em;
-    padding: 0em 0.33em 0em 0.25em;
+    // aspect-ratio: 2.14;
+    // height: 3em;
+    padding: 0em 0.33em 0em 0em;
 }
 
 nav {
-    padding: 1em 0px;
-    background-color: $inset-color;
-    margin-top: 24px;
-    border: 1px solid $light-gray-color;
+    padding: 1em 0em 2em 0em;
+    // border: 1px solid $light-gray-color;
 }
 
 nav a {
-    font-size: 18pt;
+    font-size: 24pt;
     text-decoration: none;
-    padding: 0px 0px 0px 24px;
-}
-
-nav a:last-child {
-    padding-left: 0px;
-    padding-right: 24px;
+    // padding: 0px 0px 0px 24px;
 }
 
 footer {
-    padding: 1em 0px 1em 0px;
-    color: $light-gray-color;
-    background-color: $dark-gray-color;
-    margin-top: 24px;
-    margin-bottom: 24px;
+    padding: 1em 0em;
+    padding-top: 0px;
+    padding-bottom: 24px;
 }
 
 footer  p {
-    margin: 0em 1em;
+    margin: 0em 1em 0em 0em;
+}
+
+footer  p strong {
+    font-size: 150%;
+}
+
+footer img {
+    max-width: 111px;
+    width: auto;
+    height: auto;
+    margin-left: 0em !important;
 }
 
 /* Landing page
@@ -192,20 +213,8 @@ footer  p {
     margin-bottom: 0px;
 }
 
-// .landing.row {
-//     padding-top: 1em;
-// }
-
 /* Artwork pages
 ================================================== */
-
-header.title h1.artwork {
-    background-color: $artwork-accent-color;
-}
-
-h2.artwork {
-    color: $artwork-accent-color;
-}
 
 .artwork.row h2, .artwork.row p, .artwork.row img, .artwork.row ul {
     padding-left: 24px;
@@ -228,8 +237,7 @@ h2.artwork {
 }
 
 .artwork.row p, .artwork.row ul {
-    margin-bottom: 24px;
-    padding: 24px;
+    padding: 0em 24px 1em 24px;
     margin-bottom: 0px;
 }
 
@@ -240,20 +248,13 @@ h2.artwork {
 /* Books pages
 ================================================== */
 
-header.title h1.books {
-    background-color: $books-accent-color;
-}
-
-h2.books {
-    color: $books-accent-color;
-}
-
 .books.row h2, .books.row p, .books.row img, .books.row ul {
     padding-left: 24px;
+    margin-bottom: 0.5em;
 }
 
 .books.row h2 {
-    padding-top: 24px;
+    padding-top: 0.5em;
 }
 
 .books.row img {
@@ -267,14 +268,6 @@ h2.books {
 
 /* Music pages
 ================================================== */
-
-header.title h1.music {
-    background-color: $music-accent-color;
-}
-
-h2.music {
-    color: $music-accent-color;
-}
 
 .music.row h2, .music.row p, .music.row img, .music.row ul {
     padding-left: 24px;
@@ -291,9 +284,6 @@ h2.music {
 .music.row p, .music.row ul {
     padding: 0px 24px 24px 24px;
     margin-bottom: 0px;
-}
-
-.music.row p {
 }
 
 .music.row ul {
@@ -314,20 +304,12 @@ h2.music {
 /* Software pages
 ================================================== */
 
-header.title h1.software {
-    background-color: $software-accent-color;
-}
-
-h2.software {
-    color: $software-accent-color;
-}
-
 .software.row h2, .software.row p, .software.row img, .software.row ul, .software pre {
     padding-left: 24px;
 }
 
 .software.row h2 {
-    margin-top: 2em;
+    margin-top: 0.5em;
     padding-top: 0.5em;
 }
 
@@ -362,36 +344,26 @@ h2.software {
 /* Vitae page
 ================================================== */
 
-header.title h1.vitae {
-    background-color: $vitae-accent-color;
-}
+// .vitae .photo {
+//     text-align: left;
+// }
+// @media (min-width: 1000px) {
+//     .vitae .photo {
+//         text-align: center;
+//     }
+// }
 
-h2.vitae {
-    color: $vitae-accent-color;
-}
-
-.vitae .photo {
-    text-align: left;
-}
-@media (min-width: 1000px) {
-    .vitae .photo {
-        text-align: center;
-    }
-}
-
-.vitae .photo::after {
-    content: "";
-    clear: both;
-    display: table;
-}
+// .vitae .photo::after {
+//     content: "";
+//     clear: both;
+//     display: table;
+// }
 
 .vitae img.profile {
-    width: 290px;
-    aspect-ratio: 0.54;
-    padding-top: 1em;
-    padding-bottom: 0.5em;
-    padding-left: 1em;
-    padding-right: 1em;
+    max-width: 90%;
+    width: auto;
+    height: auto;
+    padding: 0px;
 }
 
 .vitae.row h2, .vitae.row p, .vitae.row img, .vitae.row ul {
@@ -457,7 +429,7 @@ h2.vitae {
 }
 
 .vitae div.progress-container > div { 
-    background-color: $vitae-accent-color; 
+    background-color: $blue-color; 
     height: 1em;
 }
 
@@ -483,14 +455,6 @@ h2.vitae {
 /* Writing pages
 ================================================== */
 
-header.title h1.writing {
-    background-color: $writing-accent-color;
-}
-
-h2.writing {
-    color: $writing-accent-color;
-}
-
 .writing.row h2, .writing.row p, .writing.row img, .writing.row ul, .writing.row ol {
     padding-left: 24px;
     padding-right: 24px;
@@ -513,7 +477,7 @@ h2.writing {
 
 .writing.row h2 {
     padding-top: 24px;
-    margin-top: 24px;
+    // margin-top: 24px;
 }
 
 .writing.row .lede {
@@ -575,3 +539,150 @@ h2.writing {
     font-size: 150%;
     margin: 1em auto 1em auto;
 }
+
+/* Fonts
+================================================== */
+@font-face {
+    font-family: 'Neuron';
+    src: url('/fonts/NeuronDemiBold.woff2') format('woff2'),
+        url('/fonts/NeuronDemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neuron';
+    src: url('/fonts/Neuron-Italic.woff2') format('woff2'),
+        url('/fonts/Neuron-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neuron';
+    src: url('/fonts/NeuronExtraBold.woff2') format('woff2'),
+        url('/fonts/NeuronExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neuron';
+    src: url('/fonts/NeuronExtraBold-Italic.woff2') format('woff2'),
+        url('/fonts/NeuronExtraBold-Italic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neuron';
+    src: url('/fonts/NeuronHeavy.woff2') format('woff2'),
+        url('/fonts/NeuronHeavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neuron';
+    src: url('/fonts/NeuronLight.woff2') format('woff2'),
+        url('/fonts/NeuronLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neuron';
+    src: url('/fonts/NeuronLight-Italic.woff2') format('woff2'),
+        url('/fonts/NeuronLight-Italic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neuron';
+    src: url('/fonts/Neuron.woff2') format('woff2'),
+        url('/fonts/Neuron.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neuron';
+    src: url('/fonts/NeuronHeavy-Italic.woff2') format('woff2'),
+        url('/fonts/NeuronHeavy-Italic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neuron';
+    src: url('/fonts/NeuronBlack.woff2') format('woff2'),
+        url('/fonts/NeuronBlack.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neuron';
+    src: url('/fonts/NeuronBlack-Italic.woff2') format('woff2'),
+        url('/fonts/NeuronBlack-Italic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neuron';
+    src: url('/fonts/NeuronBold-Italic.woff2') format('woff2'),
+        url('/fonts/NeuronBold-Italic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neuron';
+    src: url('/fonts/NeuronBold.woff2') format('woff2'),
+        url('/fonts/NeuronBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neuron';
+    src: url('/fonts/NeuronExtraLight-Italic.woff2') format('woff2'),
+        url('/fonts/NeuronExtraLight-Italic.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neuron';
+    src: url('/fonts/NeuronDemiBold-Italic.woff2') format('woff2'),
+        url('/fonts/NeuronDemiBold-Italic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neuron';
+    src: url('/fonts/NeuronExtraLight.woff2') format('woff2'),
+        url('/fonts/NeuronExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+

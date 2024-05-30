@@ -12,7 +12,23 @@
     <meta name="author" content="Danne Stayskal">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:500|Open Sans">
+    <link rel="preload" href="/fonts/NeuronDemiBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/Neuron-Italic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/NeuronExtraBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/NeuronExtraBold-Italic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/NeuronHeavy.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/NeuronLight.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/NeuronLight-Italic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/Neuron.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/NeuronHeavy-Italic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/NeuronBlack.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/NeuronBlack-Italic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/NeuronBold-Italic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/NeuronBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/NeuronExtraLight-Italic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/NeuronDemiBold-Italic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/NeuronExtraLight.woff2" as="font" type="font/woff2" crossorigin>
+
     <link rel="stylesheet" type="text/css" href="/stylesheets/skeleton.css" />
     <link rel="stylesheet" type="text/css" href="/stylesheets/lightbox.css" />
     <link rel="stylesheet" type="text/css" href="/stylesheets/layout.css" />
@@ -36,12 +52,19 @@
     <div class="container">
 
       <header class="title row">
-        <h1 <% if @item[:section] %>class="<%= @item[:section] %>"<% end %>>
-          <% if @item[:title] %><%= @item[:title] %><% end %>
-        </h1>
+        <h1><a href="/"><% if @item[:title] %><%= @item[:title] %><% end %></a></h1>
       </header>
 
       <%= yield %>
+
+      <nav class="row">
+        <a class="two columns artwork" href="/artwork/">Artwork</a>
+        <a class="two columns books" href="/books/">Books</a>
+        <a class="two columns music" href="/music/">Music</a>
+        <a class="two columns software" href="/software/">Software</a>
+        <a class="two columns vitae" href="/vitae/">Vitae</a>
+        <a class="two columns writing" href="/writing/">Writing</a>
+      </nav>
 
       <%= render '/_footer.*' %>
 

@@ -4,9 +4,9 @@
 # Sitemap, RSS feed, and htaccess get filtered with erb, but get no layout.
 # compile %r{^/(favicon|robots|keybase)/$} do
 # end
-compile %r{^/(javascript|images|photos)/*} do
+compile %r{^/(javascript|images|photos|fonts)/*} do
 end
-route %r{^/(javascript|images|photos)/*} do
+route %r{^/(javascript|images|photos|fonts)/*} do
   item.identifier + ''
 end
 
