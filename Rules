@@ -76,11 +76,7 @@ end
 
 # Finally, catch all of our root HTML content
 compile '/*' do
-  if item.binary?
-  else
-    filter :erb
-    layout '/default.html'
-  end
+    write item.identifier
 end
 
 route '*' do

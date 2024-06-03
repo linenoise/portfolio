@@ -12,40 +12,11 @@
     <meta name="author" content="Danne Stayskal Huffaker">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <link rel="preload" href="/fonts/NeuronDemiBold.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/Neuron-Italic.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/NeuronExtraBold.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/NeuronExtraBold-Italic.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/NeuronHeavy.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/NeuronLight.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/NeuronLight-Italic.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/Neuron.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/NeuronHeavy-Italic.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/NeuronBlack.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/NeuronBlack-Italic.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/NeuronBold-Italic.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/NeuronBold.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/NeuronExtraLight-Italic.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/NeuronDemiBold-Italic.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/NeuronExtraLight.woff2" as="font" type="font/woff2" crossorigin>
-
-    <link rel="stylesheet" type="text/css" href="/stylesheets/skeleton.css" />
-    <link rel="stylesheet" type="text/css" href="/stylesheets/lightbox.css" />
-    <link rel="stylesheet" type="text/css" href="/stylesheets/layout.css" />
-
-    <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://danne.stayskal.com/feed/" />
-
-    <!--[if lt IE 9]>
-      <script src="/javascript/html5shim.js"></script>
-    <![endif]-->
-
-    <link rel="shortcut icon" href="/images/danne-stayskal-favicon.ico" />
-    <link rel="apple-touch-icon" href="/images/danne-stayskal-icon-114x114.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="/images/danne-stayskal-icon-72x72.png" />
-    <link rel="apple-touch-icon" sizes="114x114" href="/images/danne-stayskal-icon-114x114.png" />
-
-    <script src="/javascript/jquery-1.7.2.min.js"></script>
-    <script src="/javascript/lightbox.js"></script>
+    <%= render '/_head_feeds.*' %>
+    <%= render '/_head_fonts.*' %>
+    <%= render '/_head_styles.*' %>
+    <%= render '/_head_scripts.*' %>
+    <%= render '/_head_icons.*' %>
 
   </head>
   <body>
@@ -54,7 +25,11 @@
       <header class="title row">
         <h1>
           <a href="/">Danne Huffaker</a>
-          <% if @item[:section] %><span class="<%= @item[:section] %> section"><a href="/<%= @item[:section] %>"><%= @item[:section] %></a></span><% end %>
+          <% if @item[:section] %>
+          <span class="<%= @item[:section] %> section">
+            <a href="/<%= @item[:section] %>"><%= @item[:section] %></a>
+          </span>
+          <% end %>
         </h1>
       </header>
       
